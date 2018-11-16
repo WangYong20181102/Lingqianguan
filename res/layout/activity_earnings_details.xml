@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 收益详情页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <!-- <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d5"
+        android:background="@color/lqb_head_bg"
+        android:gravity="center"
+        android:text="123"
+        android:textColor="@color/white" /> -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d90"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/d15" >
+
+                    <TextView
+                        android:id="@+id/tv_dayIncomeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d20"
+                        android:autoLink="web"
+                        android:text="获得总收益"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/s16" />
+
+                    <TextView
+                        android:id="@+id/tv_dayIncomeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5"
+                        android:text="0.00"
+                        android:textColor="#ff6434"
+                        android:textSize="@dimen/s22" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_h"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginTop="@dimen/d10" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/d15" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d20"
+                            android:text="项目收益  "
+                            android:textColor="#999999"
+                            android:textSize="@dimen/s16" />
+
+                        <TextView
+                            android:id="@+id/tv_projectIncome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d20"
+                            android:text="0.00"
+                            android:textColor="#ff6434"
+                            android:textSize="@dimen/s16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d10"
+                            android:text="零钱宝收益  "
+                            android:textColor="#999999"
+                            android:textSize="@dimen/s15" />
+
+                        <TextView
+                            android:id="@+id/tv_lqgIncome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d10"
+                            android:text="0.00"
+                            android:textColor="#ff6434"
+                            android:textSize="@dimen/s15" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d13"
+                android:gravity="center"
+                android:text="累计收益"
+                android:textColor="#999999"
+                android:textSize="@dimen/s16" />
+
+            <TextView
+                android:id="@+id/tv_totalIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d13"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#ff6434"
+                android:textSize="@dimen/s50" />
+
+            <View style="@style/line" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d350"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/d15"
+                android:overScrollMode="never" >
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

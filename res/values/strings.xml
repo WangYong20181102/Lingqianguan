@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">零钱罐</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- ====================================================常用(commonly)==================================================== -->
+    <string name="lingmeimei">零妹妹</string>
+    <!-- 返回 -->
+    <string name="back">返回</string>
+    <!-- 取消 -->
+    <string name="cancel">取消</string>
+    <!-- 确定 -->
+    <string name="determine">确定</string>
+    <!-- 标题 -->
+    <string name="title">标题</string>
+    <!-- 下一步 -->
+    <string name="next">下一步 </string>
+    <!-- 提交 -->
+    <string name="submit">提交 </string>
+    <!-- 保存 -->
+    <string name="save">保存 </string>
+    <!-- 跳过 -->
+    <string name="skip">跳过 </string>
+    <!-- ====================================================常用(commonly)==================================================== -->
+
+
+    <!-- ====================================================页面标题名字(Activity title name)==================================================== -->
+    <!-- 活动 -->
+    <string name="activity_name">活动</string>
+    <!-- 可用余额 -->
+    <string name="available_balance_name">可用余额</string>
+    <!-- 收益详情 -->
+    <string name="earnings_details_name">收益详情</string>
+    <!-- 体验金 -->
+    <string name="experience_money_name">体验金</string>
+    <!-- 立即获取体验金 -->
+    <string name="acquire_experience_money_name">立即获取体验金</string>
+    <!-- 登陆 -->
+    <string name="login_name">登录</string>
+    <!-- 转入 -->
+    <string name="into_name">转入</string>
+    <!-- 立即转入 -->
+    <string name="into_now">立即转入</string>
+    <!-- 消息 -->
+    <string name="message_name">消息</string>
+    <!-- 我的投资 -->
+    <string name="my_investment_name">我的投资</string>
+    <!-- 注册 -->
+    <string name="register_name">注册</string>
+    <!-- 转出 -->
+    <string name="roll_out_name">转出</string>
+    <!-- 零钱罐服务 -->
+    <string name="service_name">零钱罐服务</string>
+    <!-- 关于零钱罐 -->
+    <string name="about_lqg">关于零钱罐</string>
+    <!-- 设置 -->
+    <string name="seting_name">设置</string>
+    <!-- 充值 -->
+    <string name="top_up_name">充值</string>
+    <!-- 福利卡券 -->
+    <string name="welfare_cord_quan">福利卡券</string>
+    <!-- 失效卡券 -->
+    <string name="failure_welfare_cord_quan">失效卡券</string>
+    <!-- 绑定银行卡 -->
+    <string name="top_up_bind_bank_name">绑定银行卡</string>
+    <!-- 总资产 -->
+    <string name="total_assets_name">总资产</string>
+    <!-- 修改密码 -->
+    <string name="user_amend_password_name">修改密码</string>
+    <!-- 密码忘记 -->
+    <string name="user_forget_password_name">密码忘记</string>
+    <!-- 密码设置 -->
+    <string name="user_set_password_name">密码设置</string>
+    <!-- 重新设置密码 -->
+    <string name="user_password_rese_name">重新设置密码</string>
+    <!-- 安全验证 -->
+    <string name="user_security_verify">安全验证</string>
+    <!-- 设置支付密码 -->
+    <string name="user_set_pay_password_name">设置支付密码</string>
+    <!-- 提现 -->
+    <string name="withdrawal_name">提现</string>
+    <!-- 提现 -->
+    <string name="creditor_transfer">债权转让及受让协议</string>
+
+
+
+    <!-- 提现金额 -->
+    <string name="withdrawal_money">提现金额</string>
+    <!-- 定期标投资金额 -->
+    <string name="bill_investment_money">定期标投资金额</string>
+    <!-- 收益 -->
+    <string name="income">收益</string>
+    <!-- 获得体验金 -->
+    <string name="get_experience">获得体验金</string>
+
+
+
+    <!-- 填写验证码 -->
+    <string name="verification_code_name">填写验证码</string>
+    <!-- 修改头像 -->
+    <string name="head_amend_name">我的</string>
+    <!-- 我的银行卡 -->
+    <string name="my_bank_name">我的银行卡</string>
+    <!-- 身份证验证 -->
+    <string name="id_card_verify_name">身份证验证</string>
+    <!-- 绑定银行卡 -->
+    <string name="band_bank_name">绑定银行卡</string>
+    <!-- 更换银行卡 -->
+    <string name="change_bank_name">更换银行卡</string>
+    <!-- 更换手机号 -->
+    <string name="change_phone_number_name">更换手机号</string>
+    <!-- 更换手机号码 -->
+    <string name="change_phone_number_code_name">更换手机号码</string>
+    <!-- 用户反馈 -->
+    <string name="user_feed_back_name">用户反馈</string>
+    <!-- 邀请有奖 -->
+    <string name="share_lqg_name">邀请有奖</string>
+    <!-- 昵称 -->
+    <string name="nick_name_name">昵称</string>
+    <!-- 开户行所在地 -->
+    <string name="bank_address_name">开户行所在地</string>
+    <!-- 选择城市 -->
+    <string name="select_bank_city_name">选择城市</string>
+    <!-- 收益计算器 -->
+    <string name="earnings_calculator_name">收益计算器</string>
+    <!-- 设置手势密码 -->
+    <string name="gesture_edit_name">设置手势密码</string>
+    <!-- 绘制解锁密码 -->
+    <string name="gesture_verify_name">绘制解锁密码</string>
+     <!-- 签到 -->
+    <string name="sign_in_name">签到</string>
+     <!-- 账单 -->
+    <string name="bill_name">账单</string>
+      <!-- 账单详情 -->
+    <string name="bill_details_name">账单详情</string>
+    <!-- 投资详情 -->
+    <string name="investment_details_name">投资详情</string>
+    <!-- 投资明细 -->
+    <string name="investment_mingxi_name">投资明细</string>
+    <!-- 投资金额 -->
+    <string name="investment_money">投资金额</string>
+
+    <!-- ====================================================页面标题名字(Activity title name)==================================================== -->
+
+
+    <!-- ====================================================底部导航条(navigation bar)==================================================== -->
+    <!-- 首页 -->
+    <string name="home_page_name">首页</string>
+    <!-- 零钱宝 -->
+    <string name="lqb_name">零钱宝</string>
+    <!-- 投资 -->
+    <string name="investment_name">投资</string>
+    <!-- 我 -->
+    <string name="me_name">我</string>
+    <!-- ====================================================底部导航条(navigation bar)==================================================== -->
+
+
+    <!-- 对图片控件的描述 -->
+    <string name="contentDescription">如同它的名字一样</string>
+
+    <!-- ====================================================首页(HomePageFragment)==================================================== -->
+    <string name="novice_enjoy">新手专享</string>
+    <!-- 我的账单 -->
+    <string name="main_my_bill">我的账单</string>
+    <!-- 立即签到 -->
+    <string name="main_sign_in">立即签到</string>
+    <!-- 常见问题 -->
+    <string name="main_problem">常见问题</string>
+    <!-- 联系我们 -->
+    <string name="main_contact_us">联系我们</string>
+    <!-- 退出 -->
+    <string name="main_exit">退出</string>
+    <!-- 充值 -->
+    <string name="home_top_up">充值</string>
+    <!-- 提现 -->
+    <string name="home_withdrawal">提现</string>
+    <!-- 总资产 -->
+    <string name="home_total_assets">总资产</string>
+    <!-- 可用余额 -->
+    <string name="home_available_balance">可用余额</string>
+    <!-- 零钱罐 -->
+    <string name="home_lqg">零钱罐 </string>
+    <!-- 零钱罐 -->
+    <string name="home_lqg_dqb">零钱罐定期标 </string>
+    <!-- 投资 -->
+    <string name="home_investment">定期标</string>
+    <!-- 零钱宝 -->
+    <string name="home_lqb">零钱宝</string>
+    <!-- 体验金 -->
+    <string name="home_experience_money">体验金</string>
+    <!-- 新手活动 -->
+    <string name="home_user_action">新手活动</string>
+    <!-- 主页标题 -->
+    <string name="home_title">零钱罐</string>
+    <!-- 预计明日收益 -->
+    <string name="expect_tomorrow_income">预计明日收益</string>
+
+    <!-- ====================================================首页(HomePageFragment)==================================================== -->
+
+
+    <!-- ====================================================我(MeFragment)==================================================== -->
+    <string name="me_assets">我的资产</string>
+    <string name="me_activity">活动</string>
+    <string name="me_messgae">消息</string>
+    <string name="me_risk_assessment">风险评测</string>
+    <string name="me_lqg_service">零钱罐服务</string>
+    <string name="me_about_lqg">关于零钱罐</string>
+    <string name="me_lqg_kefu">我的客服</string>
+    <string name="me_lqg_share">邀请好友</string>
+    <string name="me_lqg_setting">设置</string>
+    <string name="me_lqg_assets">资金记录</string>
+    <string name="me_lqg_fuli_card">福利卡券</string>
+    <!--增加下划线-->
+    <string name="me_login_register">登录/注册</string>
+    <!-- ====================================================我(MeFragment)==================================================== -->
+
+
+    <!-- ==================================================== 设置(SetTing)==================================================== -->
+    <string name="set_login_phone">登录手机号码</string>
+    <string name="set_login_password">登录密码</string>
+    <string name="set_pay_set">支付设置</string>
+    <string name="set_notify">通知设置</string>
+    <string name="set_gestures_password">手势密码</string>
+    <string name="set_gestures_track">手势轨迹</string>
+    <string name="set_voice">声音</string>
+    <string name="set_version_update">版本更新</string>
+    <string name="set_download">应用市场下载</string>
+    <string name="set_exit">退出登录</string>
+    <!-- ==================================================== 设置(SetTing)==================================================== -->
+
+    <!-- ==================================================== 通知设置(SetTing)==================================================== -->
+    <string name="notify_activity">活动消息推送</string>
+    <string name="notify_dq">到期还款推送</string>
+    <string name="notify_income">每日收益推送</string>
+    <string name="notify_tyj">体验金到账提醒</string>
+
+    <!-- ==================================================== 通知设置(SetTing)==================================================== -->
+
+
+    <!-- ====================================================服务(SetTing)==================================================== -->
+
+    <string name="ser_common_problems">常见问题</string>
+    <string name="ser_user_feedback">用户反馈</string>
+    <string name="ser_about_us">关于我们</string>
+    <string name="ser_lqg_wx">零钱罐微信</string>
+    <string name="ser_lqg_wb">零钱罐微博</string>
+    <string name="ser_hot_line">客服热线</string>
+    <string name="ser_time">工作日9:00-18:30</string>
+
+    <!-- ====================================================服务(SetTing)==================================================== -->
+
+
+    <!-- ====================================================支付密码(payPas)==================================================== -->
+    <string name="pay_prompt">根据自身情况选择以下一种方式进行验证</string>
+    <string name="pay_forget_pas">忘记支付密码</string>
+    <string name="pay_amend_pas">修改支付密码</string>
+
+    <!-- ====================================================支付密码(payPas)==================================================== -->
+
+
+    <!-- ====================================================密码(payPas)==================================================== -->
+    <string name="pas_prompt">根据自身情况选择以下一种方式进行验证</string>
+    <string name="pas_login_password">通过登录密码验证</string>
+    <string name="pas_phone_sms">通过手机短信验证</string>
+    <!-- ====================================================密码(payPas)==================================================== -->
+
+
+    <!-- ====================================================安全验证( security_verify)==================================================== -->
+    <string name="sec_prompt">请输入新的登录密码</string>
+    <string name="sec_show_pas">显示密码</string>
+    <string name="sec_hide_pas">隐藏密码</string>
+
+    <!-- ====================================================安全验证( security_verify)==================================================== -->
+
+
+    <!-- ====================================================填写短信验证码==================================================== -->
+    <string name="ver_prompt">短信验证码已发送到你的手机</string>
+
+    <!-- ====================================================填写短信验证码==================================================== -->
+
+
+    <!-- ====================================================头像==================================================== -->
+    <string name="head_head">头像</string>
+    <string name="head_nickname">昵称</string>
+    <string name="head_bank">银行卡</string>
+    <!-- ====================================================头像==================================================== -->
+
+
+    <!-- ====================================================我的银行卡(绑定银行卡)==================================================== -->
+    <string name="bank_obligate_phone">银行预留手机号码</string>
+    <string name="bank_open_account_address">开户行所在地</string>
+    <string name="bank_open_account_bank">开户支行</string>
+    <string name="bank_change_bank">更换银行卡</string>
+    <string name="bank_prompt">更换银行卡、银行预留手机号码，请点击【APP-我-我的客服-在线客服】常见问题查看更换流程；如有疑问请联系零钱罐客服400-668-5753。</string>
+    <string name="bbank_open_account_bank">开户支行:</string>
+    <string name="bbank_obligate_phone">预留手机号:</string>
+    <string name="bbank_number">银行卡号:</string>
+    <string name="bbank_open_account_name">开户名字:</string>
+    <string name="bbank_id_card">身份证号码:</string>
+    <string name="bbank_open_account_address">开户省市:</string>
+    <string name="bbank_immediately">立即绑定</string>
+    <string name="bank_hint_message">根据国家相关政策法规，投资用户年龄应在18周岁以上70周岁以下。</string>
+    <string name="bank_hint_msm">短信验证码:</string>
+    <!-- ====================================================我的银行卡(绑定银行卡)==================================================== -->
+
+
+    <!-- ====================================================更换手机号码(change_phone_number)==================================================== -->
+
+    <string name="change_prompt">你现在的手机号码为</string>
+    <string name="change_prompt1">更换后下次登录使用的新号码</string>
+    <!-- ====================================================更换手机号码(change_phone_number)==================================================== -->
+
+
+    <!-- ====================================================身份证验证==================================================== -->
+    <string name="id_card_name">真实姓名</string>
+    <string name="id_card_id_card">身份证号</string>
+    <string name="id_card_get">点击获取</string>
+    <string name="id_card_up_name">请输入你身份证上的名字</string>
+    <string name="id_card_number">请输入你的身份证号</string>
+
+    <!-- ====================================================身份证验证)==================================================== -->
+
+
+    <!-- ====================================================总资产==================================================== -->
+    <string name="tota_available_balance">可用余额</string>
+    <string name="tota_lqb">零钱宝</string>
+    <string name="tota_dqb">定期标</string>
+    <string name="tota_xsb">新手标</string>
+    <string name="tota_licai_plan">周周升</string>
+    <string name="tota_money_scatter">资金分布</string>
+
+    <!-- ====================================================总资产==================================================== -->
+
+
+    <!-- ====================================================登录页面==================================================== -->
+    <string name="login_input_phone">请输入您的手机号</string>
+    <string name="login_input_invatation_code">请输入邀请码(选填)</string>
+    <string name="login_input_pas">请输入您的密码</string>
+    <string name="login_forget_password">忘记密码?</string>
+    <string name="login_switch_account">切换账号</string>
+
+    <!-- ====================================================登录页面==================================================== -->
+
+
+    <!-- 手势锁的 -->
+    <!-- Gesture code starting -->
+    <string name="setup_gesture_code">设置手势密码</string>
+    <string name="setup_gesture_pattern">绘制解锁图案</string>
+    <string name="setup_gesture_pattern_again">再次绘制解锁图案</string>
+    <string name="forget_gesture_code">忘记手势密码?</string>
+    <string name="use_other_account_login">用其他账号登录</string>
+    <string name="set_gesture_pattern">绘制解锁图案</string>
+    <string name="reset_gesture_code">重新绘制</string>
+    <!-- End -->
+    <!-- 手势锁的 -->
+
+
+    <!-- 提示语 -->
+    <!-- 注册界面 -->
+    <string name="phone_null">手机号码不能为空哦</string>
+    <string name="phone_error">手机号码格式不正确，请重新输入一下吧~</string>
+    <string name="picture_verification_null">图形验证码不可以为空哦</string>
+    <string name="picture_verification_error">图形验证码必须正确输入</string>
+
+    <!-- 短信验证码界面 -->
+    <string name="sms_verification_null">短信验证码不能为空哦</string>
+    <string name="sms_verification_error">短信验证码不对哦，再输入一次啦</string>
+
+    <!-- 充值界面 -->
+    <string name="recharge_gt_100">充值金额超过100元就可以啦</string>
+
+    <!-- 绑卡界面 -->
+    <string name="bank_card_null">记得填写卡号哦</string>
+    <string name="bank_identity_card_null">记得填写身份证号哦</string>
+    <string name="bank_phone_null">记得填写银行预留手机号哦</string>
+    <string name="bank_address_null">记得填写开户行所在地哦</string>
+    <string name="bank_branch_name_null">记得填写银行名称哦</string>
+    <string name="bank_name_null">记得填写开户支行哦</string>
+    <string name="bank_people_name_null">记得填写持卡人姓名哦</string>
+    <string name="account_password_null">账号或密码为空</string>
+    <string name="password_error">你的密码输错啦，再来一次哦</string>
+    <string name="password_null">请输入密码</string>
+    <string name="password_format_error">请输入8-16位数字和字母组合的密码</string>
+    <string name="verify_success">验证成功</string>
+    <!--周周升预约-->
+    <string name="licai_plan_subscribe_yuyue">大满罐计划</string>
+    <string name="licai_plan_subscribe_yuyue_content">为提升用户安全投资,安心获益.零钱罐特推出计划类理财工具.该工具将有效提升资金的投资效率和流动性。</string>
+    <string name="licai_plan_subscribe_yuyue_success">恭喜,抢到了!</string>
+    <string name="licai_plan_subscribe_yuyue_success_content">大满罐计划将您在投的长期资金进行智能分配实现分散投资，并奖励您体验金与加息福利。</string>
+    <string name="licai_plan_detail_bottom_content">本产品最终解释权归零钱罐所有</string>
+
+    <!-- 网络加载对话框文字 -->
+    <string name="loading_dialog_content">正在加载哟</string>
+
+    <!-- 未绑卡点击提现弹出对话框中显示的 -->
+    <string name="no_card_withdraw_cash_title">您还未绑卡</string>
+    <string name="no_card_withdraw_cash_content">充值绑卡了才可以提现哦</string>
+
+    <!-- 转入界面 -->
+    <string name="shift_to_money_null">转入金额不能为空哟</string>
+    <string name="shift_to_money_le_100">转入金额加上零钱宝已有金额小于100是没有收益的哦</string>
+
+    <!-- 转出界面 -->
+    <string name="roll_out_money_null">转出金额不能为空哦</string>
+
+    <!-- 选择头像时 -->
+    <string name="please_select_head_portrait">记得挑一个喜欢的头像哦</string>
+
+    <!-- 提示语 -->
+
+</resources>

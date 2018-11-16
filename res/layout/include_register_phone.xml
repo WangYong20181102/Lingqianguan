@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wtjr.lqg.widget.RegistreLinerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_register_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d26"
+        android:layout_marginTop="@dimen/d26"
+        android:text="手机号码将成为您的登录账号"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s15"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d14">
+
+        <com.wtjr.lqg.widget.LineEditTextPhone
+            android:id="@+id/lineEditTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_show_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d40"
+        android:textColor="@color/FC_FF9900"
+        android:textSize="@dimen/s24"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wtjr.lqg.widget.LineEditTextInvitationCode
+            android:id="@+id/lineEditTextInvatation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_phone_next"
+        style="@style/buttonStyle_1"
+        android:layout_marginTop="@dimen/d24"
+        android:enabled="false"
+        android:text="下一步"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d25"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击“下一步”，即表示你同意"
+            android:textColor="@color/FC_999999"
+            android:textSize="@dimen/s13"/>
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《零钱罐服务协议》"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s13"/>
+    </LinearLayout>
+
+</com.wtjr.lqg.widget.RegistreLinerLayout>

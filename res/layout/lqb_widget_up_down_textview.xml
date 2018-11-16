@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lqb_linear"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/d75"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_lqb_icon"
+        android:layout_width="@dimen/d45"
+        android:layout_height="@dimen/d45"
+        android:layout_gravity="center"
+        android:padding="@dimen/d12"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.wtjr.lqg.widget.risenumber.RiseNumberTextView
+            android:id="@+id/tv_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:includeFontPadding="false"
+            android:text="TextViewTextView" />
+    </LinearLayout>
+
+
+</LinearLayout>

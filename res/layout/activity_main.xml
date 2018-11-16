@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff0000">
+
+            <LinearLayout
+                android:id="@+id/fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/main_foot_layout"
+                android:background="@color/color_app_bg"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_foot_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d55"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
+
+                <!-- 导航条 -->
+
+                <include layout="@layout/activity_main_foot" />
+            </LinearLayout>
+
+            <!--<View-->
+            <!--android:id="@+id/v_home_shade"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#80000000"-->
+            <!--android:clickable="true"-->
+            <!--android:visibility="gone" />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_cover_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ViewStub
+                    android:id="@+id/vs_guide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inflatedId="@+id/guide_1"
+                    android:layout="@layout/vs_novice_guide1"
+                    android:visibility="gone" />
+
+                <ViewStub
+                    android:id="@+id/vs_guide2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inflatedId="@+id/guide_2"
+                    android:layout="@layout/vs_novice_guide2"
+                    android:visibility="gone" />
+
+                <ViewStub
+                    android:id="@+id/vs_guide2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inflatedId="@+id/guide_2_1"
+                    android:layout="@layout/vs_novice_guide2_1"
+                    android:visibility="gone" />
+
+                <ViewStub
+                    android:id="@+id/vs_guide4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inflatedId="@+id/guide_4_1"
+                    android:layout="@layout/vs_novice_guide4"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ViewStub
+                android:id="@+id/vs_guide5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inflatedId="@+id/guide_5"
+                android:layout="@layout/vs_novice_guide5"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_cover_ad_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/novice_guide_ad"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/iv_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d354"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true">
+
+                </android.support.v4.view.ViewPager>
+                <LinearLayout
+                    android:id="@+id/ll_home_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d15"
+                    android:layout_below="@+id/iv_ad"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/bt_close"
+                    android:layout_width="@dimen/d30"
+                    android:layout_height="@dimen/d30"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/iv_ad"
+                    android:layout_marginTop="@dimen/d46"
+                    android:src="@drawable/x"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

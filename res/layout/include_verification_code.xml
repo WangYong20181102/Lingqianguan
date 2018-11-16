@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 活动页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d18"
+        android:gravity="center"
+        android:text="@string/ver_prompt"
+        android:textColor="@color/FC_999999"
+        android:textSize="@dimen/s11" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d38"
+        android:gravity="center"
+        android:text="12345679810"
+        android:layout_marginBottom="@dimen/d20"
+        android:textColor="@color/FC_666666"
+        android:textSize="@dimen/s15" />
+
+    <include layout="@layout/include_sms_count_down" />
+
+    <Button
+        android:id="@+id/bt_determine"
+        style="@style/buttonStyle_2"
+        android:layout_marginTop="@dimen/d20"
+        android:text="@string/determine" />
+
+</LinearLayout>

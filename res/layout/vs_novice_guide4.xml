@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/novice_guide_bg"
+    android:orientation="vertical" >
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/view_guide4_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d66" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="@dimen/d195"
+                android:layout_height="@dimen/d195"
+                android:src="@drawable/guide_bg2" />
+
+            <com.wtjr.lqg.widget.wave.WaveView
+                android:id="@+id/wave_circle2"
+                android:layout_width="@dimen/d195"
+                android:layout_height="@dimen/d195" />
+
+            <LinearLayout
+                android:layout_width="@dimen/d195"
+                android:layout_height="@dimen/d195"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d80" />
+
+                <TextView
+                    android:id="@+id/tv_nhsy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="年化收益(%)"
+                    android:textColor="#FA7F27"
+                    android:textSize="@dimen/s15" />
+
+                <TextView
+                    android:id="@+id/guide_page_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="7.00"
+                    android:textColor="#FA7F27"
+                    android:textSize="@dimen/s45" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/d5"
+                    android:layout_marginTop="@dimen/d5"
+                    android:src="@drawable/image_guide2_2" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d20"
+        android:paddingRight="@dimen/d20" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_guide2_close"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="零钱宝的收益每周都会上涨"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s18" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.5"
+                    android:textColor="@color/FC_FA8C1E"
+                    android:textSize="@dimen/s18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%，可达"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s18" />
+
+                <TextView
+                    android:id="@+id/guide_page_big_earning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.88"
+                    android:textColor="@color/FC_FA8C1E"
+                    android:textSize="@dimen/s18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s18" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_guide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d25"
+        android:background="@drawable/image_guide2_4"
+        android:text="朕知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s18" />
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/card_quan_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d130"
+        android:layout_marginLeft="@dimen/d11"
+        android:layout_marginRight="@dimen/d11"
+        android:layout_marginTop="@dimen/d12"
+        android:background="@drawable/card_quan_failure"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/d15"
+            android:paddingRight="@dimen/d15">
+
+            <TextView
+                android:id="@+id/card_quan_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/d20"
+                android:text="¥2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/s40"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d14"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/card_quan_withdraw_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现券"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/s24"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/card_quan_will_expire_image"
+                    android:layout_width="@dimen/d65"
+                    android:layout_height="@dimen/d20"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:src="@drawable/crad_quan_will_expire"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayout1"
+                android:layout_marginTop="@dimen/d11"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="@dimen/d5"
+                        android:layout_height="@dimen/d5"
+                        android:background="@drawable/card_quan_point" />
+
+                    <TextView
+                        android:id="@+id/card_quan_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单笔投资"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/d3"
+                        android:textSize="@dimen/s13" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/card_quan_linear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible">
+                    <View
+                        android:layout_width="@dimen/d5"
+                        android:layout_height="@dimen/d5"
+                        android:background="@drawable/card_quan_point" />
+
+                    <TextView
+                        android:id="@+id/card_quan_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单笔投资"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/d3"
+                        android:textSize="@dimen/s13" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d35"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:id="@+id/card_quan_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期"
+                    android:textSize="@dimen/s13"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/card_quan_go_investment_image"
+                android:layout_width="@dimen/d75"
+                android:layout_height="@dimen/d26"
+                android:src="@drawable/card_quan_go_investment"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d10"
+                android:visibility="invisible"/>
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/card_quan_already_failure_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_quan_already_failure"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d19"
+                android:layout_marginBottom="@dimen/d17"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

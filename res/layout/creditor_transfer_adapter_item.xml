@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.AboutLQGLayoutItem
+        android:id="@+id/tv_creditor_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50" />
+
+    <View style="@style/line_h6"
+        android:id="@+id/creditor_transfer_line"
+        android:layout_marginLeft="@dimen/d15"/>
+</LinearLayout>

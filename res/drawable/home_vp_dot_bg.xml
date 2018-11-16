@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_yellow" android:state_enabled="true">
+        <!--<shape>-->
+            <!--;<solid android:color="@color/FC_FCC51D"/>-->
+            <!--<corners android:radius="@dimen/d10"/>-->
+        <!--</shape>-->
+    </item>
+    <item android:drawable="@drawable/ic_gray" android:state_enabled="false">
+        <!--<shape>-->
+            <!--<solid android:color="@color/FC_DADADA"/>-->
+            <!--<corners android:radius="@dimen/d10"/>-->
+        <!--</shape>-->
+    </item>
+</selector>

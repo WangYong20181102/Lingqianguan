@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_investment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/investment_dingqi_bg">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_bid_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/d23"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="零钱宝小存钱罐"
+            android:textColor="@color/FC_414141"
+            android:textSize="@dimen/s12" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_lilv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d5"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bid_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="13.00"
+                        android:textColor="@color/FC_FF6021"
+                        android:textSize="@dimen/s33" />
+
+                    <TextView
+                        android:id="@+id/tv_per_cen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d1"
+                        android:text="%"
+                        android:textColor="@color/FC_FF6021"
+                        android:textSize="@dimen/s18" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_add_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/linearlayout"
+                    android:text="+0.2%"
+                    android:textColor="@color/FC_FF6021"
+                    android:textSize="@dimen/s11"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="历史年化"
+                android:textColor="@color/FC_C9A670"
+                android:textSize="@dimen/s10" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

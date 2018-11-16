@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_dialog_shape_state">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/d30"
+        android:layout_height="@dimen/d30"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/d5"
+        android:padding="@dimen/d8"
+        android:src="@drawable/close"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d10"
+            android:gravity="center"
+            android:text="请选择转入方式"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s18"/>
+
+        <!-- <LinearLayout -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginBottom="@dimen/d15" -->
+        <!-- android:gravity="center" -->
+        <!-- android:orientation="horizontal" > -->
+
+
+        <!-- <TextView -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:visibility="gone" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:drawableLeft="@drawable/common_img_sunshine" -->
+        <!-- android:drawablePadding="@dimen/d5" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="账户资产安全由月光保险保障" -->
+        <!-- android:textColor="@color/FC_5A6166" -->
+        <!-- android:textSize="@dimen/s14" /> -->
+        <!-- </LinearLayout> -->
+
+        <View style="@style/line"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_balance_shiftTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d10"
+            android:paddingLeft="@dimen/d12"
+            android:paddingTop="@dimen/d10">
+
+            <TextView
+                android:id="@+id/tv_shiftToBalanceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额转入"
+                android:textColor="@color/FC_FF8D6A"
+                android:textSize="@dimen/s15"/>
+
+            <TextView
+                android:id="@+id/tv_shiftToBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shiftToBalanceTitle"
+                android:layout_marginTop="@dimen/d5"
+                android:text="余额100.00"
+                android:textColor="@color/FC_333333"
+                android:textSize="@dimen/s13"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_balance_shiftTo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View style="@style/line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/d10"
+                android:paddingLeft="@dimen/d12"
+                android:paddingTop="@dimen/d10">
+
+                <TextView
+                    android:id="@+id/tv_shiftTotyjTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="体验金转入"
+                    android:textColor="@color/FC_FF8D6A"
+                    android:textSize="@dimen/s15"/>
+
+                <TextView
+                    android:id="@+id/tv_shiftToBalance2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shiftTotyjTitle"
+                    android:layout_marginTop="@dimen/d5"
+                    android:text="余额100.00"
+                    android:textColor="@color/FC_333333"
+                    android:textSize="@dimen/s13"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d60"
+            android:orientation="vertical">
+
+            <View style="@style/line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/d12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="银行卡转入"
+                    android:textColor="@color/FC_FF8D6A"
+                    android:textSize="@dimen/s15"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

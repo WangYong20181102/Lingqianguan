@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 对话框左侧按钮 -->
+    <!-- 点击时候的颜色 -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+
+            <corners android:bottomLeftRadius="@dimen/d10"/>
+
+            <!-- 这个是登录框输入时候的透明度 -->
+            <solid android:color="@android:color/white"/>
+            <!-- 设置圆角 -->
+        </shape>
+    </item>
+    <!-- 没有被点击时候的颜色 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="@dimen/d10"/>
+            <!-- 这个是登录框输入时候的透明度 -->
+            <solid android:color="#E3E3E3"/>
+
+            <!-- 设置圆角 -->
+        </shape>
+    </item>
+
+</selector>

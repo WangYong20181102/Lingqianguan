@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择头像的似对话框布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_set_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/round_dialog_shape_state"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/gv_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d20"
+                android:horizontalSpacing="@dimen/d10"
+                android:numColumns="3"
+                android:overScrollMode="never"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:verticalSpacing="@dimen/d20" >
+            </GridView>
+
+            <ImageButton
+                android:id="@+id/bt_yesSelect"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bt_head_select" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/iv_head_adorn" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="58dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/bt_head_close" />
+    </RelativeLayout>
+
+</FrameLayout>

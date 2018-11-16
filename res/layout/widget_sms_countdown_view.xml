@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/d96"
+    android:layout_height="@dimen/d40"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/rl_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" >
+
+        <com.wtjr.lqg.widget.RoundProgressBar
+            android:id="@+id/pb_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:roundColor="@color/FC_FF6434"
+            app:max="60"
+            app:roundProgressColor="#ffffff"
+            app:textIsDisplayable="false" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/pb_time"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="60&apos;" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_countdown"
+        style="@style/buttonStyle_1"
+        android:layout_height="@dimen/d25"
+        android:layout_centerVertical="true"
+        android:text="点击获取"
+        android:textSize="@dimen/s11"
+        />
+
+</RelativeLayout>

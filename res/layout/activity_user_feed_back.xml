@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/include_activity_title" />
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/FC_E5E5E5" >
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginBottom="@dimen/d10"
+            android:layout_marginRight="@dimen/d10"
+            android:layout_toLeftOf="@+id/btn_send_message"
+            android:background="@drawable/radio_select_btn_style"
+            android:hint="零钱罐，你吱唤"
+            android:maxLines="8"
+            android:padding="@dimen/d10"
+            android:textColorHint="@color/FC_CCCCCC"
+            android:textSize="@dimen/s15" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_send_message"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d15"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginBottom="@dimen/d10"
+            android:background="@drawable/chat_btn_send1"
+            android:text="发送"
+            android:textSize="@dimen/s14"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/include1"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal">
+    </ListView>
+
+</RelativeLayout>

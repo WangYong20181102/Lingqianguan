@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/d33"
+    android:layout_marginRight="@dimen/d48"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/ledt_input_invatation_code"
+        style="@style/editTextStyle"
+        android:digits="0123456798ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:drawableLeft="@drawable/invatation_state"
+        android:drawablePadding="@dimen/d15"
+        android:ems="10"
+        android:hint="@string/login_input_invatation_code"
+        android:inputType="text"
+        android:maxLength="6">
+    </EditText>
+
+    <View
+        android:id="@+id/v_et_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/d15"
+        android:background="@color/Line_Color"/>
+
+</LinearLayout>

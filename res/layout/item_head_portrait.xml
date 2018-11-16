@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.wtjr.lqg.widget.CircleImageView
+        android:id="@+id/iv_item_head_portrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        app:civ_border_color="@color/FC_CAN_SELECT"
+        app:civ_border_overlay="true"
+        app:civ_border_width="@dimen/d1" />
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/iv_item_head_portrait_select" -->
+    <!-- android:layout_width="20dp" -->
+    <!-- android:layout_height="20dp" -->
+    <!-- android:layout_alignBottom="@+id/iv_item_head_portrait" -->
+    <!-- android:layout_alignRight="@+id/iv_item_head_portrait" -->
+    <!-- android:src="@drawable/item_head_portrait_select" -->
+    <!-- android:visibility="gone" -->
+    <!-- /> -->
+
+</RelativeLayout>

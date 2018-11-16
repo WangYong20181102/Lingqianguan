@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按钮背景图片 -->
+    <!-- 点击时候的颜色 -->
+    <item android:state_pressed="false"><shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+
+            <corners android:radius="5dp" />
+            <!-- 设置圆角 -->
+        </shape></item>
+
+    <!-- 没有被点击时候的颜色 -->
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <solid android:color="@color/color_app_bg" />
+
+            <corners android:radius="5dp" />
+            <!-- 设置圆角 -->
+        </shape></item>
+
+</selector>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_dialog_shape_state" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d15"
+            android:gravity="center"
+            android:text="选择投标方式"
+            android:textSize="@dimen/s18" />
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:id="@+id/ll_balance_shiftTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d10"
+            android:paddingLeft="@dimen/d12"
+            android:paddingTop="@dimen/d10" >
+
+            <TextView
+                android:id="@+id/tv_shiftToBalanceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="零钱宝投标"
+                android:textColor="@color/FC_FF8D6A"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:id="@+id/tv_lqgBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shiftToBalanceTitle"
+                android:layout_marginTop="@dimen/d10"
+                android:text="余额100.00"
+                android:textColor="@color/FC_333333"
+                android:textSize="@dimen/s14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/naving_next_nor" />
+        </RelativeLayout>
+
+        <View style="@style/line" />
+
+        <RelativeLayout
+            android:id="@+id/ll_balance_shiftTo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/d10"
+            android:paddingLeft="@dimen/d12"
+            android:paddingTop="@dimen/d10" >
+
+            <TextView
+                android:id="@+id/tv_useMoneyBalanceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用余额投标"
+                android:textColor="@color/FC_FF8D6A"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:id="@+id/tv_useMoneyBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_useMoneyBalanceTitle"
+                android:layout_marginTop="@dimen/d10"
+                android:text="余额0.00"
+                android:textColor="@color/FC_333333"
+                android:textSize="@dimen/s14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/naving_next_nor" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/d30"
+        android:layout_height="@dimen/d30"
+        android:padding="@dimen/d8"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/d8"
+        android:src="@drawable/dialog_close" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 加载html页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_cont"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_act_cont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_activity_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:paddingLeft="@dimen/d18"
+                android:paddingRight="@dimen/d25"
+                android:src="@drawable/back2" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d50"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_noviceActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/head_activity_button_line"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="新手活动"
+                    android:textColor="@drawable/head_activity_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rb_dailyActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_weight="1"
+                    android:background="@drawable/head_activity_button_line"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="日常活动"
+                    android:textColor="@drawable/head_activity_text_color" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_new_mesg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_marginRight="@dimen/d35"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@drawable/yellow_prompt_dot_unit"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="@dimen/d3"-->
+        <!--android:text="new"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/s12"-->
+        <!--android:visibility="gone" />-->
+    </RelativeLayout>
+
+    <View style="@style/line" />
+
+    <com.wtjr.lqg.widget.ProgressWebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/no_data" />
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 不可点击时候的颜色 -->
+    <item android:drawable="@color/white" android:state_enabled="false"/>
+
+    <!-- 没有被点击时候的颜色 -->
+    <item android:drawable="@color/FC_FAFAFA" android:state_pressed="false"/>
+
+    <!-- 点击时候的颜色 -->
+    <item android:drawable="@color/FC_CCCCCC" android:state_pressed="true"/>
+
+</selector>

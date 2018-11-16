@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_picture"
+        android:layout_width="@dimen/d102"
+        android:layout_height="@dimen/d102"
+        android:padding="@dimen/d1"
+        android:background="@drawable/risk_message_picture_border" >
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/lingmeimei" />
+    </RelativeLayout>
+
+</LinearLayout>

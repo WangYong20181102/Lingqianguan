@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/d6"
+    android:paddingRight="@dimen/d6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d4"
+        android:layout_marginTop="@dimen/d7">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_licai_plan" />
+
+        <View
+            style="@style/line_h"
+            android:layout_height="@dimen/d10"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/d7"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d1"
+            android:background="@color/FC_FF6C50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="存取灵活，收益递增"
+            android:textColor="@color/FC_C9A670"
+            android:textSize="@dimen/s11" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_xsb"
+        layout="@layout/include_investment_card_licai_plan"
+        android:visibility="gone" />
+
+
+</LinearLayout>

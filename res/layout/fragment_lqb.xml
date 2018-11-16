@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 零钱宝碎片页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_lqb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffdc36"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 下拉刷新 -->
+
+        <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+            android:id="@+id/pullTo_refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 上头 -->
+
+            <include layout="@layout/allview_refresh_head" />
+
+            <!-- 上下分割两部风内容 -->
+
+            <com.wtjr.lqg.widget.F_ScrollViewContainer
+                android:id="@+id/scrollView_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_app_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <!-- 上部分 -->
+
+                <include layout="@layout/scl_v_lqb_up" />
+
+                <!-- 下部分 -->
+
+                <include layout="@layout/scl_v_lqb_down" />
+            </com.wtjr.lqg.widget.F_ScrollViewContainer>
+            <!-- 下头 -->
+
+            <include layout="@layout/allview_load_more" />
+        </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+
+        <include
+            layout="@layout/include_activity_title"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:id="@+id/rl_lqb_action"
+            android:layout_width="@dimen/d265"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@drawable/lqb_action_bg"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/image_action"
+                android:layout_width="@dimen/d18"
+                android:layout_height="@dimen/d18"
+                android:layout_marginLeft="@dimen/d14"
+                android:background="@color/transparent"
+                android:layout_marginTop="@dimen/d3.5"
+                android:src="@drawable/lqb_action_icon"/>
+            <ImageButton
+                android:id="@+id/image_down"
+                android:layout_width="@dimen/d18"
+                android:layout_height="@dimen/d18"
+                android:background="@color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/d3.5"
+                android:layout_marginRight="@dimen/d14"
+                android:src="@drawable/lqb_action_down_icon"/>
+            <TextView
+                android:id="@+id/tv_action_context1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d25"
+                android:layout_marginLeft="@dimen/d6"
+                android:layout_marginRight="@dimen/d6"
+                android:paddingTop="@dimen/d3.5"
+                android:layout_toRightOf="@+id/image_action"
+                android:layout_toLeftOf="@+id/image_down"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/s13"/>
+            <TextView
+                android:id="@+id/tv_action_context2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d6"
+                android:layout_marginRight="@dimen/d6"
+                android:layout_marginTop="@dimen/d3.5"
+                android:paddingBottom="@dimen/d3.5"
+                android:layout_toRightOf="@+id/image_action"
+                android:layout_toLeftOf="@+id/image_down"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/s13"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

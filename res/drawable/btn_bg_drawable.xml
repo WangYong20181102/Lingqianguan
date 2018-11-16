@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按钮背景图片 -->
+
+    <!-- 没激活时候的颜色 -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/FC_NO_SELECT"/>
+
+            <corners android:radius="@dimen/d45"/>
+            <!-- 设置圆角 -->
+        </shape>
+    </item>
+
+    <!-- 没有点击时候的颜色 -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/FC_CAN_SELECT"/>
+
+            <corners android:radius="@dimen/d45"/>
+            <!-- 设置圆角 -->
+        </shape>
+    </item>
+
+    <!-- 被点击时候的颜色 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+
+            <!-- 这个是登录框输入时候的透明度 -->
+            <solid android:color="@color/FC_FF8F00"/>
+
+            <corners android:radius="@dimen/d45"/>
+            <!-- 设置圆角 -->
+        </shape>
+    </item>
+
+</selector>

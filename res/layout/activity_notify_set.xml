@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/FC_F5F5F5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_marginTop="@dimen/d15"
+            android:background="@color/white">
+
+            <com.wtjr.lqg.widget.toggle.ToggleButton
+                android:id="@+id/tb_notify_activity"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d15"/>
+
+            <TextView
+                style="@style/TextNormalStyleL"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d15"
+                android:text="@string/notify_activity"/>
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:background="@color/white">
+
+            <com.wtjr.lqg.widget.toggle.ToggleButton
+                android:id="@+id/tb_notify_dq"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d15"/>
+
+            <TextView
+                style="@style/TextNormalStyleL"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d15"
+                android:text="@string/notify_dq"/>
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_marginTop="@dimen/d15"
+            android:background="@color/white">
+
+            <com.wtjr.lqg.widget.toggle.ToggleButton
+                android:id="@+id/tb_notify_income"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d15"/>
+
+            <TextView
+                style="@style/TextNormalStyleL"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d15"
+                android:text="@string/notify_income"/>
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:background="@color/white">
+
+            <com.wtjr.lqg.widget.toggle.ToggleButton
+                android:id="@+id/tb_notify_tyj"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d15"/>
+
+            <TextView
+                style="@style/TextNormalStyleL"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d15"
+                android:text="@string/notify_tyj"/>
+
+            <View
+                style="@style/line"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_marginTop="@dimen/d10"
+            android:text="修改后大约在五分钟后生效"
+            android:textColor="@color/FC_999999"
+            android:textSize="@dimen/s10"/>
+
+    </LinearLayout>
+
+</LinearLayout>

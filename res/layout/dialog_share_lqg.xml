@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_yq"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_share_code"
+            android:layout_width="@dimen/d215"
+            android:layout_height="@dimen/d330"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:scaleType="fitCenter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/share_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d85"
+                    android:layout_marginLeft="@dimen/d21"
+                    android:layout_marginRight="@dimen/d22"
+                    android:layout_marginTop="@dimen/d20"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/share_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d45"
+                    android:layout_marginLeft="@dimen/d32"
+                    android:layout_marginRight="@dimen/d31"
+                    android:layout_marginTop="@dimen/d11"
+                    android:background="@drawable/share_2"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_yq_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d8"
+                        android:textColor="#ff3461"
+                        android:textSize="@dimen/s15" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="106dp"
+                    android:layout_height="107dp"
+                    android:layout_marginTop="@dimen/d12"
+                    android:background="@drawable/share_3">
+
+                    <ImageView
+                        android:id="@+id/iv_yq_code"
+                        android:layout_width="102dp"
+                        android:layout_height="103dp"
+                        android:layout_marginLeft="@dimen/d3"
+                        android:layout_marginTop="@dimen/d1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d25"
+                    android:layout_marginLeft="@dimen/d28"
+                    android:layout_marginRight="@dimen/d28"
+                    android:background="@drawable/share_4"
+                    android:layout_marginTop="@dimen/d10">
+
+                    <TextView
+                        android:id="@+id/share_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d7"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/s6" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_weixin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/weixin"
+                android:text="微信好友"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+
+            <Button
+                android:id="@+id/btn_weixin_circle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/weixin_circle"
+                android:text="朋友圈"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+
+            <Button
+                android:id="@+id/btn_Qzone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/zone"
+                android:text="QQ空间"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+
+            <Button
+                android:id="@+id/btn_qq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/qq"
+                android:text="腾讯QQ"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btn_sina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/sina"
+                android:text="新浪微博"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+
+            <Button
+                android:id="@+id/btn_copyurl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/share_copy"
+                android:text="复制链接"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

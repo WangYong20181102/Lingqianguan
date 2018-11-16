@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"/>
+
+    <include layout="@layout/include_activity_title" />
+
+    <!--     <include layout="@layout/include_pull_expandable_listview" /> -->
+
+    <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+        android:id="@+id/pullTo_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:refresh_head_text_color="@color/FC_CCCCCC">
+
+        <include layout="@layout/allview_refresh_head" />
+
+        <com.wtjr.lqg.widget.pullRefresh.PullableExpandableListView
+            android:id="@+id/pullable_Expandable_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_app_bg"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:gravity="center_horizontal"
+            android:groupIndicator="@null"
+            android:listSelector="#00ff00"
+            android:orientation="vertical"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/allview_load_more" />
+    </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+
+</LinearLayout>

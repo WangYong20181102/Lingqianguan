@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextNormalStyleL"
+                android:layout_width="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d16"
+                android:layout_weight="1"
+                android:text="@string/id_card_name" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                style="@style/editTextStyle"
+                android:layout_width="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_name"
+                android:layout_weight="2"
+                android:ems="10"
+                android:gravity="center|right"
+                android:hint="@string/id_card_up_name"
+                android:maxLength="30"
+                android:textCursorDrawable="@null" >
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_marginBottom="@dimen/d10"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/tv_id_card"
+                style="@style/TextNormalStyleL"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/d16"
+                android:layout_weight="1"
+                android:text="@string/id_card_id_card" />
+
+            <EditText
+                android:id="@+id/edt_id_card"
+                style="@style/editTextStyle"
+                android:layout_width="0dp"
+                android:layout_toRightOf="@+id/tv_id_card"
+                android:layout_weight="2"
+                android:ems="10"
+                android:gravity="center|right"
+                android:digits="0123456789xX"
+                android:hint="@string/id_card_number"
+                android:maxLength="18"
+                android:textCursorDrawable="@null" >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.LineEditTextSMS
+            android:id="@+id/lineEditTextSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/buttonStyle_2"
+            android:layout_marginTop="@dimen/d20"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</LinearLayout>

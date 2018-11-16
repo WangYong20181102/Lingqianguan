@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false" >
+
+    <!-- 用来表示消息的红色小圆点里面有数字的 -->
+    <solid android:color="#ff0000" />
+    <size
+        android:height="@dimen/d20"
+        android:width="@dimen/d20" />
+ 
+</shape>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_dialog_shape_state"
+            android:layout_marginTop="45dp">
+
+
+            <ImageView
+                android:id="@+id/pay_prompt_close"
+                android:layout_width="@dimen/d15"
+                android:layout_height="@dimen/d15"
+                android:src="@drawable/pay_prompt_close"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d15"
+                android:layout_marginTop="@dimen/d15"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/d20"
+                android:paddingTop="@dimen/d73">
+
+                <TextView
+                    android:id="@+id/tvm_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/d20"
+                    android:gravity="center"
+                    android:textColor="@color/FC_999999"
+                    android:textSize="@dimen/s15" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d140"
+                    android:layout_marginLeft="@dimen/d15"
+                    android:layout_marginRight="@dimen/d15"
+                    android:src="@drawable/payment_channels_icon" />
+
+                <Button
+                    android:id="@+id/bt_yesSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d45"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/d18"
+                    android:layout_marginRight="@dimen/d18"
+                    android:layout_marginTop="@dimen/d25"
+                    android:background="@drawable/btn_bg_drawable3"
+                    android:text="立即设置"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s17" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/d90"
+            android:layout_height="@dimen/d90"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kefu"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d2" />
+    </RelativeLayout>
+
+</LinearLayout>

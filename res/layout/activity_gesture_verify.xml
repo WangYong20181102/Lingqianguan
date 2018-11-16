@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_activity_title" />
+
+    <RelativeLayout style="@style/layout_bg"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="46dip"
+            android:layout_alignParentTop="true"
+            android:background="#000000"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/setup_gesture_code"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="取消"
+                android:textColor="#000000"
+                android:textSize="18sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/gesture_tip_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/d20" >
+
+            <com.wtjr.lqg.widget.CircleImageView
+                android:id="@+id/civ_headPicture"
+                android:layout_width="@dimen/d85"
+                android:layout_height="@dimen/d85"
+                android:layout_margin="2.5dp"
+                android:src="@drawable/qiurenshi"
+                app:civ_border_color="#fff000"
+                app:civ_border_overlay="true" />
+
+            <TextView
+                android:id="@+id/text_phone_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center_horizontal"
+                android:textColor="@color/FC_333333"
+                android:textSize="@dimen/s15" />
+
+            <TextView
+                android:id="@+id/text_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center_horizontal"
+                android:text="@string/set_gesture_pattern"
+                android:textColor="@color/FC_FF9900"
+                android:textSize="@dimen/s15" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_marginTop="@dimen/d5"
+            android:id="@+id/gesture_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gesture_tip_layout" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_forget_gesture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/d10"
+            android:layout_marginBottom="@dimen/d25"
+            android:gravity="center"
+            android:text="@string/forget_gesture_code"
+            android:textColor="@color/FC_333333"
+            android:textSize="@dimen/s13" />
+
+    </RelativeLayout>
+
+</LinearLayout>

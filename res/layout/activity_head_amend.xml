@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_app_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d75"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@drawable/layout_item_state" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/TextNormalStyleL"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/d16"
+                    android:text="@string/head_head" />
+
+                <ImageView
+                    android:id="@+id/image_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/d16"
+                    android:src="@drawable/naving_next_nor" />
+
+                <com.wtjr.lqg.widget.CircleImageView
+                    android:id="@+id/civ_head_picture"
+                    android:layout_width="@dimen/d50"
+                    android:layout_height="@dimen/d50"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/d7"
+                    android:layout_toLeftOf="@+id/image_next"
+                    android:src="@drawable/lingmeimei"
+                    app:civ_border_color="@color/Line_Color"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="@dimen/d1" />
+            </RelativeLayout>
+
+            <View style="@style/line" />
+
+            <com.wtjr.lqg.widget.UsuallyLayoutItem
+                android:id="@+id/uli_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:com_ImageLeftMarginL="@dimen/d1"
+                app:com_textTvContentL="@string/head_nickname"
+                app:com_textTvContentR="@string/lingmeimei"
+                app:com_textTvContentLMarginL="@dimen/d16"
+                app:com_textTvSizeL="@dimen/s16"
+                app:com_textTvSizeR="@dimen/s16" />
+
+
+            <com.wtjr.lqg.widget.UsuallyLayoutItem
+                android:id="@+id/uli_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                app:com_ImageContentrScrR="@drawable/ic_launcher"
+                app:com_textTvContentLMarginL="@dimen/d16"
+                app:com_ImageLeftMarginL="@dimen/d1"
+                app:com_textTvSizeL="@dimen/s16"
+                app:com_textTvContentL="@string/head_bank"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- 选择头像（似对话框布局） -->
+
+        <ViewStub
+            android:id="@+id/vs_set_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inflatedId="@+id/fl_set_head"
+            android:layout="@layout/dialog_lmm_head_portrait" />
+    </FrameLayout>
+
+</LinearLayout>

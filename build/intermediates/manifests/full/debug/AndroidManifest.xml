@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wtjr.lqg"
+    android:versionCode="32"
+    android:versionName="3.12" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
+
+    <!--
+       <instrumentation
+           android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.wtjr.lqg" >
+       </instrumentation>
+    -->
+
+
+    <!-- 添加广播权限 -->
+    <permission android:name="com.wtjr.lqg.receiver_permission" />
+    <!-- 添加极光推送权限 -->
+    <permission
+        android:name="com.wtjr.lqg.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.wtjr.lqg.receiver_permission" />
+
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 自动填写短信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <!-- 友盟分享需要的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- 极光推送SDK所需权限，与其他重复的已被删除 -->
+    <uses-permission android:name="com.wtjr.lqg.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <!-- 电源管理系统服务（为了保持线程一直执行） -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 8.0安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.wtjr.lqg.activities.LqgApplication"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这里需要配置自己QQ互联的AppID:tencentXXXXXX，和代码中保持一致 -->
+                <!-- tencent100424468 -->
+                <data android:scheme="tencent1105163229" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 智齿客服广播接收通知栏点击事件 -->
+        <receiver
+            android:name="com.wtjr.lqg.SobotReceiver.MySobotReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.sobot.chat.SobotReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <!-- *************************    分享相关的注册 START **************************** -->
+        <!-- 分享内容编辑页 -->
+
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+
+        <!-- 新浪微博 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 分享微信回调activity -->
+        <activity
+            android:name="com.wtjr.lqg.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- alipay callback -->
+        <!-- *************************    分享相关的注册 END **************************** -->
+        <!-- ===============================================友盟========================================================== -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56f23d7ee0f55a5dc80007e8" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="toutiao" />
+        <!-- ============================================================================================================== -->
+
+
+        <!-- ==========================================极光推送===================================================== -->
+
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!-- 如：android:process=":remote" -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.wtjr.lqg" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.wtjr.lqg.DataProvider"
+            android:exported="false" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.wtjr.lqg" />
+            </intent-filter>
+        </service>
+
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.wtjr.lqg.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.wtjr.lqg" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.wtjr.lqg" />
+            </intent-filter>
+        </activity>
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.wtjr.lqg.jpushReceiver.MyJpushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--
+     Required
+                用户注册SDK的intent
+                -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--
+     Required
+                用户接收SDK消息的intent
+                -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--
+     Required
+                 用户接收SDK通知栏信息的intent
+                -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!--
+     Required
+                 用户打开自定义通知栏的intent
+                -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!--
+ 接收网络变化 连接/断开
+                since 1.6.3
+                -->
+
+                <category android:name="com.wtjr.lqg" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal 6eb8028cc2320cf4016717e5 -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="6eb8028cc2320cf4016717e5" />
+        <!-- android:value="6232d40a8116e08a6d410bb5"/> -->
+
+
+        <!-- 7.0读写sd卡存储权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wtjr.lqg.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- ================================================================================================================== -->
+
+        <activity
+            android:name="com.wtjr.lqg.activities.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 启动 -->
+        <activity
+            android:name="com.wtjr.lqg.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarStyle" />
+
+        <!-- 测试页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.TestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 引导页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.GuideActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 引导页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.GuidePageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 可用余额 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.AvailableBalanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 收益详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.EarningsDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 体验金详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.TyjDetailsActivity1"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 有账号登录 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.HaveAcountsLoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 转入 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.IntoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 转出 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RollOutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 转入 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RollInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 登录页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 消息 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.MessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 投资 详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.InvestmentDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 新手标投资 详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.NewBorrowDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 注册页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 福利卡券 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WelfareCardVoucherActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 失效卡券 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WelfareCardVoucherFailureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 设置 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.SetingActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 通知设置 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.NotfiySetActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 充值页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RechargeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 充值绑定银行卡 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RechargeBindBankActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 更换银行卡 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangeBankCardActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 总资产 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.TotalAssetsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 债权转让 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.CreditorTransferActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 周周升投资详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.LiCaiPlanInvestmentDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 周周升 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WeekWeekUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 周周升项目详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WeekProjectDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 借款列表 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.BorrowingListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 待借款项目 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.BorrowingProjectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 我的银行卡 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.MyBankActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 用户修改密码 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordAmendActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 密码忘记界面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordForgetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 密码设置界面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordSetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 重新设置密码 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordResetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 登陆密码验证 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordVerifyLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 短信验证码验证 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PasswordVerificationCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 短信验证码验证(手机号码更改) -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangePhoneSMSVerifyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 设置支付密码页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PayPasswordSetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 支付密码重置页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PayPasswordResetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 支付设置页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PaySetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 支付设置页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PayThirdpartyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 找回支付密码 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PayBackPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 更换银行预留手机号 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangeBankObligatePhoneNumActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 修改头像 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.HeadAmendActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 加载html界面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WebViewActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <!-- 提现页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WithdrawalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 提现验证验证码页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WithdrawalSMSVerifyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 提现成功页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.WithdrawalSuccessActivity"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 填写验证码页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.BandBankVerificationCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 绑定银行卡 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.BandBankActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 零钱宝中的投资明细页面 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.LqbInvestmentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 浏览图片Activity -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RiskImagePagerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 更换手机号 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangePhoneNumberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 更换手机号码 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangePhoneNewNumberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 身份证验证 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.PayPasswordIdCardVerifyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 风控信息 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RiskMessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 还款计划 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.RefundPlanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 投资记录 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.InvestmentLogActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 我的投资 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.MyInvestmentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 开始投资 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.StartInvestmentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 用户反馈 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.UserFeedBackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 关于零钱罐 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.AboutLQGActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 昵称 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.NickNameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 选择银行省 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.SelectBankAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 选择银行城市 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.SelectBankCityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 创建手势锁 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.GestureEditActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 解除手势锁 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.GestureVerifyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 设置头像 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.HeadSetingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 使用稳通头像 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.HeadAmendWenTongActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 零钱宝的记录详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.LqbDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 剪切头像 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ClipHeadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 签到 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 账单详情 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.BillDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 网页版活动 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ActivityWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarStyle" />
+        <!-- 网页版活动 -->
+        <activity
+            android:name="com.wtjr.lqg.activities.ChangeRequestAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme" />
+        <activity
+            android:name="com.sobot.chat.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotSkillGroupActivity"
+            android:theme="@style/sobot_dialog_skill" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPostMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPhotoListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotCusFieldActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPostCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.sobot.chat.core.channel.SobotTCPServer"
+            android:exported="false"
+            android:label="SobotChatTCPServer" />
+        <service android:name="com.sobot.chat.server.SobotSessionServer" />
+    </application>
+
+</manifest>

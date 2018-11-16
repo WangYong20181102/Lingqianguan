@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false" >
+<!-- 主页零钱宝点-->
+    <solid android:color="@color/FC_FEDB40" />
+
+    <size
+        android:height="@dimen/d8"
+        android:width="@dimen/d8" />
+    <corners
+        android:radius="@dimen/d2"/>
+ 
+</shape>

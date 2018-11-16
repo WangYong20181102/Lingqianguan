@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+    <RelativeLayout
+        android:id="@+id/rl_licai"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_toLeftOf="@+id/ll_subscribe_open"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d15"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大满罐计划，抢先专享体验金和加息"
+                android:textSize="@dimen/s14"/>
+            <LinearLayout
+                android:id="@+id/ll_agree_xieyi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/d1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/open_account_agree_icon_yes" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d5"
+                    android:text="专享后即视为同意"
+                    android:textColor="@color/FC_C9A670"
+                    android:textSize="@dimen/s11" />
+
+                <TextView
+                    android:id="@+id/tv_user_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《周周升服务协议》"
+                    android:textColor="@color/FC_FFC62A"
+                    android:textSize="@dimen/s11" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/ll_subscribe_open"
+            android:layout_width="@dimen/d115"
+            android:layout_height="@dimen/d50"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="@dimen/d115"
+                android:layout_height="@dimen/d50"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_bg4"
+                android:enabled="true"
+                android:textSize="@dimen/s16" />
+
+            <LinearLayout
+                android:layout_width="@dimen/d115"
+                android:layout_height="@dimen/d50"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢先专享"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s16" />
+
+                <TextView
+                    android:id="@+id/tv_tyj_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s10" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/line"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include layout="@layout/include_pull_expandable_listview" />
+
+        <LinearLayout
+            android:id="@+id/ll_titleMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d38"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_marginRight="@dimen/d20"
+                    android:layout_marginTop="@dimen/d20"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_all"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="全部" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/d40"
+                        android:layout_marginLeft="@dimen/d20"
+                        android:layout_marginRight="@dimen/d20"
+                        android:layout_weight="2"
+                        android:button="@null"
+                        android:enabled="false" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:paddingLeft="@dimen/d20"
+                        android:paddingRight="@dimen/d20"
+                        android:text="支出"
+                        android:textColor="@color/FC_999999"
+                        android:textSize="@dimen/s14" />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d38"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_marginRight="@dimen/d20"
+                    android:layout_marginTop="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_withdraw"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="提现" />
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_investment"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d20"
+                        android:layout_marginRight="@dimen/d20"
+                        android:layout_weight="1"
+                        android:text="项目投资" />
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_shiftTo"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="转入零钱宝" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:paddingLeft="@dimen/d20"
+                        android:paddingRight="@dimen/d20"
+                        android:text="收入"
+                        android:textColor="@color/FC_999999"
+                        android:textSize="@dimen/s14" />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d38"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_marginRight="@dimen/d20"
+                    android:layout_marginTop="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_recharge"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="充值" />
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_repay"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d20"
+                        android:layout_marginRight="@dimen/d20"
+                        android:layout_weight="1"
+                        android:text="还本" />
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_earnings"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="收益" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d38"
+                    android:layout_marginBottom="@dimen/d20"
+                    android:layout_marginLeft="@dimen/d20"
+                    android:layout_marginRight="@dimen/d20"
+                    android:layout_marginTop="@dimen/d10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_rolOut"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="零钱宝转出" />
+
+                    <RadioButton
+                        android:id="@+id/bt_titleMenu_award"
+                        style="@style/RadioButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d20"
+                        android:layout_marginRight="@dimen/d20"
+                        android:layout_weight="1"
+                        android:text="现金奖励"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d20"
+                        android:layout_marginRight="@dimen/d20"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:enabled="false"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:enabled="false" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_hide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#70000000" />
+
+            <com.wtjr.lqg.widget.RoundRectView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                app:border_size="5dp"
+                app:no_pressed_border_color="#000000"
+                app:no_pressed_color="#ffffff"
+                app:pressed_border_color="#00ff00"
+                app:pressed_color="#ff0000"
+                app:round_border_size_x="5dp"
+                app:round_border_size_y="5dp"
+                app:round_size_x="5dp"
+                app:round_size_y="5dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

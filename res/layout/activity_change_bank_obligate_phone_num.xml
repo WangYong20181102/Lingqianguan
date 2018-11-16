@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d15"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View style="@style/line_h5" />
+
+            <com.wtjr.lqg.widget.LineEditTextPhoneNumber
+                android:id="@+id/line_edit_text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:letp_hint="请输入银行原预留手机号码">
+
+            </com.wtjr.lqg.widget.LineEditTextPhoneNumber>
+
+            <View
+                style="@style/line_h5"
+                android:layout_marginLeft="55dp" />
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.LineEditTextPhoneNumber
+            android:id="@+id/line_edit_text_new_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:letp_hint="请输入要更换的新手机号码">
+
+        </com.wtjr.lqg.widget.LineEditTextPhoneNumber>
+
+        <View style="@style/line_h5" />
+
+        <View
+            style="@style/line_h5"
+            android:layout_marginTop="@dimen/d15" />
+
+        <com.wtjr.lqg.utils.LineEditTextObtainSMS
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.wtjr.lqg.utils.LineEditTextObtainSMS>
+
+        <View style="@style/line_h5" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/buttonStyle_2"
+            android:layout_marginTop="@dimen/d25"
+            android:text="@string/determine" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

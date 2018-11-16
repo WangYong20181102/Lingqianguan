@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_guide2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/novice_guide_bg"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"
+        android:clickable="true" />
+
+    <!-- <View -->
+    <!-- android:id="@+id/v_guide2" -->
+    <!-- android:background="@color/lqb_head_bg" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="@dimen/d255" /> -->
+
+    <View
+        android:id="@+id/v_guide2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_tyj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/v_guide2"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d10">
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem
+            android:id="@+id/uli_guide2_experience_money"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            app:com_ImageContentrScrL="@drawable/home_experience_money_nor"
+            app:com_textTvContentL="@string/home_experience_money"
+            app:com_textTvContentR="0.00"
+            app:com_textTvSizeL="@dimen/s15"
+            app:com_textTvSizeR="@dimen/s15" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/d90"
+        android:layout_height="@dimen/d75"
+        android:layout_above="@+id/rl_tyj"
+        android:layout_marginLeft="@dimen/d50"
+        android:src="@drawable/image_guide2" />
+
+    <LinearLayout
+        android:id="@+id/ll_tyjdz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d5"
+            android:text="体验金到账了，转入零钱宝\n产生收益。"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s18" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_guide2_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_tyjdz"
+        android:paddingBottom="@dimen/d10"
+        android:paddingLeft="@dimen/d8"
+        android:src="@drawable/image_guide2_3"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_guide2_register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_alignTop="@+id/imageView2"
+        android:background="@drawable/image_guide2_4"
+        android:text="立即转入"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s18"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

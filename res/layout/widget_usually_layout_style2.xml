@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iamge"
+        android:layout_width="@dimen/d30"
+        android:layout_height="@dimen/d30"
+        android:layout_marginLeft="@dimen/d12"
+        android:src="@drawable/home_page_select" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d12"
+        android:text="好好好好好好"
+        android:textSize="@dimen/d16" />
+
+</LinearLayout>

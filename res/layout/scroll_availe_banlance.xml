@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_head_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d110"
+    android:background="@drawable/available_balance_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_tyj_head"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d100"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_typeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用余额(元)"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="@dimen/s15"/>
+
+            <TextView
+                android:id="@+id/tv_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/FC_FFC62A"
+                android:textSize="@dimen/s29"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_tyj_help"
+            android:layout_width="@dimen/d20"
+            android:layout_height="@dimen/d20"
+            android:layout_marginLeft="@dimen/d10"
+            android:layout_marginTop="@dimen/d22"
+            android:layout_toRightOf="@+id/ll_tyj_head"
+            android:src="@drawable/tyj_help_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

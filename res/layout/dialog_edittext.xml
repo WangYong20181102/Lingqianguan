@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_dialog_shape_state"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="80dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="输入登录密码后，可关闭手势"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s15"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_context"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d40"
+                android:layout_marginLeft="@dimen/d40"
+                android:layout_marginRight="@dimen/d40"
+                android:layout_marginTop="@dimen/d20"
+                android:background="@drawable/rounded_rectangle_border"
+                android:gravity="center|left"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="@dimen/d5"
+                android:singleLine="true"
+                android:textSize="@dimen/s14" />
+
+            <View
+                style="@style/line"
+                android:layout_marginTop="@dimen/d20" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_noSend"
+                    style="@style/buttonStyle_2_l"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="取消" />
+
+                <View style="@style/line_h" />
+
+                <Button
+                    android:id="@+id/bt_yesSend"
+                    style="@style/buttonStyle_2_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="确定" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d100"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/lingmeimei"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d2" />
+    </RelativeLayout>
+
+</LinearLayout>

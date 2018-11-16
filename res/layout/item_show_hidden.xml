@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:visibility="gone"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/child_dealNumber_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d5"
+        android:layout_marginLeft="@dimen/d15"
+        android:layout_marginTop="@dimen/d15"
+        android:text="交易流水号"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/child_dealNumber_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d15"
+        android:text="155564215646541"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/child_dealTime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d5"
+        android:layout_marginLeft="@dimen/d15"
+        android:layout_marginTop="@dimen/d15"
+        android:text="交易时间"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/child_dealTime_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d15"
+        android:layout_marginLeft="@dimen/d15"
+        android:text="2015-11-25 10:00"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/child_remark_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d5"
+        android:layout_marginLeft="@dimen/d15"
+        android:text="备注"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/child_remark_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d20"
+        android:layout_marginLeft="@dimen/d15"
+        android:text="零钱宝-可用余额快速转入"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/s13" />
+
+</LinearLayout>

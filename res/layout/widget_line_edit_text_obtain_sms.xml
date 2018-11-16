@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:background="@android:color/white" >
+
+        <EditText
+            android:id="@+id/ledt_sms"
+            style="@style/editTextStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:digits="0123456789"
+            android:drawableLeft="@drawable/sms_state"
+            android:drawablePadding="16dp"
+            android:hint="短信验证码"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:paddingRight="@dimen/d100" >
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/image_sms_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d100"
+            android:visibility="gone"/>
+        <com.wtjr.lqg.widget.TextViewCountDownView
+            android:id="@+id/tcdv_sms"
+            android:layout_width="@dimen/d75"
+            android:layout_height="@dimen/d30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/d15"
+            android:gravity="center"
+            android:text="点击获取"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/immersion_status"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_activity_title"/>
+
+    <RelativeLayout
+        style="@style/layout_bg"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:id="@+id/gesture_tip_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.wtjr.lqg.lock.widget.LockIndicator
+                android:id="@+id/lock_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d30"/>
+
+            <TextView
+                android:id="@+id/text_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d20"
+                android:gravity="center_horizontal"
+                android:text="@string/set_gesture_pattern"
+                android:textColor="@color/FC_FF9900"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/gesture_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gesture_tip_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d10">
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gesture_container"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/d15"
+            android:text="@string/reset_gesture_code"
+            android:textColor="@color/FC_CAN_SELECT"
+            android:textSize="@dimen/s13"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="130*****919"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s13" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="投标金额"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s13" />
+
+<!--         <TextView -->
+<!--             android:id="@+id/tv_tender_account" -->
+<!--             android:layout_width="0dp" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_weight="1" -->
+<!--             android:gravity="center" -->
+<!--             android:text="有效金额" -->
+<!--             android:textColor="@color/gray" -->
+<!--             android:textSize="@dimen/s13" /> -->
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/FC_999999"
+            android:textSize="@dimen/s13" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d44">
+
+    <!-- 文字返回 -->
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/d10"
+        android:paddingLeft="@dimen/d15"
+        android:paddingRight="@dimen/d10"
+        android:paddingStart="@dimen/d15"
+        android:text="@string/back"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/s16"
+        android:visibility="gone"/>
+
+    <!-- 图片返回 -->
+
+    <ImageButton
+        android:id="@+id/imgBtn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="@string/contentDescription"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/d10"
+        android:paddingLeft="@dimen/d15"
+        android:paddingRight="@dimen/d10"
+        android:paddingStart="@dimen/d15"
+        android:src="@drawable/back2"
+        android:visibility="gone"/>
+
+    <!-- android:src="@drawable/naving_back_state" -->
+
+    <ImageView
+        android:id="@+id/image_point"
+        android:layout_width="@dimen/d3"
+        android:layout_height="@dimen/d14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d12.5"
+        android:src="@drawable/point"
+        android:visibility="gone"/>
+    <!-- 零妹妹头像 -->
+
+    <com.wtjr.lqg.widget.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="@dimen/d40"
+        android:layout_height="@dimen/d40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d5"
+        android:layout_toRightOf="@id/image_point"
+        android:background="@null"
+        android:contentDescription="@string/contentDescription"
+        android:gravity="center_vertical"
+        android:src="@drawable/lingmeimei"
+        android:visibility="gone"/>
+
+    <!-- 中间标题 -->
+
+    <LinearLayout
+        android:id="@+id/ll_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/d60"
+        android:layout_marginRight="@dimen/d60"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/title"
+            android:textColor="@color/FC_333333"
+            android:textSize="@dimen/s20"/>
+
+        <ImageView
+            android:id="@+id/image_title"
+            android:layout_width="@dimen/d20"
+            android:layout_height="@dimen/d20"
+            android:layout_gravity="center"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/naving_triangle_nor_or"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- 下一步图片 -->
+
+    <ImageButton
+        android:id="@+id/imgBtn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="@string/contentDescription"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/d13"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d13"
+        android:layout_marginStart="@dimen/d10"
+        android:src="@drawable/help_icon_black"
+        android:visibility="gone"/>
+
+    <!-- 下一步确认文字 -->
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/d15"
+        android:paddingLeft="@dimen/d10"
+        android:paddingRight="@dimen/d15"
+        android:paddingStart="@dimen/d10"
+        android:text="@string/determine"
+        android:textColor="@color/black"
+        android:textSize="@dimen/s16"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/title_bottom_line"
+        style="@style/line"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

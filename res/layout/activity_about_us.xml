@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.wtjr.lqg.widget.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d25" />
+
+        <include layout="@layout/include_activity_title" />
+    </LinearLayout>
+
+    <View style="@style/line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/FC_F7F7F7"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_offical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d100"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:layout_marginTop="@dimen/d15"
+                android:background="@drawable/about_offical"
+                android:gravity="center"
+                android:text="官方介绍"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s20" />
+
+            <Button
+                android:id="@+id/btn_media"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d100"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:layout_marginTop="@dimen/d15"
+                android:background="@drawable/about_media"
+                android:gravity="center"
+                android:text="媒体报道"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s20" />
+
+            <Button
+                android:id="@+id/btn_company"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d100"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:layout_marginTop="@dimen/d15"
+                android:background="@drawable/about_company"
+                android:gravity="center"
+                android:text="公司资质"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s20" />
+
+            <Button
+
+                android:id="@+id/btn_about_lqg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d200"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginRight="@dimen/d15"
+                android:layout_marginTop="@dimen/d15"
+                android:background="@drawable/about_lqg"
+                android:gravity="center"
+                android:text="150秒了解零钱罐"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s20"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

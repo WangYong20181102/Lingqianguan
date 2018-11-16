@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_toatl_assets_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d16">
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem4
+            android:id="@+id/uli_available_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:com_ImageContentrScrL="@drawable/home_available_balance_nor"
+            app:com_ImageLeftMarginL="@dimen/d0"
+            app:com_textTvContentL="@string/home_available_balance"
+            app:com_textTvContentLMarginL="@dimen/d10"
+            app:com_textTvContentLMarginR="@dimen/d12"
+            app:com_textTvContentR="0.00"
+            app:com_textTvSizeL="@dimen/s14"
+            app:com_textTvSizeR="@dimen/s16"/>
+
+        <View
+            style="@style/xuxian"
+            android:layout_marginLeft="@dimen/d5"
+            android:layerType="software"/>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem4
+            android:id="@+id/uli_lqb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:com_ImageContentrScrL="@drawable/home_lqb_nor"
+            app:com_ImageLeftMarginL="@dimen/d0"
+            app:com_textTvContentL="@string/home_lqb"
+            app:com_textTvContentLMarginL="@dimen/d10"
+            app:com_textTvContentLMarginR="@dimen/d12"
+            app:com_textTvContentR="0.00"
+            app:com_textTvSizeL="@dimen/s14"
+            app:com_textTvSizeR="@dimen/s16"/>
+
+        <View
+            style="@style/xuxian"
+            android:layout_marginLeft="@dimen/d5"
+            android:layerType="software"/>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem4
+            android:id="@+id/uli_investment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:com_ImageContentrScrL="@drawable/home_investment_nor"
+            app:com_ImageLeftMarginL="@dimen/d0"
+            app:com_textTvContentL="@string/my_investment_name"
+            app:com_textTvContentLMarginL="@dimen/d10"
+            app:com_textTvContentLMarginR="@dimen/d12"
+            app:com_textTvContentR="0.00"
+            app:com_textTvSizeL="@dimen/s14"
+            app:com_textTvSizeR="@dimen/s16"/>
+    </LinearLayout>
+
+    <!-- 下面是一键转入的上次布局 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d11"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_oneKeyRollIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_oneKeyRollIn_translation"
+                android:layout_width="@dimen/d28"
+                android:layout_height="@dimen/d28"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/home_available_balance_nor"/>
+
+            <ImageView
+                android:id="@+id/iv_oneKeyRollIn_scale"
+                android:layout_width="@dimen/d28"
+                android:layout_height="@dimen/d28"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/home_available_balance_nor"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

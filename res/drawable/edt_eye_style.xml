@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 布局条目样式 -->
+
+
+    <!-- 点击时候的颜色 -->
+    <item android:state_focused="false"><shape android:shape="rectangle">
+
+            <!-- 这个是登录框输入时候的透明度 -->
+            <solid android:color="#ff0000" />
+
+            <size android:height="20dp" android:width="20dp" />
+        </shape></item>
+
+    <!-- 没有被点击时候的颜色 -->
+    <item android:state_focused="true"><shape android:shape="rectangle">
+
+            <!-- 这个是登录框输入时候的透明度 -->
+            <solid android:color="#000000" />
+
+            <size android:height="20dp" android:width="20dp" />
+        </shape></item>
+
+</selector>

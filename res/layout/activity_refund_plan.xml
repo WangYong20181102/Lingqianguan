@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 还款计划 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/include_activity_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_title"
+        android:background="@color/color_app_bg" >
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/d15"
+                android:paddingLeft="@dimen/d17"
+                android:paddingTop="@dimen/d15" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还款方式"
+                    android:textColor="@color/FC_999999"
+                    android:textSize="@dimen/s15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:text="先息后本"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s15" />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/d15"
+                android:paddingLeft="@dimen/d17"
+                android:paddingTop="@dimen/d15" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还款期次"
+                    android:textColor="@color/FC_999999"
+                    android:textSize="@dimen/s15" />
+
+                <TextView
+                    android:id="@+id/tv_repaymentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:text="0次"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginTop="@dimen/d10"
+                android:text="还款金额"
+                android:textColor="@color/FC_999999"
+                android:textSize="@dimen/s13" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_refundLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never" />
+
+<!--         <RelativeLayout -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="@dimen/d45" -->
+<!--             android:layout_alignParentBottom="true" -->
+<!--             android:background="@color/white" > -->
+
+<!--             <TextView -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_centerInParent="true" -->
+<!--                 android:text="还款中..." -->
+<!--                 android:textColor="#FF8566" -->
+<!--                 android:textSize="@dimen/s17" /> -->
+<!--         </RelativeLayout> -->
+    </RelativeLayout>
+
+</RelativeLayout>

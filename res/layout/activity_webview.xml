@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 加载html页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical" >
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <include layout="@layout/no_data" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/iv_linshi_img"
+            android:layout_width="@dimen/d0"
+            android:layout_height="@dimen/d0" />
+
+        <com.wtjr.lqg.widget.ProgressWebView
+            android:id="@+id/webView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 我碎片页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_me"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <com.wtjr.lqg.widget.ObservableScrollView
+        android:id="@+id/scrollview_me"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/me_white_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_me_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/d5"
+                    android:paddingRight="@dimen/d5">
+
+                    <LinearLayout
+                        android:id="@+id/ll_head"
+                        android:layout_width="@dimen/d52"
+                        android:layout_height="@dimen/d52"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/me_head_image_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.wtjr.lqg.widget.CircleImageView
+                            android:id="@+id/civ_head"
+                            android:layout_width="@dimen/d32"
+                            android:layout_height="@dimen/d32"
+                            android:layout_gravity="center"
+                            android:src="@drawable/lingmeimei" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_show_phone_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:layout_toRightOf="@+id/ll_head"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/uli_tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/FC_333333"
+                            android:textSize="@dimen/s18" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_show_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:layout_toRightOf="@+id/ll_head"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/me_login_register"
+                            android:textColor="@color/FC_333333"
+                            android:textSize="@dimen/s18" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d15"
+                    android:layout_marginTop="@dimen/d18"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="总资产 (元) :"
+                        android:textColor="@color/FC_414141"
+                        android:textSize="@dimen/s14" />
+
+                    <RelativeLayout
+                        android:id="@+id/uli_me_assets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d5">
+
+                        <TextView
+                            android:id="@+id/uli_me_tv_assets"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="00000"
+                            android:textColor="@color/FC_FFC62A"
+                            android:textSize="@dimen/s28" />
+
+                        <ImageView
+                            android:id="@+id/image_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/d15"
+                            android:src="@drawable/me_icon_right" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d55"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/me_available_balance"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_me_kyye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/FC_414141"
+                            android:textSize="@dimen/s15" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d5"
+                            android:text="可用余额(元)"
+                            android:textColor="@color/FC_BBBBBB"
+                            android:textSize="@dimen/s11" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/d1"
+                        android:layout_height="@dimen/d25"
+                        android:background="@color/FC_E5E5E5" />
+
+                    <LinearLayout
+                        android:id="@+id/me_total_earnings"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_me_ljsy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/FC_414141"
+                            android:textSize="@dimen/s13" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d5"
+                            android:text="累计收益(元)"
+                            android:textColor="@color/FC_BBBBBB"
+                            android:textSize="@dimen/s11" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/d1"
+                        android:layout_height="@dimen/d25"
+                        android:background="@color/FC_E5E5E5" />
+
+                    <LinearLayout
+                        android:id="@+id/me_experience_money"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv_me_tyj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/FC_414141"
+                            android:textSize="@dimen/s13" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d5"
+                            android:text="体验金(元)"
+                            android:textColor="@color/FC_BBBBBB"
+                            android:textSize="@dimen/s11" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginLeft="@dimen/d12.5"
+                    android:layout_marginRight="@dimen/d12.5"
+                    android:layout_marginTop="@dimen/d15"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/me_fuli_task"
+                        android:layout_width="@dimen/d112"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_icon_fuli_card" />
+
+                    <ImageView
+                        android:id="@+id/me_operation_data"
+                        android:layout_width="@dimen/d112"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_icon_data" />
+
+                    <ImageView
+                        android:id="@+id/uli_lqg_my_services"
+                        android:layout_width="@dimen/d112"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_icon_kefu" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d2"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_my_investment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_icon_my_investment"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/my_investment_name"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+
+                <View
+                    style="@style/line_h7"
+                    android:layout_marginLeft="@dimen/d50" />
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_assets"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_icon_money_jilu"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/me_lqg_assets"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLMarginR="@dimen/d10"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvContentR="账户资金变动一目了然"
+                    app:me_com_textTvContentRTextColor="@color/FC_BBBBBB"
+                    app:me_com_textTvSizeL="@dimen/s15"
+                    app:me_com_textTvSizeR="@dimen/s13" />
+
+                <View
+                    style="@style/line_h7"
+                    android:layout_marginLeft="@dimen/d50" />
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_fuli_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_icon_card_quan"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/me_lqg_fuli_card"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_activity_back"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/head_bank"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+
+                <View
+                    style="@style/line_h7"
+                    android:layout_marginLeft="@dimen/d50" />
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_messgae_nor"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/me_messgae"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+
+                <View
+                    style="@style/line_h7"
+                    android:layout_marginLeft="@dimen/d50" />
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_risk_assessment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/risk_assessment_icon"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/me_risk_assessment"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_lqg_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_about_lqg"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/about_lqg"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+
+                <View
+                    style="@style/line_h7"
+                    android:layout_marginLeft="@dimen/d50" />
+
+                <com.wtjr.lqg.widget.UsuallyLayoutItem5
+                    android:id="@+id/uli_lqg_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    app:me_com_ImageContentrScrL="@drawable/me_setting_nor"
+                    app:me_com_ImageLeftMarginL="@dimen/d15"
+                    app:me_com_textTvContentL="@string/me_lqg_setting"
+                    app:me_com_textTvContentLMarginL="@dimen/d12"
+                    app:me_com_textTvContentLTextColor="@color/FC_414141"
+                    app:me_com_textTvSizeL="@dimen/s15" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.wtjr.lqg.widget.ObservableScrollView>
+
+</LinearLayout>

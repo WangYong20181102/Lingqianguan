@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_dialog_shape_state"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="80dp" >
+
+            <TextView
+                android:id="@+id/tvm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="若您在提现过程中出现任何疑问\n可添加零妹妹微信咨询\n（微信号：lingmm27）"
+                android:textColor="@color/FC_FF6434"
+                android:textSize="@dimen/s16" />
+
+            <ImageView
+                android:id="@+id/image_lmm_ewm"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lingmm01" />
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d100"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_iamge_white"
+            android:src="@drawable/lingmeimei"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d2" />
+    </RelativeLayout>
+
+</LinearLayout>

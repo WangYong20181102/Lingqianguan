@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 活动页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <!-- <include layout="@layout/include_activity_title" /> -->
+
+    <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+        android:id="@+id/pullTo_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lqb_head_bg" >
+
+        <include layout="@layout/allview_refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.wtjr.lqg.widget.pullRefresh.PullableListView
+            android:id="@+id/pullable_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="1dp"
+            android:listSelector="@android:color/transparent" />
+
+        <include layout="@layout/allview_load_more" />
+    </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+
+</LinearLayout>

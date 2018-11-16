@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/novice_guide_bg"
+    android:orientation="vertical" >
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/view_guide1_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d250" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:paddingBottom="@dimen/d4"
+                android:paddingTop="@dimen/d4" >
+
+                <Button
+                    android:id="@+id/bt_guide2_register1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/d18"
+                    android:layout_marginRight="@dimen/d18"
+                    android:background="@drawable/guide_bg1"
+                    android:gravity="center"
+                    android:text="@string/register_name"
+                    android:textColor="@color/FC_FF8D6A"
+                    android:textSize="@dimen/s17" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_guide2_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/d20"
+        android:paddingRight="@dimen/d20" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_guide2_close"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现在注册零钱罐送你"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5000"
+                android:textColor="@color/FC_FA8C1E"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元体验金"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s18" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_guide2_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:paddingBottom="@dimen/d8"
+            android:paddingLeft="@dimen/d10"
+            android:src="@drawable/image_guide2_3" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_guide2_register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d40"
+        android:background="@drawable/image_guide2_4"
+        android:text="注册领取"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s18" />
+
+</LinearLayout>

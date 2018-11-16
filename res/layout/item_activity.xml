@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <com.wtjr.lqg.widget.RoundRectImageView
+        android:id="@+id/foodItem_foodImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d100"
+        android:layout_marginLeft="@dimen/d10"
+        android:layout_marginRight="@dimen/d10"
+        android:layout_marginTop="@dimen/d10"
+        android:scaleType="fitXY"
+        android:src="@drawable/head_activity_list_bg" />
+
+</LinearLayout>

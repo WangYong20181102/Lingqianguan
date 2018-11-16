@@ -1,0 +1,386 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <!--状态栏字体颜色-->
+    <style name="StatusBarStyle" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/FeelyouWindowAnimTheme</item>
+        <!-- splitMotionEvents是禁止多点触控 -->
+        <item name="android:splitMotionEvents">false</item>
+        <!--设置为true时，当statusbar的背景颜色为淡色时，statusbar的文字颜色会变成灰色，为false时同理-->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/FeelyouWindowAnimTheme</item>
+        <item name="android:splitMotionEvents">false</item>
+        <!--设置为true时，当statusbar的背景颜色为淡色时，statusbar的文字颜色会变成灰色，为false时同理-->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <!-- Activity转场动画 -->
+    <style name="FeelyouWindowAnimTheme" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_activity_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_activity_in_bg</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_activity_out_bg</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_activity_out</item>
+    </style>
+
+    <!-- 浸没状态 -->
+    <style name="immersion_status">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+    <!-- 浸没状态1 -->
+    <style name="immersion_status1">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- 透明的浸没状态 -->
+    <style name="immersion_status_transparent">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!-- 带背景的活动界面title浸没状态 -->
+    <style name="activity_title_bg_status">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/activity_title_bg</item>
+
+    </style>
+
+    <!-- 普通对话框 -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/image_dialog_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <!-- 设置矩形圆角按钮圆角样式 -->
+    <style name="angle_status">
+        <item name="com.wtjr.lqg:round_size_x">@dimen/d5</item>
+        <item name="com.wtjr.lqg:round_size_y">@dimen/d5</item>
+        <item name="com.wtjr.lqg:round_border_size_x">@dimen/d8</item>
+        <item name="com.wtjr.lqg:round_border_size_y">@dimen/d8</item>
+    </style>
+
+    <!-- 虚线的style -->
+    <style name="xuxian">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d3</item>
+        <item name="android:background">@drawable/xuxian</item>
+    </style>
+
+    <!-- 线条间隙的样式 -->
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d0.5</item>
+        <item name="android:background">#dddddd</item>
+    </style>
+
+    <!-- 线条间隙的样式 -->
+    <style name="line_h">
+        <item name="android:layout_width">@dimen/d0.5</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#e5e5e5</item>
+    </style>
+    <!-- 线条间隙的样式 -->
+    <style name="line_h1">
+        <item name="android:layout_width">@dimen/d0.5</item>
+        <item name="android:layout_height">@dimen/d32</item>
+        <item name="android:background">#ff9900</item>
+    </style>
+    <!-- 账单明细线条间隙的样式 -->
+    <style name="line_h2">
+        <item name="android:layout_width">@dimen/d0.5</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#e1e2e6</item>
+    </style>
+    <!-- 提现完成线条间隙的样式 -->
+    <style name="line_h3">
+        <item name="android:layout_width">@dimen/d2</item>
+        <item name="android:layout_height">@dimen/d40</item>
+        <item name="android:background">#ff8f00</item>
+    </style>
+    <!-- 提现完成灰色线条间隙的样式 -->
+    <style name="line_h4">
+        <item name="android:layout_width">@dimen/d2</item>
+        <item name="android:layout_height">@dimen/d40</item>
+        <item name="android:background">#e1e1e1</item>
+    </style>
+    <!-- 更换银行预留手机号灰色线条间隙的样式 -->
+    <style name="line_h5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d0.5</item>
+        <item name="android:background">#e5e5e5</item>
+    </style>
+    <!-- 线条间隙的样式 -->
+    <style name="line_h6">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d0.5</item>
+        <item name="android:background">#dddddd</item>
+    </style>
+    <!-- 线条间隙的样式 -->
+    <style name="line_h7">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d0.5</item>
+        <item name="android:background">#e6e6e6</item>
+    </style>
+
+    <!-- 启动页背景-->
+    <style name="StartAppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowBackground">@drawable/layout_list_start_pic</item>-->
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--设置为true时，当statusbar的背景颜色为淡色时，statusbar的文字颜色会变成灰色，为false时同理-->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 主页左侧的item样式 -->
+    <style name="main_left_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d60</item>
+        <item name="android:background">@drawable/layout_item_state</item>
+        <item name="android:gravity">center</item>
+        <item name="com.wtjr.lqg:com_ImageNextVisibility">false</item>
+        <item name="com.wtjr.lqg:com_textTvSizeL">@dimen/s16</item>
+        <item name="com.wtjr.lqg:com_ImageLeftMarginL">@dimen/d21</item>
+    </style>
+    <!-- RotateTextView样式 -->
+    <declare-styleable name="RotateTextView">
+        <attr name="degree" format="dimension"/>
+    </declare-styleable>
+
+    <!-- 输入框正常的样式 -->
+    <style name="editTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d50</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/FC_666666</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:textColorHint">@color/FC_CCCCCC</item>
+        <item name="android:paddingLeft">@dimen/d15</item>
+        <item name="android:paddingRight">@dimen/d15</item>
+    </style>
+
+    <!-- 登陆按钮的样式    <item name="android:enabled">false</item> -->
+    <style name="buttonStyle_1">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_bg_drawable</item>
+        <item name="android:textSize">@dimen/s18</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/d48</item>
+        <item name="android:layout_marginRight">@dimen/d48</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_height">@dimen/d45</item>
+    </style>
+
+    <style name="buttonStyle_2">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_bg_drawable</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/d15</item>
+        <item name="android:layout_marginRight">@dimen/d15</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_height">@dimen/d45</item>
+    </style>
+    <!--提现下一步按钮-->
+    <style name="buttonStyle_3">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_bg_drawable4</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/d15</item>
+        <item name="android:layout_marginRight">@dimen/d15</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_height">@dimen/d45</item>
+    </style>
+
+    <style name="buttonStyle_2_l">
+        <item name="android:background">@drawable/dialog_btn_l</item>
+        <item name="android:textColor">#FF973B</item>
+        <item name="android:textSize">@dimen/s15</item>
+    </style>
+
+    <style name="buttonStyle_2_r">
+        <item name="android:background">@drawable/dialog_btn_r</item>
+        <item name="android:textColor">#FF973B</item>
+        <item name="android:textSize">@dimen/s15</item>
+    </style>
+
+    <style name="buttonStyle_2_l_r">
+        <item name="android:background">@drawable/dialog_btn_l_r</item>
+        <item name="android:textColor">#FF973B</item>
+        <item name="android:textSize">@dimen/s15</item>
+    </style>
+
+    <!-- 提现完成按钮的样式    <item name="android:enabled">false</item> -->
+    <style name="buttonStyle_2_2">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_bg_drawable</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/d15</item>
+        <item name="android:layout_marginRight">@dimen/d15</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_height">@dimen/d45</item>
+    </style>
+    <!-- 全部转入的那种小按钮 -->
+    <style name="button_small">
+        <item name="android:background">@drawable/btn_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/s14</item>
+        <item name="android:paddingLeft">@dimen/d5</item>
+        <item name="android:paddingRight">@dimen/d5</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/d30</item>
+    </style>
+
+    <!-- 可用余额中单选按钮的样式 -->
+    <style name="RadioButtonStyle">
+        <item name="android:textColor">@color/lqb_head_bg</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/radio_select_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/s14</item>
+    </style>
+
+    <!-- textView左正常的样式 -->
+    <style name="TextNormalStyleL">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/FC_333333</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- textView右正常的样式 -->
+    <style name="TextNormalStyleR">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/FC_999999</item>
+        <item name="android:textSize">@dimen/s13</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- textView右正常的样式 -->
+    <style name="band_bank_text">
+        <item name="android:layout_width">@dimen/d90</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textSize">@dimen/s15</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/FC_666666</item>
+    </style>
+
+    <!-- 背景 -->
+    <style name="layout_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_app_bg</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- ============================================================支付键盘============================================================ -->
+    <!-- PayKeyboardDialog1=========有背景阴影 -->
+    <style name="PayKeyboardDialog1" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- PayKeyboardDialog2=========无背景阴影 -->
+    <style name="PayKeyboardDialog2" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!-- ============================================================支付键盘============================================================ -->
+
+
+    <!-- 设置从下往上弹出的样式动画 -->
+    <style name="FromDownToUpStyleAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_set_in_down_up</item>
+        <item name="android:windowExitAnimation">@anim/anim_set_out_down_up</item>
+    </style>
+
+    <!-- 更换头像弹出的对话框的样式 -->
+    <style name="HeadChangeDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <!-- 账单明细对话框的样式 -->
+    <style name="BillDetailDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!-- 筛选功能对话框style-->
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!--首页全屏对话框-->
+    <style name="dialog_full_screen">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+</resources>

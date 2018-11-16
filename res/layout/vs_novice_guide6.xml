@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/novice_guide_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_into_iv"
+        android:layout_marginBottom="@dimen/d10"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即转入零钱宝"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_into_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_tv_into_tyj"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d50"
+            android:src="@drawable/ic_into_tyj" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tv_into_tyj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+    <TextView
+        android:id="@+id/tv_into_tyj"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:background="@color/FC_CAN_SELECT"
+        android:gravity="center"
+        android:text="@string/into_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s17" />
+    </LinearLayout>
+</RelativeLayout>

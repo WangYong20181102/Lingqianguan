@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/round_dialog_shape_state"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="88dp">
+
+            <TextView
+                android:id="@+id/tvm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s15" />
+
+            <TextView
+                android:id="@+id/tvm_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="温馨提示"
+                android:textColor="@color/FC_FF8F00"
+                android:textSize="@dimen/s18" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="25dp">
+                <include layout="@layout/activity_one_button_layout"/>
+                <LinearLayout
+                    android:id="@+id/two_btn_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <Button
+                        android:id="@+id/btm_noSend"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:layout_marginRight="@dimen/d5"
+                        android:background="@drawable/rounded_rectangle_border"
+                        android:text="取消"
+                        android:textSize="@dimen/s17"
+                        android:textColor="#666666" />
+
+                    <Button
+                        android:id="@+id/bt_yesSend"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:layout_marginRight="@dimen/d5"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_drawable3"
+                        android:text="确定"
+                        android:textSize="@dimen/s17"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d2" />
+    </RelativeLayout>
+
+</LinearLayout>

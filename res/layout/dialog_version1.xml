@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_dialog_shape_state"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="30dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="本版更新"
+                android:textSize="@dimen/s15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginLeft="@dimen/d10"
+                android:layout_marginTop="@dimen/d10"
+                android:text="1、BUG修复\n2、BUG修复\n3、BUG修复\n"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13" />
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_noSend"
+                    style="@style/buttonStyle_2_l"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="取消" />
+
+                <View style="@style/line_h" />
+
+                <Button
+                    android:id="@+id/bt_yesSend"
+                    style="@style/buttonStyle_2_r"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="确定" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d100"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/lingmeimei"
+            android:visibility="gone"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d2" />
+    </RelativeLayout>
+
+</LinearLayout>

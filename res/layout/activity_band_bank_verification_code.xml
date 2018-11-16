@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 活动页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_activity_title" />
+
+    <!-- 活动页面布局 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d18"
+            android:gravity="center"
+            android:text="@string/ver_prompt"
+            android:textColor="@color/FC_999999"
+            android:textSize="@dimen/s16" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d20"
+            android:layout_marginTop="@dimen/d35"
+            android:gravity="center"
+            android:text="12345679810"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s18" />
+
+        <!-- <RelativeLayout -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="@dimen/d50" -->
+        <!-- android:background="@android:color/white" > -->
+
+
+        <!-- <EditText -->
+        <!-- android:id="@+id/et_sms" -->
+        <!-- style="@style/editTextStyle" -->
+        <!-- android:layout_alignParentLeft="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:background="@color/white" -->
+        <!-- android:digits="0123456789" -->
+        <!-- android:hint="请输入您的短信验证码" -->
+        <!-- android:inputType="phone" -->
+        <!-- android:maxLength="6" -->
+        <!-- android:paddingRight="@dimen/d85" -->
+        <!-- android:singleLine="true" > -->
+        <!-- </EditText> -->
+
+
+        <!-- <com.wtjr.lqg.widget.TextViewCountDownView -->
+        <!-- android:id="@+id/tcdv_sms" -->
+        <!-- android:layout_width="@dimen/d60" -->
+        <!-- android:layout_height="@dimen/d25" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_marginRight="@dimen/d16" -->
+        <!-- android:gravity="center" -->
+        <!-- android:textColor="@color/white" /> -->
+        <!-- </RelativeLayout> -->
+
+        <com.wtjr.lqg.widget.LineEditTextSMS
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_determine"
+            style="@style/buttonStyle_2"
+            android:layout_marginTop="@dimen/d20"
+            android:text="@string/determine" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_time_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="10:00"
+        android:textColor="@color/FC_BLACK6F" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time_r"
+        android:layout_marginTop="@dimen/d15">
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/image_my_heand_r"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d50"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d1" />
+
+        <TextView
+            android:id="@+id/my_name_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_toLeftOf="@+id/image_my_heand_r"
+            android:text="自己名字"
+            android:textColor="@color/FC_BLACK6F"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/image_my_heand_r"
+            android:layout_marginRight="@dimen/d10"
+            android:layout_marginLeft="@dimen/d60"
+            android:layout_toLeftOf="@+id/image_my_heand_r"
+            android:background="@drawable/feedback_img_dialogue2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_content_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/d5"
+                android:textSize="@dimen/d15"
+                android:textColor="#ffffff"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

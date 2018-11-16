@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 充值页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/immersion_status"
+              android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title"/>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/d23"
+                android:paddingLeft="@dimen/d20"
+                android:paddingRight="@dimen/d20"
+                android:paddingTop="@dimen/d25">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/d50"
+                        android:layout_height="@dimen/d50"
+                        android:background="@drawable/image_bank_backbround"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.wtjr.lqg.widget.CircleImageView
+                            android:id="@+id/civ_bank"
+                            android:layout_width="@dimen/d46"
+                            android:layout_height="@dimen/d46"
+                            android:src="@drawable/image_bank_moreng"
+                            app:civ_border_color="#000000"
+                            app:civ_border_overlay="true"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d18"
+                        android:text="银行卡"
+                        android:textColor="@color/FC_3F1E00"
+                        android:textSize="@dimen/s15"/>
+
+                    <TextView
+                        android:id="@+id/tv_bank_card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d7"
+                        android:text="储蓄卡(0000)"
+                        android:textColor="@color/FC_3F1E00"
+                        android:textSize="@dimen/s15"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_recharge_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快捷支付"
+                        android:textColor="@color/FC_666666"
+                        android:textSize="@dimen/d14"/>
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d5"
+                        android:src="@drawable/common_img_arrow"/>
+
+                    <TextView
+                        android:id="@+id/tv_daozhang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="实时到账"
+                        android:textColor="@color/FC_666666"
+                        android:textSize="@dimen/d14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/re_image_bank_background"
+                        android:layout_width="@dimen/d50"
+                        android:layout_height="@dimen/d50"
+                        android:background="@drawable/image_bank_backbround">
+
+                        <com.wtjr.lqg.widget.CircleImageView
+                            android:id="@+id/image_lqg"
+                            android:layout_width="@dimen/d46"
+                            android:layout_height="@dimen/d46"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/image_recharge_lqb"
+                            android:visibility="gone"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_overlay="true"/>
+
+                        <ImageView
+                            android:id="@+id/image_lqg_pig"
+                            android:layout_width="@dimen/d50"
+                            android:layout_height="@dimen/d50"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/image_recharge_pig"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/d18"
+                            android:text="零钱罐"
+                            android:textColor="@color/FC_3F1E00"
+                            android:textSize="@dimen/s15"/>
+
+                        <TextView
+                            android:id="@+id/tv_balance_lqb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/d26"
+                            android:text="零钱宝"
+                            android:textColor="@color/FC_3F1E00"
+                            android:textSize="@dimen/s15"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_balance"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/d7"
+                            android:text="(可用余额)"
+                            android:textColor="@color/FC_3F1E00"
+                            android:textSize="@dimen/s15"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 选择充值金额 -->
+
+            <ViewStub
+                android:id="@+id/vs_select_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inflatedId="@+id/ll_select_recharge"
+                android:layout="@layout/vs_select_recharge"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/d15"
+                        android:src="@drawable/ic_recharge_gold"/>
+
+                    <com.wtjr.lqg.widget.MoneyEditText
+                        android:id="@+id/me_recharge_money"
+                        style="@style/editTextStyle"
+                        android:layout_gravity="center_vertical"
+                        android:digits="0123456789."
+                        android:hint="充值金额 (元)"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/FC_999999"
+                        android:textColorHint="#d9d9d9"
+                        android:textSize="@dimen/s13">
+
+                        <requestFocus/>
+                    </com.wtjr.lqg.widget.MoneyEditText>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/recharge_quota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginTop="@dimen/d10"
+                android:text="单笔: 1万元，每日: 10万元"
+                android:textColor="@color/FC_666666"
+                android:textSize="@dimen/s13"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/buttonStyle_2"
+                android:layout_marginTop="@dimen/d38"
+                android:text="下一步"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginTop="@dimen/d20"
+                android:drawableLeft="@drawable/lqb_down5"
+                android:drawablePadding="@dimen/d6"
+                android:gravity="center_vertical"
+                android:text="华海保险提供交易资金安全保障"
+                android:textColor="@color/FC_B0B0B0"
+                android:textSize="@dimen/s14"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_limits_table"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d30"
+                android:layout_marginTop="@dimen/d5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/d8"
+                    android:layout_toLeftOf="@+id/iv_yellow_arrow"
+                    android:text="各银行限额"
+                    android:textColor="@color/FC_FFC62A"
+                    android:textSize="@dimen/s13"/>
+
+                <ImageView
+                    android:id="@+id/iv_yellow_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/d20"
+                    android:src="@drawable/yellow_arrow"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

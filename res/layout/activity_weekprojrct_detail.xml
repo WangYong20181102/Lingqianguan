@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"/>
+
+    <include layout="@layout/include_activity_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/d20"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d15"
+                android:layout_marginLeft="@dimen/d15"
+                android:layout_marginTop="@dimen/d20"
+                android:text="待投资总额(元)"
+                android:textColor="@color/FC_414141"
+                android:textSize="@dimen/s14"/>
+
+            <TextView
+                android:id="@+id/tv_week_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d25"
+                android:layout_marginLeft="@dimen/d15"
+                android:text="0.00"
+                android:textColor="@color/FC_FFC62A"
+                android:textSize="@dimen/s28"/>
+
+            <View style="@style/line_h6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d70"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_week_borrow_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d10"
+                        android:layout_marginTop="@dimen/d15"
+                        android:textColor="@color/FC_414141"
+                        android:textSize="@dimen/s15"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="借款期限"
+                        android:textColor="@color/FC_BBBBBB"
+                        android:textSize="@dimen/s11"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/d1"
+                    android:layout_height="@dimen/d25"
+                    android:background="@color/FC_BBBBBB"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_week_borrow_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d10"
+                        android:layout_marginTop="@dimen/d15"
+                        android:text="***"
+                        android:textColor="@color/FC_414141"
+                        android:textSize="@dimen/s15"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="借款人"
+                        android:textColor="@color/FC_BBBBBB"
+                        android:textSize="@dimen/s11"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d10"
+                android:background="@color/color_app_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d50"
+                android:layout_marginLeft="@dimen/d15"
+                android:gravity="center_vertical"
+                android:text="借款详情"
+                android:textColor="@color/FC_414141"
+                android:textSize="@dimen/s14"
+                android:textStyle="bold"/>
+
+            <View
+                style="@style/line_h6"
+                android:layout_marginLeft="@dimen/d15"/>
+
+            <TextView
+                android:id="@+id/tv_week_borrow_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/d15"
+                android:textColor="@color/FC_777777"
+                android:textSize="@dimen/s12"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d10"
+                android:background="@color/color_app_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d50"
+                android:layout_marginLeft="@dimen/d15"
+                android:gravity="center_vertical"
+                android:text="资料证明"
+                android:textColor="@color/FC_414141"
+                android:textSize="@dimen/s14"
+                android:textStyle="bold"/>
+
+            <View
+                style="@style/line_h6"
+                android:layout_marginLeft="@dimen/d15"/>
+
+            <com.wtjr.lqg.widget.ListViewForScrollView
+                android:id="@+id/lv_material"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginTop="@dimen/d5"
+                android:divider="@null"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

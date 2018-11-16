@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择协议的时候弹出的菜单布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_queryLoanProtocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/d10"
+        android:paddingTop="@dimen/d10"
+        android:text="零钱宝借款协议"
+        android:textColor="@color/FC_666666"
+        android:textSize="@dimen/s15" />
+
+    <View style="@style/line" />
+
+    <Button
+        android:id="@+id/bt_queryTransferProtocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/d10"
+        android:paddingTop="@dimen/d10"
+        android:text="零钱宝转让协议"
+        android:textColor="@color/FC_666666"
+        android:textSize="@dimen/s15" />
+
+
+    <View
+        style="@style/line"
+        android:layout_height="@dimen/d10"
+        android:background="@color/color_app_bg" />
+
+    <Button
+        android:id="@+id/bt_popmenu_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/d10"
+        android:paddingTop="@dimen/d10"
+        android:text="取消"
+        android:textColor="@color/FC_FF6434"
+        android:textSize="@dimen/s15" />
+
+    <View style="@style/line" />
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/btn_head_bottom"
+        android:layout_width="@dimen/d200"
+        android:layout_height="@dimen/d45"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/change_head_bottom_botton"
+        android:layout_centerHorizontal="true"
+        android:text="就选ta了"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/d20"
+        android:textSize="@dimen/s17" />
+
+    <LinearLayout
+        android:id="@+id/linear_point_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d8"
+        android:layout_above="@id/btn_head_bottom"
+        android:layout_marginBottom="@dimen/d30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/image_point_state_left"
+            android:layout_width="@dimen/d8"
+            android:layout_height="@dimen/d8"
+            android:background="@drawable/head_bottom_point"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/image_point_state_right"
+            android:layout_width="@dimen/d8"
+            android:layout_height="@dimen/d8"
+            android:layout_marginLeft="@dimen/d10"
+            android:background="@drawable/head_bottom_point"
+            android:button="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear_point_bar"
+        android:orientation="vertical">
+
+        <com.wtjr.lqg.widget.StatusBarView
+            android:id="@+id/state_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include layout="@layout/include_activity_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d40"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/change_head_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

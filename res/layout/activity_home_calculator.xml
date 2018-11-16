@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 计算器 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/include_activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_title"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/ll_cl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d18"
+                android:layout_marginRight="@dimen/d18"
+                android:layout_marginTop="@dimen/d35">
+
+                <TextView
+                    android:id="@+id/tv_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="投资"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/d15" />
+
+                <TextView
+                    android:id="@+id/tv_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="元"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/d15" />
+
+                <com.wtjr.lqg.widget.MoneyEditText
+                    android:id="@+id/et_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:layout_marginLeft="@dimen/d4"
+                    android:layout_marginRight="@dimen/d4"
+                    android:layout_toLeftOf="@id/tv_yuan"
+                    android:layout_toRightOf="@id/tv_invest"
+                    android:background="@drawable/rounded_rectangle_border"
+                    android:gravity="center_vertical"
+                    android:hint="请输入金额"
+                    android:maxLength="16"
+                    android:paddingLeft="@dimen/d10" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cl1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d120"
+                android:layout_below="@id/ll_cl1"
+                android:layout_marginLeft="@dimen/d37"
+                android:layout_marginRight="@dimen/d39">
+
+                <ImageView
+                    android:id="@+id/btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="@dimen/d15"
+                    android:paddingRight="@dimen/d15"
+                    android:src="@drawable/press_icon_left" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/tv_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="X1"
+                        android:textColor="@color/FC_SELECT"
+                        android:textSize="@dimen/d16"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/tv_mimi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/FC_666666"
+                        android:textSize="@dimen/d16"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/btn_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="@dimen/d15"
+                    android:paddingRight="@dimen/d15"
+                    android:src="@drawable/press_icon_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_cl1">
+
+                <TextView
+                    android:id="@+id/tv_match"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="每月收益(元)"
+                    android:textColor="@color/FC_999999"
+                    android:textSize="@dimen/d14" />
+
+                <TextView
+                    android:id="@+id/tv_match_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_match"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/d7"
+                    android:text="0.00"
+                    android:textColor="@color/FC_SELECT"
+                    android:textSize="@dimen/s30" />
+
+                <Button
+                    android:id="@+id/btn_cll"
+                    style="@style/buttonStyle_1"
+                    android:layout_below="@id/tv_match_num"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/d16"
+                    android:layout_marginRight="@dimen/d0"
+                    android:layout_marginTop="@dimen/d28"
+                    android:enabled="false"
+                    android:text="计算收益" />
+
+                <TextView
+                    android:id="@+id/tv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/btn_cll"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/btn_cll"
+                    android:layout_marginTop="@dimen/d15"
+                    android:text="注：以92天标利率计算"
+                    android:textColor="@color/FC_CCCCCC"
+                    android:textSize="@dimen/d14" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_activity_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_recharge_aisle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#f5f5f5"
+          android:orientation="vertical" >
+
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/d15"
+              android:layout_marginLeft="@dimen/d15"
+              android:layout_marginTop="@dimen/d15"
+              android:textColor="@color/FC_666666"
+              android:text="请选择一个充值通道"
+              android:visibility="gone"/>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d60"
+              android:background="@color/white"
+              android:layout_marginTop="@dimen/d15">
+              <ImageView
+                  android:id="@+id/iv_baofu"
+                  android:layout_width="@dimen/d50"
+                  android:layout_height="@dimen/d50"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/d15"
+                  android:src="@drawable/wt_pay_type_baofu" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/d10"
+                  android:layout_toRightOf="@+id/iv_baofu"
+                  android:text="富友支付"
+                  android:textColor="@color/FC_666666"
+                  android:textSize="@dimen/s15" />
+
+              <ImageView
+                  android:id="@+id/imageView2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/d15"
+                  android:src="@drawable/wt_pay_type_select" />
+          </RelativeLayout>
+          <View style="@style/line"/>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/d60"
+              android:background="@color/white">
+
+              <ImageView
+                  android:id="@+id/iv_rongbao"
+                  android:layout_width="@dimen/d50"
+                  android:layout_height="@dimen/d50"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="@dimen/d15"
+                  android:src="@drawable/wt_pay_type_rongbao" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_toRightOf="@+id/iv_rongbao"
+                  android:layout_marginLeft="@dimen/d10"
+                  android:text="融宝支付"
+                  android:textColor="@color/FC_666666"
+                  android:textSize="@dimen/s15" />
+
+              <ImageView
+                  android:id="@+id/imageView3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/d15"
+                  android:src="@drawable/wt_pay_type_select" />
+          </RelativeLayout>
+      </LinearLayout>-->
+
+</LinearLayout>

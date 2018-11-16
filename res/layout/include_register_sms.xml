@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wtjr.lqg.widget.RegistreLinerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_register_sms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d26"
+        android:layout_marginTop="@dimen/d26"
+        android:text="请输入您收到的验证码"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s15"/>
+
+    <com.wtjr.lqg.widget.RegistLineEditTextSMS
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_sms_next"
+        style="@style/buttonStyle_1"
+        android:layout_marginTop="@dimen/d36"
+        android:enabled="false"
+        android:text="下一步"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d25"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击“下一步”，即表示你同意"
+            android:textColor="@color/FC_999999"
+            android:textSize="@dimen/s13"/>
+
+        <TextView
+            android:id="@+id/tv_sms_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《零钱罐服务协议》"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s13"/>
+    </LinearLayout>
+
+</com.wtjr.lqg.widget.RegistreLinerLayout>

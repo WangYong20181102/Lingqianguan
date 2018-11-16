@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主页碎片页面布局 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_title_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wtjr.lqg.widget.StatusBarView
+            android:id="@+id/sbv_home_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+            android:id="@+id/pullTo_refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/sbv_home_top">
+
+            <include layout="@layout/allview_refresh_head"/>
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <!--ObservableScrollView只能有一个父布局做childrent-->
+            <com.wtjr.lqg.widget.ObservableScrollView
+                android:id="@+id/osv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_app_bg"
+                android:orientation="vertical"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/FC_F5F5F5"
+                    android:orientation="vertical">
+
+                    <!--首页顶部，收益，资产，轮播,四个标签item-->
+                    <include layout="@layout/fragment_home_top"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_image_grand_slam_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d4"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/grand_slam_plam"/>
+
+                    </LinearLayout>
+                    <!--首页底部 新手标或者优质标-->
+                    <include layout="@layout/fragment_home_bottom"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/d5"
+                                android:layout_toLeftOf="@+id/tv_huahai"
+                                android:src="@drawable/home_huahai"/>
+
+                            <TextView
+                                android:id="@+id/tv_huahai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/d7"
+                                android:text="华海保险提供交易资金安全保障"
+                                android:textColor="#bbbbbb"
+                                android:textSize="@dimen/s10"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/d10"
+                        android:layout_marginTop="@dimen/d4"
+                        android:gravity="center_horizontal"
+                        android:text="借贷有风险,投资需谨慎"
+                        android:textColor="#bbbbbb"
+                        android:textSize="@dimen/s10"/>
+
+                </LinearLayout>
+
+            </com.wtjr.lqg.widget.ObservableScrollView>
+
+            <include layout="@layout/allview_load_more"/>
+        </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+        <!-- 标题块 -->
+
+    </RelativeLayout>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/home_gif"
+        android:layout_width="@dimen/d50"
+        android:layout_height="@dimen/d50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/d13"
+        android:layout_marginRight="@dimen/d15"/>
+
+</RelativeLayout>

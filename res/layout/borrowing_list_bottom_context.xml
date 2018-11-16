@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d30"
+        android:gravity="center"
+        android:text="点击借款人可查看具体协议"
+        android:textColor="@color/FC_C9A670"
+        android:textSize="@dimen/s11" />
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/d265"
+        android:layout_height="@dimen/d339"
+        android:background="@drawable/bg_licai_plan_dialog"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d15"
+        android:paddingRight="@dimen/d15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d23"
+                android:gravity="center_horizontal"
+                android:text="转入周周升"
+                android:textColor="@color/FC_3E3E3E"
+                android:textSize="@dimen/s18" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="转入预计收益:"
+                    android:textColor="@color/FC_3E3E3E"
+                    android:textSize="@dimen/s13" />
+
+                <TextView
+                    android:id="@+id/tv_expected_earnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/d5"
+                    android:layout_toLeftOf="@+id/tv_licai_plan_yuan"
+                    android:text="0.00"
+                    android:textColor="@color/FC_F5A019"
+                    android:textSize="@dimen/s18" />
+
+                <TextView
+                    android:id="@+id/tv_licai_plan_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="元"
+                    android:textColor="@color/FC_3E3E3E"
+                    android:textSize="@dimen/s13" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d71"
+                android:layout_marginTop="@dimen/d10">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d71"
+                    android:src="@drawable/licai_plan_dialog_lilv_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/d14"
+                    android:text="周周升"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s18" />
+
+                <TextView
+                    android:id="@+id/tv_wwu_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/d14"
+                    android:layout_marginRight="@dimen/d14"
+                    android:text="7.88%~11.88%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s18" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d8">
+
+                <com.wtjr.lqg.widget.MoneyEditText
+                    android:id="@+id/et_rollInMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d40"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/textView"
+                    android:background="@color/white"
+                    android:digits="0123456789."
+                    android:hint="转入金额(元)"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/FC_3F1E00"
+                    android:textColorHint="@color/FC_A5A5A5"
+                    android:textSize="@dimen/s13">
+
+                    <requestFocus />
+                </com.wtjr.lqg.widget.MoneyEditText>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="元"
+                    android:textColor="@color/FC_3E3E3E"
+                    android:textSize="@dimen/s13" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d1"
+                android:background="@color/FC_F5F5F5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d5">
+
+                <TextView
+                    android:id="@+id/tv_lqb_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="零钱宝资金：元"
+                    android:textColor="@color/FC_A5A5A5"
+                    android:textSize="@dimen/s12" />
+
+                <Button
+                    android:id="@+id/btn_allRollIn"
+                    android:layout_width="@dimen/d63"
+                    android:layout_height="@dimen/d27"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_bg"
+                    android:text="全部转入"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s12" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="@dimen/d169"
+            android:layout_height="@dimen/d40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/d19"
+            android:background="@drawable/btn_bg1"
+            android:enabled="false"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s16" />
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d15"
+        android:background="@color/transparent"
+        android:src="@drawable/licai_plan_close_icon" />
+
+
+</LinearLayout>

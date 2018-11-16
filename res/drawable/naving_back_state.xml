@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 这个是返回按钮的 -->
+    <!-- 点击时候的颜色 -->
+    <item android:drawable="@drawable/naving_back_press" android:state_pressed="true"/>
+    <!-- 没有被点击时候的颜色 -->
+    <item android:drawable="@drawable/naving_back_nor" android:state_pressed="false"/>
+
+</selector>

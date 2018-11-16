@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置输入框的边框 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:bottom="@dimen/d0.5"
+        android:left="@dimen/d0.5"
+        android:right="@dimen/d0.5"
+        android:top="@dimen/d0.5">
+        <shape
+            android:dither="true"
+            android:shape="rectangle" >
+            <solid android:color="@color/FC_CCCCCC" />
+        </shape>
+    </item>
+    
+    <item
+        android:bottom="@dimen/d1.5"
+        android:left="@dimen/d1.5"
+        android:right="@dimen/d1.5"
+        android:top="@dimen/d1.5">
+        <shape
+            android:dither="true"
+            android:shape="rectangle" >
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+
+</layer-list>

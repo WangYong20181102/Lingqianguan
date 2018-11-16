@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.wtjr.lqg.widget.WeekDayView
+        android:id="@+id/weekDayView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d35"
+        android:layout_marginLeft="@dimen/d12"
+        android:layout_marginRight="@dimen/d12" />
+
+    <View style="@style/line" />
+
+    <com.wtjr.lqg.widget.SignInMonthDateView
+        android:id="@+id/monthDateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d12"
+        android:layout_marginRight="@dimen/d12"
+        android:layout_marginTop="@dimen/d10" />
+
+</LinearLayout>

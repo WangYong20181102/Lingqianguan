@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 消息页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_requestAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#00ff00"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_changeRequestAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:background="@color/white"
+                android:hint="请输入您要切换地址"
+                android:padding="@dimen/d15">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:gravity="center"
+                android:text="http://192.168.1.129:9908" />
+
+            <TextView
+                android:id="@+id/tv_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:gravity="center"
+                android:text="https://manager.lqgapp.com" />
+
+            <TextView
+                android:id="@+id/tv_address3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:gravity="center"
+                android:text="http://120.76.102.214:9908"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_address4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:gravity="center"
+                android:text="https://test.lqgapp.com" />
+
+            <Button
+                android:id="@+id/btn_changeRequestAddress"
+                style="@style/buttonStyle_1"
+                android:layout_height="@dimen/d50"
+                android:layout_marginTop="@dimen/d20"
+                android:enabled="true"
+                android:text="确认更换环境" />
+
+            <Button
+                android:id="@+id/btn_dataClean"
+                style="@style/buttonStyle_1"
+                android:layout_height="@dimen/d50"
+                android:layout_marginTop="@dimen/d20"
+                android:enabled="true"
+                android:text="清除所有缓存数据" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

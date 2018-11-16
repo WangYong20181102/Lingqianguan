@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/d265"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="@dimen/d265"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d22"
+            android:background="@drawable/bg_licai_plan_dialog"
+            android:paddingBottom="@dimen/d20"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/d15"
+            android:paddingRight="@dimen/d15">
+
+            <TextView
+                android:id="@+id/tv_licai_plan_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d113"
+                android:gravity="center"
+                android:text="@string/licai_plan_subscribe_yuyue"
+                android:textColor="@color/FC_3E3E3E"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:id="@+id/tv_licai_plan_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d17"
+                android:layout_marginBottom="@dimen/d40"
+                android:gravity="center"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="@dimen/s13" />
+            <TextView
+                android:id="@+id/tv_licai_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:gravity="center"
+                android:textColor="@color/FC_FFAF0C"
+                android:textSize="@dimen/s13"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d40"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_two_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_refuse"
+                        android:layout_width="@dimen/d109"
+                        android:layout_height="@dimen/d40"
+                        android:background="@drawable/btn_bg2"
+                        android:text="稍后"
+                        android:textColor="@color/FC_A5A5A5"
+                        android:textSize="@dimen/s16" />
+
+                    <Button
+                        android:id="@+id/btn_open"
+                        android:layout_width="@dimen/d109"
+                        android:layout_height="@dimen/d40"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_bg1"
+                        android:enabled="false"
+                        android:textSize="@dimen/s16" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/d109"
+                        android:layout_height="@dimen/d40"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="抢先专享"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/s16" />
+
+                        <TextView
+                            android:id="@+id/tv_tyj_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/s10" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_sure"
+                    android:layout_width="@dimen/d169"
+                    android:layout_height="@dimen/d40"
+                    android:background="@drawable/btn_bg1"
+                    android:text="知道了"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s16"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_agree_xieyi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d12"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/image_agree_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/open_account_agree_icon_no" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d9"
+                    android:text="同意"
+                    android:textColor="@color/FC_C9A670"
+                    android:textSize="@dimen/s13" />
+
+                <TextView
+                    android:id="@+id/tv_user_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《大满罐服务协议》"
+                    android:textColor="@color/FC_FFC62A"
+                    android:textSize="@dimen/s13" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_licai_head"
+            android:layout_width="@dimen/d150"
+            android:layout_height="@dimen/d120"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/licai_plan_subscribe_icon" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d15"
+        android:background="@color/transparent"
+        android:src="@drawable/licai_plan_close_icon" />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 下拉刷新 -->
+
+    <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+        android:id="@+id/pullTo_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:refresh_head_text_color="@color/FC_A5A5A5">
+
+        <!-- 上头 -->
+
+        <include layout="@layout/allview_refresh_head" />
+        <!-- 上下分割两部风内容 -->
+
+        <com.wtjr.lqg.widget.pullRefresh.PullableListView
+            android:id="@+id/pullable_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_app_bg"
+            android:divider="@null"
+            android:gravity="center_horizontal"
+            android:listSelector="@android:color/transparent"
+            android:orientation="vertical"
+            android:overScrollMode="never" >
+        </com.wtjr.lqg.widget.pullRefresh.PullableListView>
+        <!-- 下头 -->
+
+        <include layout="@layout/allview_load_more" />
+    </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+
+</LinearLayout>

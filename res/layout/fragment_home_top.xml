@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_home_top"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d250"
+            android:background="@drawable/home_top_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_home_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d15"
+                        android:src="@drawable/ic_home_withdraw"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:text="提现"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s16"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d25"
+                        android:src="@drawable/ic_home_recharge"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d5"
+                        android:text="充值"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s16"/>
+
+                </LinearLayout>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gif_home_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gif_home_recharge"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/iv_home_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/d15"
+                    android:src="@drawable/home_service"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_unlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d30"
+                    android:layout_marginTop="@dimen/d30"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/ic_login_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/me_login_register"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s17"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/d10"
+                        android:layout_toRightOf="@+id/ic_login_register"
+                        android:src="@drawable/home_unlogin"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d12"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_yesterdayIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/d10"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s45"/>
+
+                    <ImageView
+                        android:id="@+id/iv_home_show_asset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_yesterdayIncome"
+                        android:src="@drawable/home_show_asset"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_text_yesterdayIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/d17"
+                android:text="昨日收益(元)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s13"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_tomorrow_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/d5"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s18"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="预计明日收益(元)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s11"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/d0.5"
+                    android:layout_height="@dimen/d25"
+                    android:alpha="0.8"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_totalincome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_totalincome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/d5"
+                        android:text="0.00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s18"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="累计收益(元)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s11"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d95"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_marginRight="@dimen/d15"
+            android:layout_marginTop="@dimen/d210"
+            android:background="@drawable/home_bg_5"
+            android:orientation="horizontal">
+
+            <com.wtjr.lqg.widget.UsuallyLayoutHome
+                android:id="@+id/ulh_information"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/d9"
+                android:layout_weight="1"
+                app:reuse_context="信息披露"
+                app:reuse_icon="@drawable/home_information"
+                app:reuse_textSize="@dimen/d14"/>
+
+            <com.wtjr.lqg.widget.UsuallyLayoutHome
+                android:id="@+id/ulh_activ"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:reuse_context="精彩活动"
+                app:reuse_icon="@drawable/home_activity"
+                app:reuse_textSize="@dimen/d14"/>
+
+            <com.wtjr.lqg.widget.UsuallyLayoutHome
+                android:id="@+id/ulh_sign_in"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:reuse_context="签到奖励"
+                app:reuse_icon="@drawable/home_sign_in"
+                app:reuse_textSize="@dimen/d14"/>
+
+            <com.wtjr.lqg.widget.UsuallyLayoutHome
+                android:id="@+id/ulh_invitation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/d9"
+                android:layout_weight="1"
+                app:reuse_context="邀请有礼"
+                app:reuse_icon="@drawable/home_invite"
+                app:reuse_textSize="@dimen/d14"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_homevp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d115"
+        android:layout_marginBottom="@dimen/d5"
+        android:layout_marginTop="@dimen/d10">
+
+        <!--无限轮播显示三条item的ViewPager-->
+        <com.wtjr.lqg.widget.ScalePagerView
+            android:id="@+id/vp_home_spv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d115"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_banner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d115"
+        android:layout_marginTop="@dimen/d10"
+        android:src="@drawable/home_banner_default"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_home_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d10"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+
+</LinearLayout>

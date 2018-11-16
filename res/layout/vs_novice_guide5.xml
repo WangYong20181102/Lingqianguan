@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"
+        android:background="@color/novice_guide_bg"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/view_guide5_top"
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:background="@color/novice_guide_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/guide5_l" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/d20"
+            android:layout_marginRight="@dimen/d20"
+            android:src="@drawable/guide5_shou" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/guide5_r" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/novice_guide_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_guide5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d20"
+            android:paddingRight="@dimen/d20" >
+
+            <Button
+                android:id="@+id/bt_guide5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/d15"
+                android:background="@drawable/image_guide2_4"
+                android:text="朕知道了"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s18" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/d18"
+                android:text="左右滑动可以看不同的金额收益哦！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s18" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

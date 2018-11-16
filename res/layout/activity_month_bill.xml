@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lqb_head_bg"
+        android:orientation="vertical">
+
+        <com.wtjr.lqg.widget.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d25" />
+
+        <include layout="@layout/include_activity_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d35"
+        android:background="@color/FC_F4F5F9"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_select_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d15"
+            android:layout_weight="1"
+            android:text="本月"
+            android:textColor="@color/FC_333333"
+            android:textSize="@dimen/s15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mm_bill"
+            android:layout_width="@dimen/d50"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_mm_bill"
+                android:layout_width="@dimen/d18"
+                android:layout_height="@dimen/d18"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/d15"
+                android:src="@drawable/bill_month" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bill_case"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:layout_marginLeft="@dimen/d15"
+        android:gravity="center_vertical"
+        android:text="充值金额情况"
+        android:textColor="@color/FC_333333"
+        android:textSize="@dimen/s17" />
+
+    <com.wtjr.lqg.widget.BillLineChartView
+        android:id="@+id/bill_lineChartView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d100"
+        android:layout_marginLeft="@dimen/d15"
+        android:layout_marginRight="@dimen/d15"
+        android:background="@color/white"
+        app:YAxisColor="@android:color/transparent"
+        app:bottomHideHeight="@dimen/d30"
+        app:brokenLineBackgroundEnd="@color/transparent"
+        app:brokenLineBackgroundStart="@color/transparent"
+        app:brokenLineColor="@android:color/holo_blue_bright"
+        app:brokenLineSize="@dimen/d3"
+        app:circleLineSize="@dimen/d1.5"
+        app:circleRadius="@dimen/d5"
+        app:dateTextSize="@dimen/s10"
+        app:incomeTextColor="@color/FC_999999"
+        app:incomeTextSize="@dimen/s11"
+        app:topPadding="@dimen/d30" />
+
+    <View
+        android:id="@+id/v_billvv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d0.5"
+        android:layout_marginLeft="@dimen/d15"
+        android:layout_marginRight="@dimen/d15"
+        android:background="@color/FC_E5E5E5" />
+
+    <LinearLayout
+        android:id="@+id/ll_bill0"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:background="@color/FC_F4F5F9"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_bill0"
+            android:layout_width="@dimen/d5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/d25"
+            android:background="@color/FC_FFC966" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="充值金额"
+            android:textColor="@color/FC_FFC966"
+            android:textSize="@dimen/s17" />
+
+        <TextView
+            android:id="@+id/tv_chargeSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d30"
+            android:text="0.00"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bill1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_bill1"
+            android:layout_width="@dimen/d5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/d25"
+            android:background="@color/FC_66CCAD"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/withdrawal_money"
+            android:textColor="@color/FC_66CCAD"
+            android:textSize="@dimen/s17" />
+
+        <TextView
+            android:id="@+id/tv_withdrawSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d30"
+            android:text="0.00"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bill2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_bill2"
+            android:layout_width="@dimen/d5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/d25"
+            android:background="@color/FC_FE8080"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bill_investment_money"
+            android:textColor="@color/FC_FE8080"
+            android:textSize="@dimen/s17" />
+
+        <TextView
+            android:id="@+id/tv_investSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d30"
+            android:text="0.00"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bill3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_bill3"
+            android:layout_width="@dimen/d5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/d25"
+            android:background="@color/FC_A49EFC"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/income"
+            android:textColor="@color/FC_A49EFC"
+            android:textSize="@dimen/s17" />
+
+        <TextView
+            android:id="@+id/tv_profitSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d30"
+            android:text="0.00"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s17" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bill4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d55"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_bill4"
+            android:layout_width="@dimen/d5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/d25"
+            android:background="@color/FC_66D6Ff"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/get_experience"
+            android:textColor="@color/FC_66D6Ff"
+            android:textSize="@dimen/s17" />
+
+        <TextView
+            android:id="@+id/tv_expSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d30"
+            android:text="0.00"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s17" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 周周升详情页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/root_layout"
+              style="@style/immersion_status"
+              android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/FC_F5F5F5">
+
+        <Button
+            android:id="@+id/bt_start_investment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d50"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bt_investment"
+            android:text="立即预约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s18"/>
+
+        <com.wtjr.lqg.widget.ObservableScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bt_start_investment"
+            android:background="@color/FC_F5F5F5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/d10"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/include_investment_licai_card"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d10"
+                        android:background="@drawable/me_drawable_background"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/d20">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d40"
+                            android:layout_marginLeft="@dimen/d15"
+                            android:gravity="center_vertical"
+                            android:text="产品介绍"
+                            android:textColor="@color/FC_414141"
+                            android:textSize="@dimen/s14"/>
+
+                        <View
+                            style="@style/line_h6"
+                            android:layout_marginLeft="@dimen/d15"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d40"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/d15">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/licai_plan_detail_icon1"/>
+
+                            <TextView
+                                android:id="@+id/tv_project_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d10"
+                                android:text="最低100元即可预约"
+                                android:textColor="@color/FC_777777"
+                                android:textSize="@dimen/s14"/>
+
+                        </LinearLayout>
+
+                        <!--<View style="@style/line" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d40"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/d15">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/licai_plan_detail_icon2"/>
+
+                            <TextView
+                                android:id="@+id/tv_year_earnings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d10"
+                                android:text="7天锁定期，锁定期后自由转出"
+                                android:textColor="@color/FC_777777"
+                                android:textSize="@dimen/s14"/>
+                        </LinearLayout>
+
+                        <!--<View style="@style/line" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d40"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/d15">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/licai_plan_detail_icon3"/>
+
+                            <TextView
+                                android:id="@+id/tv_financing_limit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d10"
+                                android:text="当日计息，每周涨息"
+                                android:textColor="@color/FC_777777"
+                                android:textSize="@dimen/s14"/>
+                        </LinearLayout>
+
+                        <!--<View style="@style/line" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d40"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/d15">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/licai_plan_detail_icon4"/>
+
+                            <TextView
+                                android:id="@+id/tv_financing_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/d10"
+                                android:text="先息后本，按周期结息"
+                                android:textColor="@color/FC_777777"
+                                android:textSize="@dimen/s14"/>
+                        </LinearLayout>
+
+                        <!--<View style="@style/line" />-->
+                        <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/d120"-->
+                        <!--android:layout_marginBottom="@dimen/d5"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:layout_marginRight="15dp"-->
+                        <!--android:background="@drawable/licai_histogram_bg">-->
+
+                        <!--<com.wtjr.lqg.widget.Histogram-->
+                        <!--android:id="@+id/histogram_licai"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/d100"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_marginBottom="@dimen/d1"-->
+                        <!--android:layout_marginLeft="@dimen/d1"-->
+                        <!--android:layout_marginRight="@dimen/d20"-->
+                        <!--app:brokenLineBackgroundEnd1="@color/FC_FFF8EA"-->
+                        <!--app:brokenLineBackgroundStart1="@color/FC_FFCC66"-->
+                        <!--app:brokenLineColor1="@color/FC_FFAF0C"-->
+                        <!--app:brokenLineSize1="@dimen/d1"-->
+                        <!--app:textColor1="@color/FC_FFAF0C"-->
+                        <!--app:textSize1="@dimen/d11"/>-->
+
+                        <!--</RelativeLayout>-->
+
+                        <!--<com.wtjr.lqg.widget.WeekText-->
+                        <!--android:id="@+id/weektext"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="@dimen/d10"-->
+                        <!--android:layout_marginLeft="@dimen/d16"-->
+                        <!--android:layout_marginRight="@dimen/d22"-->
+                        <!--android:layout_marginTop="@dimen/d2"/>-->
+
+                        <ImageView
+                            android:id="@+id/iv_licai_plan_detail_interest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/d15"
+                            android:layout_marginRight="@dimen/d15"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/week_up_detail_table"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_activity_explain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/d10"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/d15"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/d15"
+                                    android:src="@drawable/week_up_icon_statement"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/d10"
+                                    android:text="活动说明: "
+                                    android:textColor="@color/FC_999999"
+                                    android:textSize="@dimen/s13"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_add_rate_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="加息幅度-2%\n加息时长-即日起，30天"
+                                android:textColor="@color/FC_999999"
+                                android:textSize="@dimen/s13"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d10"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_project_list"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/d65"
+                            android:layout_marginLeft="@dimen/d3"
+                            android:layout_weight="1"
+                            android:background="@drawable/me_drawable_background">
+
+                            <ImageView
+                                android:id="@+id/investment_image1"
+                                android:layout_width="@dimen/d26"
+                                android:layout_height="@dimen/d26"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d28"
+                                android:src="@drawable/investment_detail_product_list_icon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d13"
+                                android:layout_toRightOf="@id/investment_image1"
+                                android:text="项目列表"
+                                android:textColor="@color/FC_666666"
+                                android:textSize="@dimen/s13"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_safety_safeguard"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/d65"
+                            android:layout_marginLeft="@dimen/d3"
+                            android:layout_weight="1"
+                            android:background="@drawable/me_drawable_background">
+
+                            <ImageView
+                                android:id="@+id/investment_image2"
+                                android:layout_width="@dimen/d26"
+                                android:layout_height="@dimen/d26"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d28"
+                                android:src="@drawable/investment_details_safe"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d13"
+                                android:layout_toRightOf="@id/investment_image2"
+                                android:text="安全保障"
+                                android:textColor="@color/FC_666666"
+                                android:textSize="@dimen/s13"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d3"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_product_specification"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/d65"
+                            android:layout_marginLeft="@dimen/d3"
+                            android:layout_weight="1"
+                            android:background="@drawable/me_drawable_background">
+
+                            <ImageView
+                                android:id="@+id/investment_image3"
+                                android:layout_width="@dimen/d26"
+                                android:layout_height="@dimen/d26"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d28"
+                                android:src="@drawable/investment_detail_product_specification_icon"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d13"
+                                android:layout_toRightOf="@id/investment_image3"
+                                android:text="产品说明"
+                                android:textColor="@color/FC_666666"
+                                android:textSize="@dimen/s13"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_investment_log"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/d65"
+                            android:layout_marginLeft="@dimen/d3"
+                            android:layout_weight="1"
+                            android:background="@drawable/me_drawable_background">
+
+                            <ImageView
+                                android:id="@+id/investment_image4"
+                                android:layout_width="@dimen/d26"
+                                android:layout_height="@dimen/d26"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d28"
+                                android:src="@drawable/investment_details_investment_log"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/d13"
+                                android:layout_toRightOf="@id/investment_image4"
+                                android:text="加入记录"
+                                android:textColor="@color/FC_666666"
+                                android:textSize="@dimen/s13"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/ali_risk_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="《风险提示告知书》"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginTop="@dimen/d10"
+                    android:gravity="center"
+                    android:text="@string/licai_plan_detail_bottom_content"
+                    android:textColor="@color/FC_BBBBBB"
+                    android:textSize="@dimen/d10"/>
+
+            </LinearLayout>
+        </com.wtjr.lqg.widget.ObservableScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

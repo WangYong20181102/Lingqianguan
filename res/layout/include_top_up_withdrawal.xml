@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/d50"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d49.5"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_withdrawal_and_login"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/layout_item_state"
+            android:text="@string/home_withdrawal"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s18" />
+
+        <View
+            style="@style/line_h1"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/btn_top_up_and_register"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/layout_item_state"
+            android:text="@string/home_top_up"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s18" />
+    </LinearLayout>
+
+    <View style="@style/line" />
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d100"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_common_problems"
+                style="@style/TextNormalStyleL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/common_problems_nor"
+                android:paddingBottom="@dimen/d20"
+                android:paddingTop="@dimen/d20"
+                android:text="@string/ser_common_problems" />
+
+            <View
+                style="@style/line_h"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginTop="@dimen/d10" />
+
+            <Button
+                android:id="@+id/btn_user_feedback"
+                style="@style/TextNormalStyleL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/user_feedback_nor"
+                android:paddingBottom="@dimen/d20"
+                android:paddingTop="@dimen/d20"
+                android:text="@string/ser_user_feedback" />
+
+            <View
+                style="@style/line_h"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginTop="@dimen/d10" />
+
+            <Button
+                android:id="@+id/btn_about_us"
+                style="@style/TextNormalStyleL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layout_item_state"
+                android:drawablePadding="@dimen/d10"
+                android:drawableTop="@drawable/about_us"
+                android:paddingBottom="@dimen/d20"
+                android:paddingTop="@dimen/d20"
+                android:text="@string/ser_about_us" />
+        </LinearLayout>
+
+        <View style="@style/line" />
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem
+            android:id="@+id/uli_lqg_wx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            android:background="@drawable/layout_item_state"
+            app:com_ImageContentrScrL="@drawable/lqg_wx_nor"
+            app:com_ImageLeftMarginL="@dimen/d12"
+            app:com_textTvContentL="@string/ser_lqg_wx"
+            app:com_textTvContentLMarginL="@dimen/d10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/d50" />
+        </RelativeLayout>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem
+            android:id="@+id/uli_lqg_wb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:com_ImageContentrScrL="@drawable/lqg_wb_nor"
+            app:com_ImageLeftMarginL="@dimen/d12"
+            app:com_textTvContentL="@string/ser_lqg_wb"
+            app:com_textTvContentLMarginL="@dimen/d10" />
+
+        <View style="@style/line" />
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem
+            android:id="@+id/uli_hot_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d10"
+            app:com_ImageContentrScrL="@drawable/hot_line"
+            app:com_ImageLeftMarginL="@dimen/d12"
+            app:com_textTvContentL="@string/ser_hot_line"
+            app:com_textTvContentLMarginL="@dimen/d10"
+            app:com_textTvContentR="@string/ser_time" />
+
+        <View style="@style/line" />
+    </LinearLayout>
+
+</LinearLayout>

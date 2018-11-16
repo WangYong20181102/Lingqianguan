@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sv_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/FC_F5F5F5">
+
+        <RelativeLayout
+            android:id="@+id/rl_lqg_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffdc36">
+                    <!--android:background="@drawable/guoduse_lqb">-->
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/d44">
+
+                        <ImageButton
+                            android:id="@+id/imgBtn_help"
+                            android:layout_width="@dimen/d32"
+                            android:layout_height="@dimen/d32"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/d12"
+                            android:background="@null"
+                            android:src="@drawable/naving_help" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d66">
+
+                        <com.wtjr.lqg.widget.wave.WaveView
+                            android:id="@+id/wave_rectangle"
+                            android:layout_width="match_parent"
+                            android:layout_height="245dp"
+                            android:layout_alignParentTop="true" />
+
+                        <com.wtjr.lqg.widget.wave.WaveView
+                            android:id="@+id/wave_circle"
+                            android:layout_width="@dimen/d195"
+                            android:layout_height="@dimen/d195"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="0dp" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/wave_circle"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/d15"
+                            android:layout_marginTop="@dimen/d13"
+                            android:gravity="center"
+                            android:text="历史年化收益7.0%起，每周涨0.5%，可达9.88%"
+                            android:textColor="@color/FC_3F1E00"
+                            android:textSize="@dimen/s13" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d180"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:id="@+id/tv_nhsy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:text="历史年化收益(%)"
+                                android:textColor="#ff7930"
+                                android:textSize="@dimen/s13" />
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_nhsy"
+                                android:layout_centerHorizontal="true"
+                                android:includeFontPadding="false"
+                                android:text="7.00"
+                                android:textColor="#ff7930"
+                                android:textSize="@dimen/s45" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d50"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_roll_out"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_item_state"
+                        android:text="转出"
+                        android:textColor="@color/FC_FFAF0D"
+                        android:textSize="@dimen/s18" />
+
+                    <View
+                        style="@style/line_h1"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_into"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="转到周周升"
+                            android:textSize="@dimen/s15"
+                            android:textColor="@color/FC_FFAF0D"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/d7"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="@dimen/d14"
+                                android:layout_height="@dimen/d14"
+                                android:src="@drawable/lqb_roll_in_zan_icon"/>
+                            <TextView
+                                android:id="@+id/tv_max_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最高11.88%，自由退出"
+                                android:textColor="@color/FC_C9A670"
+                                android:textSize="@dimen/s12"
+                                android:layout_marginLeft="@dimen/d4"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_into1"
+                        android:layout_width="@dimen/d0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_item_state"
+                        android:text="转入"
+                        android:textColor="@color/FC_FFAF0D"
+                        android:textSize="@dimen/s18"
+                        android:visibility="visible"/>
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d80"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_marginTop="@dimen/d10"
+                    android:background="@drawable/me_drawable_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.wtjr.lqg.widget.UpDownTextView
+                        android:id="@+id/lqb_yesterday_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:down_text_color="@color/FC_FFAF0D"
+                        app:down_text_content="0.00"
+                        app:down_text_size="@dimen/s36"
+                        app:up_text_color="@color/FC_3F1E00"
+                        app:up_text_content="预计明日收益(元)"
+                        app:up_text_size="@dimen/s13" />
+                </LinearLayout>
+
+                <!--<View-->
+                <!--style="@style/line"-->
+                <!--android:layout_height="@dimen/d10"-->
+                <!--android:background="@color/FC_F5F5F5" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d75"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_marginTop="@dimen/d10"
+                    android:background="@color/FC_F5F5F5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.wtjr.lqg.widget.LqbUpDownTextView
+                        android:id="@+id/udtv_total_assets"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_drawable_background"
+                        android:clickable="true"
+                        app:lqb_down_text_color="@color/FC_FFAF0D"
+                        app:lqb_down_text_content="0.00"
+                        app:lqb_down_text_size="@dimen/s21"
+                        app:lqb_left_icon="@drawable/lqb_money_icon"
+                        app:lqb_text_gravity="left"
+                        app:lqb_up_text_color="@color/FC_3F1E00"
+                        app:lqb_up_text_content="零钱宝资金(元)"
+                        app:lqb_up_text_size="@dimen/s13" />
+
+                    <!--<View-->
+                    <!--style="@style/line_h"-->
+                    <!--android:layout_height="@dimen/d45" />-->
+
+                    <com.wtjr.lqg.widget.LqbUpDownTextView
+                        android:id="@+id/udtv_experience_money"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d3"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_drawable_background"
+                        android:clickable="true"
+                        app:lqb_down_text_color="@color/FC_FFAF0D"
+                        app:lqb_down_text_content="0.00"
+                        app:lqb_down_text_size="@dimen/s21"
+                        app:lqb_left_icon="@drawable/lqb_experience_icon"
+                        app:lqb_text_gravity="left"
+                        app:lqb_up_text_color="@color/FC_3F1E00"
+                        app:lqb_up_text_content="体验金(元)"
+                        app:lqb_up_text_size="@dimen/s13" />
+                </LinearLayout>
+
+                <!--<View style="@style/line" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d75"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:layout_marginRight="@dimen/d10"
+                    android:layout_marginTop="@dimen/d3"
+                    android:background="@color/FC_F5F5F5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.wtjr.lqg.widget.LqbUpDownTextView
+                        android:id="@+id/udtv_total_earnings"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_drawable_background"
+                        android:clickable="true"
+                        app:lqb_down_text_color="@color/FC_FFAF0D"
+                        app:lqb_down_text_content="0.00"
+                        app:lqb_down_text_size="@dimen/s21"
+                        app:lqb_left_icon="@drawable/lqb_accumulated_earnings_icon"
+                        app:lqb_text_gravity="left"
+                        app:lqb_up_text_color="@color/FC_3F1E00"
+                        app:lqb_up_text_content="累计收益(元)"
+                        app:lqb_up_text_size="@dimen/s13" />
+
+                    <!--<View-->
+                    <!--style="@style/line_h"-->
+                    <!--android:layout_height="@dimen/d45"  />-->
+
+                    <com.wtjr.lqg.widget.LqbUpDownTextView
+                        android:id="@+id/udtv_investment_day"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d3"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_drawable_background"
+                        android:clickable="true"
+                        app:lqb_down_text_color="@color/FC_FFAF0D"
+                        app:lqb_down_text_content="0"
+                        app:lqb_down_text_size="@dimen/s21"
+                        app:lqb_left_icon="@drawable/lqb_investment_icon"
+                        app:lqb_text_gravity="left"
+                        app:lqb_up_text_color="@color/FC_3F1E00"
+                        app:lqb_up_text_content="投资天数(天)"
+                        app:lqb_up_text_size="@dimen/s13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d30"
+                    android:background="@color/color_app_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_to_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/naving_up_down_page" />
+
+                    <TextView
+                        android:id="@+id/tv_to_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/d4"
+                        android:gravity="center"
+                        android:text="继续拖动，查看安全保障"
+                        android:textColor="#e6e6e6"
+                        android:textSize="@dimen/s12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="224dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="118dp"
+                android:gravity="center_horizontal">
+
+                <com.wtjr.lqg.widget.periscope.PeriscopeLayout
+                    android:id="@+id/periscope"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

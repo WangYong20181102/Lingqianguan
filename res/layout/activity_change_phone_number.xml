@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.wtjr.lqg.widget.CircleImageView
+            android:id="@+id/civ_headPicture"
+            android:layout_width="@dimen/d90"
+            android:layout_height="@dimen/d90"
+            android:layout_marginTop="@dimen/d50"
+            android:src="@drawable/lingmeimei"
+            app:civ_border_color="@color/color_app_bg"
+            app:civ_border_overlay="true"
+            app:civ_border_width="@dimen/d1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d30"
+            android:text="你现在的手机号码为"
+            android:textColor="@color/FC_666666"
+            android:textSize="@dimen/s15" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d15"
+            android:text="TextView"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s15" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/buttonStyle_1"
+            android:layout_marginLeft="@dimen/d88"
+            android:layout_marginRight="@dimen/d88"
+            android:layout_marginTop="@dimen/d30"
+            android:background="@drawable/pay_back_password_btn_bg"
+            android:enabled="true"
+            android:text="@string/change_phone_number_code_name"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s15"/>
+    </LinearLayout>
+
+</LinearLayout>

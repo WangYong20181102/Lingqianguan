@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.wtjr.lqg.widget.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/include_activity_title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linear_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d50"
+                android:layout_alignParentBottom="true"
+                android:background="@color/FC_CAN_SELECT"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_acquire_tyj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acquire_experience_money_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s17" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/linear_bottom">
+
+                <include layout="@layout/include_pull_expandable_listview" />
+
+                <LinearLayout
+                    android:id="@+id/ll_titleMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d38"
+                            android:layout_marginLeft="@dimen/d20"
+                            android:layout_marginRight="@dimen/d20"
+                            android:layout_marginTop="@dimen/d20"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rd_tyj_award"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="赠送体验金" />
+
+                            <RadioButton
+                                android:id="@+id/rd_tyj_investment"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/d20"
+                                android:layout_marginRight="@dimen/d20"
+                                android:layout_weight="1"
+                                android:text="体验金转入" />
+
+                            <RadioButton
+                                android:id="@+id/rd_tyj_expire"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="体验金到期" />
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/d38"
+                            android:layout_marginBottom="@dimen/d20"
+                            android:layout_marginLeft="@dimen/d20"
+                            android:layout_marginRight="@dimen/d20"
+                            android:layout_marginTop="@dimen/d20"
+                            android:background="@android:color/white"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_all"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="全部" />
+
+                            <RadioButton
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/d20"
+                                android:layout_marginRight="@dimen/d20"
+                                android:layout_weight="1"
+                                android:text="全部"
+                                android:visibility="invisible" />
+
+                            <RadioButton
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="全部"
+                                android:visibility="invisible" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#70000000" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@+id/vs_guide6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/guide_6"
+        android:layout="@layout/vs_novice_guide6"
+        android:visibility="visible" />
+</RelativeLayout>

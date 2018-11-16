@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d50"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_left"
+        style="@style/band_bank_text"
+        android:text="预留手机号：" />
+
+    <com.wtjr.lqg.widget.ClearEditText
+        android:id="@+id/edt_right"
+        style="@style/editTextStyle"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/tv_left"
+        android:ems="10"
+        android:maxLength="24">
+    </com.wtjr.lqg.widget.ClearEditText>
+
+</RelativeLayout>

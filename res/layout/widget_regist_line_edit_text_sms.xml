@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/d33"
+    android:layout_marginRight="@dimen/d48"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/ledt_sms"
+            style="@style/editTextStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:digits="0123456789"
+            android:drawableLeft="@drawable/sms_state"
+            android:drawablePadding="16dp"
+            android:hint="请输入您的短信验证码"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:paddingRight="@dimen/d65">
+
+            <requestFocus/>
+        </EditText>
+
+        <View
+            android:id="@+id/v_et_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ledt_sms"
+            android:layout_marginLeft="@dimen/d15"
+            android:background="#fa8f21"/>
+
+        <com.wtjr.lqg.widget.TextViewCountDownView
+            android:id="@+id/tcdv_sms"
+            android:layout_width="@dimen/d50"
+            android:layout_height="@dimen/d22"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="点击获取"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

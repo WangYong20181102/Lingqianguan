@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d55"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View style="@style/line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_foot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.wtjr.lqg.widget.NavigationBarItem
+            android:id="@+id/nbi_home_page"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            app:nbi_content="@string/home_page_name"
+            app:nbi_image="@drawable/home_page_select"
+            app:nbi_textColor="@color/lqb_head_bg"/>
+
+        <com.wtjr.lqg.widget.NavigationBarItem
+            android:id="@+id/nbi_lqb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            app:nbi_content="@string/lqb_name"
+            app:nbi_image="@drawable/lqb_unselect"
+            app:nbi_textColor="#5A6166"/>
+
+        <com.wtjr.lqg.widget.NavigationBarItem
+            android:id="@+id/nbi_investment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            app:nbi_content="@string/investment_name"
+            app:nbi_image="@drawable/investment_unselect"
+            app:nbi_textColor="#5A6166"/>
+
+        <com.wtjr.lqg.widget.NavigationBarItem
+            android:id="@+id/nbi_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            app:nbi_content="@string/me_name"
+            app:nbi_image="@drawable/me_unselect"
+            app:nbi_textColor="#5A6166"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rotates="http://schemas.android.com/apk/res-auto"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:shareInterpolator="true" >
+
+    <com.wtjr.lqg.widget.Rotate3dAnimation
+        android:repeatCount="-1"
+        rotates:fromDeg="179"
+        rotates:pivotX="50%"
+        rotates:pivotY="50%"
+        rotates:rollType="y"
+        rotates:toDeg="0" />
+
+</set>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 没有焦点时候的颜色 -->
+    <item android:drawable="@drawable/activation_nor" android:state_focused="false"/>
+
+    <!-- 有焦点时候的颜色 -->
+    <item android:drawable="@drawable/activation_focused" android:state_focused="true"/>
+
+</selector>

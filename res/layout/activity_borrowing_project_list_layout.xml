@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.StatusBarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/include_activity_title" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/FC_F5F6F8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:background="@color/FC_F5F6F8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="借款人"
+                android:textColor="@color/FC_777777"
+                android:textSize="@dimen/s13"/>
+
+            <TextView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="待投资总额(元)"
+                android:textColor="@color/FC_777777"
+                android:textSize="@dimen/s13"/>
+
+            <TextView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="借款期限(天)"
+                android:textColor="@color/FC_777777"
+                android:textSize="@dimen/s13"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+        android:id="@+id/pullTo_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:refresh_head_text_color="@color/FC_A5A5A5">
+
+        <include layout="@layout/allview_refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.wtjr.lqg.widget.pullRefresh.PullableListView
+            android:id="@+id/list_borrowing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent" />
+
+        <include layout="@layout/allview_load_more" />
+    </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/d50"
+    android:background="@android:color/white" >
+
+    <com.wtjr.lqg.widget.SmsCountdownView
+        android:id="@+id/scv"
+        android:layout_width="@dimen/d96"
+        android:layout_height="@dimen/d40"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+    </com.wtjr.lqg.widget.SmsCountdownView>
+
+    <EditText
+        android:id="@+id/et_sms"
+        style="@style/editTextStyle"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/scv"
+        android:drawableLeft="@drawable/verify_code"
+        android:drawablePadding="@dimen/d10"
+        android:ems="10"
+        android:hint="原登录密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:paddingLeft="@dimen/d15" />
+
+</RelativeLayout>

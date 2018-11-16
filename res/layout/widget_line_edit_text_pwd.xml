@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/d33"
+    android:layout_marginRight="@dimen/d48"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ledt_input_pas"
+            style="@style/editTextStyle"
+            android:digits="0123456798abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+            android:drawableLeft="@drawable/password_state"
+            android:drawablePadding="@dimen/d15"
+            android:hint="@string/login_input_pas"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingRight="@dimen/d65">
+        </EditText>
+
+        <View
+            android:id="@+id/v_et_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ledt_input_pas"
+            android:layout_marginLeft="@dimen/d15"
+            android:background="@color/Line_Color"/>
+
+        <com.wtjr.lqg.widget.CheckBoxShowOrHide
+            android:id="@+id/cb_show_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/show_hide_state"
+            android:gravity="center"
+            android:paddingRight="16dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+</LinearLayout>

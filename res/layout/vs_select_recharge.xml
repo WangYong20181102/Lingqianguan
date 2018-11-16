@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_select_tup_up"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/line_h6"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_top_up_100"
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/d25"
+            android:paddingBottom="@dimen/d25"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/tv_top_up100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="充值100"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_tyj_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_top_up100"
+                android:layout_below="@id/tv_top_up100"
+                android:text="送1000体验金"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/image_select_100"
+                android:layout_width="@dimen/d13"
+                android:layout_height="@dimen/d13"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_select"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/d26"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/image_top_up100" />
+        </RelativeLayout>
+
+        <View
+            android:layout_height="@dimen/d30"
+            android:layout_width="@dimen/d0.5"
+            android:background="@color/FC_C9A670"
+            android:layout_gravity="center_vertical"/>
+        <RelativeLayout
+            android:id="@+id/rl_top_up_1000"
+            android:layout_width="@dimen/d0"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/d25"
+            android:paddingBottom="@dimen/d25"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_top_up1000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/image_tyj_1000"
+                android:text="充值1000"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_tyj_2000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_top_up1000"
+                android:layout_below="@id/tv_top_up1000"
+                android:text="送2000体验金"
+                android:textColor="@color/FC_3F1E00"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/image_select_1000"
+                android:layout_width="@dimen/d13"
+                android:layout_height="@dimen/d13"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_select"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/image_tyj_1000"
+                android:layout_width="@dimen/d26"
+                android:layout_height="@dimen/d26"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/image_top_up1000" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:useLevel="true" >
+
+    <!-- 红色提示小圆点 -->
+    <solid android:color="@color/FC_FF5039" />
+    <!--<stroke android:color="@color/FC_FF5039" android:width="@dimen/d1"/>-->
+
+    <size
+        android:height="@dimen/d9"
+        android:width="@dimen/d9" />
+
+    <corners android:radius="@dimen/d5" />
+
+</shape>

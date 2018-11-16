@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/d300"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_system_notice_close"-->
+            <!--android:layout_width="@dimen/d34"-->
+            <!--android:layout_height="@dimen/d34"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@drawable/home_update_close"/>-->
+
+        <!--<View-->
+            <!--android:id="@+id/v_system_notice"-->
+            <!--android:layout_width="@dimen/d1"-->
+            <!--android:layout_height="@dimen/d18"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/iv_system_notice_close"-->
+            <!--android:layout_marginRight="@dimen/d16"-->
+            <!--android:background="#dedede"/>-->
+
+        <LinearLayout
+            android:layout_width="@dimen/d300"
+            android:layout_height="@dimen/d340"
+            android:background="@drawable/dialog_system_notice_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d17"
+                android:gravity="center"
+                android:text="系统公告"
+                android:textColor="@color/FC_FF9900"
+                android:textSize="@dimen/s18"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/d30"
+                android:layout_marginLeft="@dimen/d13"
+                android:layout_marginRight="@dimen/d13"
+                android:layout_marginTop="@dimen/d90"
+                android:overScrollMode="never"
+                android:fadingEdge="none"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/tv_system_notice_context"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/d7"
+                    android:text="1.针对首页进行了美化;\n2.零钱宝功能更新;\n3.转入功能更新，并做出优化。"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/s13"/>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

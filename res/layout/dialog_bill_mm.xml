@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/d44"
+        android:alpha="0.2"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bill_detail_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/d44">
+
+        <View
+            android:id="@+id/v_trigon"
+            android:layout_width="@dimen/d20"
+            android:layout_height="@dimen/d20"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d13"
+            android:layout_marginTop="@dimen/d18"
+            android:background="@drawable/trigon" />
+
+        <LinearLayout
+            android:layout_width="@dimen/d100"
+            android:layout_height="@dimen/d200"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_trigon"
+            android:layout_marginRight="@dimen/d5"
+            android:background="@drawable/bill_mm_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_month0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/d5"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <View
+                style="@style/line"
+                android:layout_height="@dimen/d0.5"
+                android:layout_marginLeft="@dimen/d5"
+                android:layout_marginRight="@dimen/d5" />
+
+            <TextView
+                android:id="@+id/tv_month1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <View
+                style="@style/line"
+                android:layout_height="@dimen/d0.5"
+                android:layout_marginLeft="@dimen/d5"
+                android:layout_marginRight="@dimen/d5" />
+
+            <TextView
+                android:id="@+id/tv_month2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <View
+                style="@style/line"
+                android:layout_height="@dimen/d0.5"
+                android:layout_marginLeft="@dimen/d5"
+                android:layout_marginRight="@dimen/d5" />
+
+            <TextView
+                android:id="@+id/tv_month3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <View
+                style="@style/line"
+                android:layout_height="@dimen/d0.5"
+                android:layout_marginLeft="@dimen/d5"
+                android:layout_marginRight="@dimen/d5" />
+
+            <TextView
+                android:id="@+id/tv_month4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/d5"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

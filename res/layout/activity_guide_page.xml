@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_guide_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <ImageView
+        android:id="@+id/btn_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/d50"
+        android:src="@drawable/guide_page_sure_btn_icon"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_points_guide_page"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d25"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/d20"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+</RelativeLayout>

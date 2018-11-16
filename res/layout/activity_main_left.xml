@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d175"
+            android:background="@drawable/main_left_head_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="@dimen/d80"
+                android:layout_height="@dimen/d80"
+                android:background="@drawable/main_left_head_bg_unit"
+                android:layout_marginTop="@dimen/d2"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.wtjr.lqg.widget.CircleImageView
+                    android:id="@+id/civ_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2.5dp"
+                    android:src="@drawable/lingmeimei"
+                    app:civ_border_color="#ffffff"
+                    app:civ_border_overlay="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d5"
+                android:text="玲妹妹"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s16" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d5"
+                android:text="12345678910"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s16" />
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem2
+            android:id="@+id/uli_my_bill"
+            style="@style/main_left_item"
+            app:com_ImageContentrScrL="@drawable/main_my_bill_nor"
+            app:com_textTvContentL="@string/main_my_bill"
+            app:com_textTvContentLMarginL="@dimen/d10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0.5"
+            android:background="@color/white" >
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/d50"
+                android:background="@color/color_line_1" />
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem2
+            android:id="@+id/uli_sign_in"
+            style="@style/main_left_item"
+            app:com_ImageContentrScrL="@drawable/main_sign_in_nor"
+            app:com_textTvContentL="@string/main_sign_in"
+            app:com_textTvContentLMarginL="@dimen/d10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0.5"
+            android:background="@color/white" >
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/d50"
+                android:background="@color/color_line_1" />
+        </LinearLayout>
+        <com.wtjr.lqg.widget.UsuallyLayoutItem2
+            android:id="@+id/uli_problem"
+            style="@style/main_left_item"
+            app:com_ImageContentrScrL="@drawable/main_problem_nor"
+            app:com_textTvContentL="@string/main_problem"
+            app:com_textTvContentLMarginL="@dimen/d10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0.5"
+            android:background="@color/white" >
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/d50"
+                android:background="@color/color_line_1" />
+        </LinearLayout>
+
+        <com.wtjr.lqg.widget.UsuallyLayoutItem2
+            android:id="@+id/uli_contact_us"
+            style="@style/main_left_item"
+            app:com_ImageContentrScrL="@drawable/main_contact_us_nor"
+            app:com_textTvContentL="@string/main_contact_us"
+            app:com_textTvContentLMarginL="@dimen/d10" >
+        </com.wtjr.lqg.widget.UsuallyLayoutItem2>
+
+        <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0.5"
+            android:background="@color/white" >
+
+            <View
+                style="@style/line"
+                android:layout_marginLeft="@dimen/d50"
+                android:background="@color/color_line_1" />
+        </LinearLayout> -->
+    </LinearLayout>
+
+    <com.wtjr.lqg.widget.UsuallyLayoutItem2
+        android:id="@+id/uli_exit"
+        style="@style/main_left_item"
+        android:layout_alignParentBottom="true"
+        app:com_ImageContentrScrL="@drawable/main_exit_nor"
+        app:com_textTvContentL="@string/main_exit"
+        app:com_textTvContentLMarginL="@dimen/d10" />
+
+</RelativeLayout>

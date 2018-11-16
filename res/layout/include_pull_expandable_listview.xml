@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout
+        android:id="@+id/pullTo_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refresh_head_text_color="@color/FC_A5A5A5"
+        android:orientation="vertical" >
+
+        <include layout="@layout/allview_refresh_head" />
+
+        <com.wtjr.lqg.widget.pullRefresh.PullableExpandableListView
+            android:id="@+id/pullable_Expandable_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000" 
+            android:background="@color/color_app_bg" 
+            android:divider="@null"
+            android:gravity="center_horizontal" 
+            android:groupIndicator="@null"
+            android:listSelector="#00ff00"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            >
+        </com.wtjr.lqg.widget.pullRefresh.PullableExpandableListView>
+
+        <include layout="@layout/allview_load_more" />
+    </com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout>
+    
+</LinearLayout>

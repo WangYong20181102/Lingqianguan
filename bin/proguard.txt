@@ -1,0 +1,571 @@
+# view res/layout/activity_earnings_details.xml #generated:148
+# view res/layout/activity_guide.xml #generated:13
+# view res/layout/activity_risk_image_pager.xml #generated:2
+# view res/layout/activity_sign_in.xml #generated:80
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:11
+-keep class android.test.InstrumentationTestRunner { <init>(...); }
+
+# view AndroidManifest.xml #generated:203
+-keep class cn.jpush.android.service.AlarmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:152
+-keep class cn.jpush.android.service.DaemonService { <init>(...); }
+
+# view AndroidManifest.xml #generated:197
+-keep class cn.jpush.android.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:164
+-keep class cn.jpush.android.service.PushReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class cn.jpush.android.service.PushService { <init>(...); }
+
+# view res/layout/jpush_webview_layout.xml #generated:2
+-keep class cn.jpush.android.ui.FullScreenView { <init>(...); }
+
+# view AndroidManifest.xml #generated:185
+-keep class cn.jpush.android.ui.PushActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:262
+-keep class com.tencent.android.tpush.XGPushActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:241
+-keep class com.tencent.android.tpush.XGPushReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:280
+-keep class com.tencent.android.tpush.rpc.XGRemoteService { <init>(...); }
+
+# view AndroidManifest.xml #generated:273
+-keep class com.tencent.android.tpush.service.XGPushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.tencent.connect.common.AssistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class com.tencent.tauth.AuthActivity { <init>(...); }
+
+# view res/layout/umeng_socialize_post_share.xml #generated:2
+# view sw550dp-large-v13\res/layout-sw550dp-large-v13/umeng_socialize_post_share.xml #generated:2
+-keep class com.umeng.socialize.editorpage.KeyboardListenRelativeLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:107
+-keep class com.umeng.socialize.editorpage.ShareActivity { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:21
+-keep class com.umeng.socialize.view.wigets.SearchBox { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:38
+-keep class com.umeng.socialize.view.wigets.SectionListView { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:47
+-keep class com.umeng.socialize.view.wigets.SlideBar { <init>(...); }
+
+# view AndroidManifest.xml #generated:310
+-keep class com.wtjr.lqg.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:336
+-keep class com.wtjr.lqg.activities.ActivityActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:714
+-keep class com.wtjr.lqg.activities.ActivityWebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:342
+-keep class com.wtjr.lqg.activities.AvailableBalanceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:551
+-keep class com.wtjr.lqg.activities.BandBankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:545
+-keep class com.wtjr.lqg.activities.BandBankVerificationCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:701
+-keep class com.wtjr.lqg.activities.BillActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:708
+-keep class com.wtjr.lqg.activities.BillDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:316
+-keep class com.wtjr.lqg.activities.CalculatorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:577
+-keep class com.wtjr.lqg.activities.ChangePhoneNewNumberActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:571
+-keep class com.wtjr.lqg.activities.ChangePhoneNumberActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:482
+-keep class com.wtjr.lqg.activities.ChangePhoneSMSVerifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:720
+-keep class com.wtjr.lqg.activities.ChangeRequestAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:687
+-keep class com.wtjr.lqg.activities.ClipHeadActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:651
+-keep class com.wtjr.lqg.activities.EarningsCalculatorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:348
+-keep class com.wtjr.lqg.activities.EarningsDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:657
+-keep class com.wtjr.lqg.activities.GestureEditActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:663
+-keep class com.wtjr.lqg.activities.GestureVerifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:330
+-keep class com.wtjr.lqg.activities.GuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:360
+-keep class com.wtjr.lqg.activities.HaveAcountsLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:513
+-keep class com.wtjr.lqg.activities.HeadAmendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:669
+-keep class com.wtjr.lqg.activities.HeadSetingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:367
+-keep class com.wtjr.lqg.activities.IntoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:385
+-keep class com.wtjr.lqg.activities.InvestmentDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:601
+-keep class com.wtjr.lqg.activities.InvestmentLogActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:298
+-keep class com.wtjr.lqg.activities.LaunchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:373
+-keep class com.wtjr.lqg.activities.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:675
+-keep class com.wtjr.lqg.activities.LqbDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:559
+-keep class com.wtjr.lqg.activities.LqbInvestmentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.wtjr.lqg.activities.LqgApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:380
+-keep class com.wtjr.lqg.activities.MessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:440
+-keep class com.wtjr.lqg.activities.MyBankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:607
+-keep class com.wtjr.lqg.activities.MyInvestmentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:633
+-keep class com.wtjr.lqg.activities.NickNameActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:446
+-keep class com.wtjr.lqg.activities.PasswordAmendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:452
+-keep class com.wtjr.lqg.activities.PasswordForgetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:464
+-keep class com.wtjr.lqg.activities.PasswordResetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:458
+-keep class com.wtjr.lqg.activities.PasswordSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:476
+-keep class com.wtjr.lqg.activities.PasswordVerificationCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:470
+-keep class com.wtjr.lqg.activities.PasswordVerifyLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:583
+-keep class com.wtjr.lqg.activities.PayPasswordIdCardVerifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:494
+-keep class com.wtjr.lqg.activities.PayPasswordResetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:488
+-keep class com.wtjr.lqg.activities.PayPasswordSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:500
+-keep class com.wtjr.lqg.activities.PaySetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:506
+-keep class com.wtjr.lqg.activities.PayThirdpartyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:422
+-keep class com.wtjr.lqg.activities.RechargeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:428
+-keep class com.wtjr.lqg.activities.RechargeBindBankActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:595
+-keep class com.wtjr.lqg.activities.RefundPlanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:391
+-keep class com.wtjr.lqg.activities.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:681
+-keep class com.wtjr.lqg.activities.ReplaceBankCardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:565
+-keep class com.wtjr.lqg.activities.RiskImagePagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:589
+-keep class com.wtjr.lqg.activities.RiskMessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:403
+-keep class com.wtjr.lqg.activities.RollInActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:397
+-keep class com.wtjr.lqg.activities.RollOutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:639
+-keep class com.wtjr.lqg.activities.SelectBankAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:645
+-keep class com.wtjr.lqg.activities.SelectBankCityActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:409
+-keep class com.wtjr.lqg.activities.ServiceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:415
+-keep class com.wtjr.lqg.activities.SetingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:627
+-keep class com.wtjr.lqg.activities.ShareLqgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:694
+-keep class com.wtjr.lqg.activities.SignInActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:613
+-keep class com.wtjr.lqg.activities.StartInvestmentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:324
+-keep class com.wtjr.lqg.activities.TestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:434
+-keep class com.wtjr.lqg.activities.TotalAssetsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:354
+-keep class com.wtjr.lqg.activities.TyjDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:621
+-keep class com.wtjr.lqg.activities.UserFeedBackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:519
+-keep class com.wtjr.lqg.activities.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:525
+-keep class com.wtjr.lqg.activities.WithdrawalActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:531
+-keep class com.wtjr.lqg.activities.WithdrawalSMSVerifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:537
+-keep class com.wtjr.lqg.activities.WithdrawalSuccessActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:206
+-keep class com.wtjr.lqg.jpushReceiver.MyJpushReceiver { <init>(...); }
+
+# view res/layout/activity_gesture_edit.xml #generated:19
+-keep class com.wtjr.lqg.lock.widget.LockIndicator { <init>(...); }
+
+# view res/layout/include_investment_card.xml #generated:188
+-keep class com.wtjr.lqg.utils.RotateTextView { <init>(...); }
+
+# view res/layout/activity_band_bank.xml #generated:107
+# view res/layout/activity_band_bank.xml #generated:17
+# view res/layout/activity_band_bank.xml #generated:28
+# view res/layout/activity_band_bank.xml #generated:38
+# view res/layout/activity_band_bank.xml #generated:54
+# view res/layout/activity_band_bank.xml #generated:81
+-keep class com.wtjr.lqg.widget.BandBankEdit { <init>(...); }
+
+# view res/layout/activity_password_reset.xml #generated:48
+# view res/layout/activity_password_reset.xml #generated:81
+# view res/layout/activity_password_verify_login.xml #generated:49
+# view res/layout/widget_line_edit_text_pwd.xml #generated:32
+-keep class com.wtjr.lqg.widget.CheckBoxShowOrHide { <init>(...); }
+
+# view res/layout/activity_change_phone_number.xml #generated:16
+# view res/layout/activity_gesture_verify.xml #generated:53
+# view res/layout/activity_have_acounts_login.xml #generated:18
+# view res/layout/activity_head_amend.xml #generated:45
+# view res/layout/activity_login.xml #generated:22
+# view res/layout/activity_main_left.xml #generated:27
+# view res/layout/activity_my_bank.xml #generated:37
+# view res/layout/activity_recharge.xml #generated:104
+# view res/layout/activity_recharge.xml #generated:40
+# view res/layout/activity_withdrawal.xml #generated:41
+# view res/layout/activity_withdrawal.xml #generated:97
+# view res/layout/dialog_download.xml #generated:75
+# view res/layout/dialog_edittext.xml #generated:77
+# view res/layout/dialog_frist_tx.xml #generated:40
+# view res/layout/dialog_make.xml #generated:74
+# view res/layout/dialog_version1.xml #generated:70
+# view res/layout/dialog_version2.xml #generated:51
+# view res/layout/fragment_me_head.xml #generated:29
+# view res/layout/include_activity_title.xml #generated:59
+# view res/layout/item_feed_back_l.xml #generated:23
+# view res/layout/item_feed_back_r.xml #generated:24
+# view res/layout/item_head_portrait.xml #generated:10
+-keep class com.wtjr.lqg.widget.CircleImageView { <init>(...); }
+
+# view res/layout/activity_change_phone_number_code.xml #generated:34
+# view res/layout/activity_nick_name.xml #generated:14
+# view res/layout/activity_user_forget_password.xml #generated:17
+# view res/layout/widget_band_bank_edit.xml #generated:13
+-keep class com.wtjr.lqg.widget.ClearEditText { <init>(...); }
+
+# view res/layout/activity_clip_head.xml #generated:45
+-keep class com.wtjr.lqg.widget.ClipImageLayout { <init>(...); }
+
+# view res/layout/rv_item.xml #generated:18
+-keep class com.wtjr.lqg.widget.DrawScale { <init>(...); }
+
+# view res/layout/fragment_lqb.xml #generated:33
+-keep class com.wtjr.lqg.widget.F_ScrollViewContainer { <init>(...); }
+
+# view res/layout/widget_foot_item.xml #generated:11
+-keep class com.wtjr.lqg.widget.ImageRedDotView { <init>(...); }
+
+# view res/layout/include_income_ratio_view.xml #generated:7
+-keep class com.wtjr.lqg.widget.IncomeRatioView { <init>(...); }
+
+# view res/layout/activity_register.xml #generated:28
+-keep class com.wtjr.lqg.widget.LadderView { <init>(...); }
+
+# view res/layout/fragment_home_page.xml #generated:91
+-keep class com.wtjr.lqg.widget.LineChartView { <init>(...); }
+
+# view res/layout/include_register_phone.xml #generated:42
+-keep class com.wtjr.lqg.widget.LineEditTextInvitationCode { <init>(...); }
+
+# view res/layout/activity_have_acounts_login.xml #generated:33
+# view res/layout/activity_login.xml #generated:37
+# view res/layout/include_register_password.xml #generated:20
+-keep class com.wtjr.lqg.widget.LineEditTextPassword { <init>(...); }
+
+# view res/layout/activity_login.xml #generated:32
+# view res/layout/include_register_phone.xml #generated:24
+-keep class com.wtjr.lqg.widget.LineEditTextPhone { <init>(...); }
+
+# view res/layout/activity_band_bank_verification_code.xml #generated:72
+# view res/layout/activity_id_card_verify.xml #generated:83
+# view res/layout/activity_password_verification_code.xml #generated:40
+# view res/layout/activity_verification_code.xml #generated:40
+# view res/layout/include_register_sms.xml #generated:19
+-keep class com.wtjr.lqg.widget.LineEditTextSMS { <init>(...); }
+
+# view res/layout/activity_home_calculator.xml #generated:51
+# view res/layout/activity_recharge.xml #generated:145
+# view res/layout/activity_roll_in.xml #generated:53
+# view res/layout/activity_roll_out.xml #generated:52
+# view res/layout/activity_start_investment.xml #generated:87
+# view res/layout/activity_withdrawal.xml #generated:129
+-keep class com.wtjr.lqg.widget.MoneyEditText { <init>(...); }
+
+# view res/layout/calendar.xml #generated:13
+-keep class com.wtjr.lqg.widget.MonthDateView { <init>(...); }
+
+# view res/layout/activity_main_foot.xml #generated:10
+# view res/layout/activity_main_foot.xml #generated:22
+# view res/layout/activity_main_foot.xml #generated:34
+# view res/layout/activity_main_foot.xml #generated:46
+-keep class com.wtjr.lqg.widget.NavigationBarItem { <init>(...); }
+
+# view res/layout/investment_lv_head.xml #generated:13
+-keep class com.wtjr.lqg.widget.NoViewPager { <init>(...); }
+
+# view res/layout/fragment_home_page.xml #generated:28
+-keep class com.wtjr.lqg.widget.ObservableScrollView { <init>(...); }
+
+# view res/layout/activity_activity_webview.xml #generated:33
+# view res/layout/activity_webview.xml #generated:27
+-keep class com.wtjr.lqg.widget.ProgressWebView { <init>(...); }
+
+# view res/layout/include_register_password.xml #generated:2
+# view res/layout/include_register_phone.xml #generated:2
+# view res/layout/include_register_sms.xml #generated:2
+-keep class com.wtjr.lqg.widget.RegistreLinerLayout { <init>(...); }
+
+# view res/layout/activity_risk_message.xml #generated:61
+# view res/layout/activity_seting_head.xml #generated:10
+-keep class com.wtjr.lqg.widget.RiskGridView { <init>(...); }
+
+# view res/layout/activity_test.xml #generated:8
+# view res/layout/widget_sms_countdown_view.xml #generated:15
+-keep class com.wtjr.lqg.widget.RoundProgressBar { <init>(...); }
+
+# view res/layout/item_activity.xml #generated:8
+-keep class com.wtjr.lqg.widget.RoundRectImageView { <init>(...); }
+
+# view res/layout/activity_available_balance.xml #generated:216
+-keep class com.wtjr.lqg.widget.RoundRectView { <init>(...); }
+
+# view res/layout/head_foot_xc_recycler.xml #generated:8
+-keep class com.wtjr.lqg.widget.ScreenValfView { <init>(...); }
+
+# view res/layout/sign_in_calendar.xml #generated:17
+-keep class com.wtjr.lqg.widget.SignInMonthDateView { <init>(...); }
+
+# view res/layout/include_sms_count_down.xml #generated:7
+-keep class com.wtjr.lqg.widget.SmsCountdownView { <init>(...); }
+
+# view res/layout/fragment_home_page.xml #generated:15
+# view res/layout/fragment_home_page.xml #generated:257
+# view res/layout/fragment_home_page.xml #generated:54
+# view res/layout/fragment_investment.xml #generated:63
+# view res/layout/fragment_lqb.xml #generated:10
+# view res/layout/fragment_me_head.xml #generated:9
+# view res/layout/vs_novice_guide1.xml #generated:8
+# view res/layout/vs_novice_guide2.xml #generated:10
+# view res/layout/vs_novice_guide2_1.xml #generated:9
+# view res/layout/vs_novice_guide4.xml #generated:9
+# view res/layout/vs_novice_guide5.xml #generated:8
+-keep class com.wtjr.lqg.widget.StatusBarView { <init>(...); }
+
+# view res/layout/activity_withdrawal.xml #generated:167
+# view res/layout/widget_line_edit_text_sms.xml #generated:39
+-keep class com.wtjr.lqg.widget.TextViewCountDownView { <init>(...); }
+
+# view res/layout/include_earnings_contrast.xml #generated:10
+# view res/layout/scl_v_lqb_down.xml #generated:121
+-keep class com.wtjr.lqg.widget.TextViewWrapContent { <init>(...); }
+
+# view res/layout/activity_total_assets.xml #generated:28
+-keep class com.wtjr.lqg.widget.TotalAssetsView { <init>(...); }
+
+# view res/layout/activity_sign_in.xml #generated:48
+# view res/layout/activity_sign_in.xml #generated:63
+# view res/layout/activity_total_assets.xml #generated:38
+# view res/layout/activity_withdrawal_success.xml #generated:27
+# view res/layout/bill_details_child.xml #generated:30
+# view res/layout/head_my_investment.xml #generated:15
+# view res/layout/head_my_investment.xml #generated:41
+# view res/layout/include_investment_card.xml #generated:104
+# view res/layout/include_investment_card.xml #generated:124
+# view res/layout/investment_item.xml #generated:104
+# view res/layout/investment_item.xml #generated:82
+# view res/layout/scl_v_lqb_up.xml #generated:144
+# view res/layout/scl_v_lqb_up.xml #generated:169
+# view res/layout/scl_v_lqb_up.xml #generated:191
+# view res/layout/scl_v_lqb_up.xml #generated:218
+# view res/layout/scl_v_lqb_up.xml #generated:240
+-keep class com.wtjr.lqg.widget.UpDownTextView { <init>(...); }
+
+# view res/layout/activity_head_amend.xml #generated:60
+# view res/layout/activity_head_amend.xml #generated:72
+# view res/layout/activity_main_left.xml #generated:109
+# view res/layout/activity_main_left.xml #generated:129
+# view res/layout/activity_main_left.xml #generated:56
+# view res/layout/activity_main_left.xml #generated:74
+# view res/layout/activity_main_left.xml #generated:91
+# view res/layout/activity_my_bank.xml #generated:103
+# view res/layout/activity_my_bank.xml #generated:77
+# view res/layout/activity_my_bank.xml #generated:90
+# view res/layout/activity_pay_set.xml #generated:15
+# view res/layout/activity_pay_set.xml #generated:26
+# view res/layout/activity_service.xml #generated:108
+# view res/layout/activity_service.xml #generated:77
+# view res/layout/activity_service.xml #generated:97
+# view res/layout/activity_set_password.xml #generated:26
+# view res/layout/activity_set_password.xml #generated:37
+# view res/layout/activity_set_pay_password.xml #generated:32
+# view res/layout/activity_set_pay_password.xml #generated:43
+# view res/layout/activity_set_pay_password.xml #generated:59
+# view res/layout/activity_seting.xml #generated:126
+# view res/layout/activity_seting.xml #generated:18
+# view res/layout/activity_seting.xml #generated:31
+# view res/layout/activity_seting.xml #generated:41
+# view res/layout/activity_user_set_password.xml #generated:25
+# view res/layout/activity_user_set_password.xml #generated:35
+# view res/layout/activity_user_set_pay_password.xml #generated:25
+# view res/layout/activity_user_set_pay_password.xml #generated:35
+# view res/layout/fragment_home_page.xml #generated:127
+# view res/layout/fragment_home_page.xml #generated:146
+# view res/layout/fragment_home_page.xml #generated:182
+# view res/layout/fragment_home_total_assets.xml #generated:15
+# view res/layout/fragment_home_total_assets.xml #generated:31
+# view res/layout/fragment_home_total_assets.xml #generated:47
+# view res/layout/fragment_me.xml #generated:15
+# view res/layout/fragment_me.xml #generated:36
+# view res/layout/fragment_me.xml #generated:51
+# view res/layout/fragment_me.xml #generated:66
+# view res/layout/fragment_me.xml #generated:81
+# view res/layout/vs_novice_guide2.xml #generated:36
+# view res/layout/vs_novice_guide2_1.xml #generated:29
+-keep class com.wtjr.lqg.widget.UsuallyLayoutItem { <init>(...); }
+
+# view res/layout/fragment_home_page.xml #generated:204
+# view res/layout/fragment_home_page.xml #generated:214
+# view res/layout/fragment_home_page.xml #generated:224
+-keep class com.wtjr.lqg.widget.UsuallyLayoutStyle { <init>(...); }
+
+# view res/layout/calendar.xml #generated:8
+# view res/layout/sign_in_calendar.xml #generated:8
+-keep class com.wtjr.lqg.widget.WeekDayView { <init>(...); }
+
+# view res/layout/include_earnings_contrast.xml #generated:34
+# view res/layout/scl_v_lqb_down.xml #generated:146
+-keep class com.wtjr.lqg.widget.XCRecyclerView { <init>(...); }
+
+# view res/layout/scl_v_lqb_up.xml #generated:290
+-keep class com.wtjr.lqg.widget.periscope.PeriscopeLayout { <init>(...); }
+
+# view res/layout/activity_activity.xml #generated:12
+# view res/layout/activity_bill.xml #generated:12
+# view res/layout/activity_message.xml #generated:9
+# view res/layout/activity_my_investment.xml #generated:13
+# view res/layout/activity_replace_bank_card.xml #generated:13
+# view res/layout/fragment_home_page.xml #generated:20
+# view res/layout/fragment_investment.xml #generated:26
+# view res/layout/fragment_lqb.xml #generated:21
+# view res/layout/include_pull_expandable_listview.xml #generated:7
+# view res/layout/include_pull_listview.xml #generated:10
+-keep class com.wtjr.lqg.widget.pullRefresh.PullToRefreshLayout { <init>(...); }
+
+# view res/layout/activity_bill.xml #generated:21
+# view res/layout/include_pull_expandable_listview.xml #generated:15
+-keep class com.wtjr.lqg.widget.pullRefresh.PullableExpandableListView { <init>(...); }
+
+# view res/layout/activity_activity.xml #generated:21
+# view res/layout/activity_message.xml #generated:17
+# view res/layout/activity_my_investment.xml #generated:24
+# view res/layout/fragment_investment.xml #generated:38
+# view res/layout/include_pull_listview.xml #generated:21
+-keep class com.wtjr.lqg.widget.pullRefresh.PullableListView { <init>(...); }
+
+# view res/layout/activity_replace_bank_card.xml #generated:21
+-keep class com.wtjr.lqg.widget.pullRefresh.PullableScrollView { <init>(...); }
+
+# view res/layout/widget_up_down_textview.xml #generated:14
+-keep class com.wtjr.lqg.widget.risenumber.RiseNumberTextView { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:1
+-keep class com.wtjr.lqg.widget.slidingmenu.SlidingMenu { <init>(...); }
+
+# view res/layout/activity_seting.xml #generated:107
+# view res/layout/activity_seting.xml #generated:57
+# view res/layout/activity_seting.xml #generated:83
+-keep class com.wtjr.lqg.widget.toggle.ToggleButton { <init>(...); }
+
+# view res/layout/scl_v_lqb_up.xml #generated:51
+# view res/layout/scl_v_lqb_up.xml #generated:57
+# view res/layout/vs_novice_guide4.xml #generated:35
+-keep class com.wtjr.lqg.widget.wave.WaveView { <init>(...); }
+
+# view AndroidManifest.xml #generated:113
+-keep class com.wtjr.lqg.wxapi.WXEntryActivity { <init>(...); }
+
+# onClick res/layout/activity_main2.xml #generated:34
+-keepclassmembers class * { *** xuanzhuan1(...); }
+
+# onClick res/layout/activity_main2.xml #generated:41
+-keepclassmembers class * { *** xuanzhuan2(...); }
+

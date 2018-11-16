@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loadmore_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg" >
+
+    <RelativeLayout
+        android:id="@+id/header_content"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/loadstate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="下拉刷新"
+            android:textColor="#A5A5A5" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/loadstate_tv"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/d5" >
+
+            <ImageView
+                android:id="@+id/loading_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refresh_img_coin" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refresh_img_shadow"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

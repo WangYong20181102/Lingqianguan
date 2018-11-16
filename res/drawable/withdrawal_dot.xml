@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+
+    <!-- 提现成功的进度的点 -->
+    <solid android:color="@color/lqb_head_bg" />
+
+    <corners android:radius="@dimen/d10" />
+
+</shape>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 签到界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/ll_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d180"
+                android:background="@drawable/sign_in_up_bg" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/d15" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sign_in_up_circle" />
+
+                    <TextView
+                        android:id="@+id/tv_signInState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="未签到"
+                        android:textColor="@color/FC_FF6434"
+                        android:textSize="@dimen/s20" />
+                </RelativeLayout>
+
+                <com.wtjr.lqg.widget.UpDownTextView
+                    android:id="@+id/udtv_totalSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginLeft="@dimen/d50"
+                    app:down_text_color="@color/white"
+                    app:down_text_content="累计签到"
+                    app:down_text_size="@dimen/s16"
+                    app:up_down_margin="@dimen/d7"
+                    app:up_text_color="@color/white"
+                    app:up_text_content="0天"
+                    app:up_text_size="@dimen/s16" />
+
+                <com.wtjr.lqg.widget.UpDownTextView
+                    android:id="@+id/udtv_continuousSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/d10"
+                    android:layout_marginRight="@dimen/d50"
+                    app:down_text_color="@color/white"
+                    app:down_text_content="连续签到"
+                    app:down_text_size="@dimen/s16"
+                    app:up_down_margin="@dimen/d7"
+                    app:up_text_color="@color/white"
+                    app:up_text_content="0天"
+                    app:up_text_size="@dimen/s16" />
+            </RelativeLayout>
+
+            <android.support.v4.view.ViewPager
+                android:background="@color/white"
+                android:id="@+id/vp_calendar"
+              
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d300"
+                android:layout_gravity="center"
+                android:overScrollMode="never" >
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

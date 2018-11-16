@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false" >
+<!-- 总资产零钱包 -->
+    <solid android:color="@color/FC_FF7C03" />
+
+    <size
+        android:height="@dimen/d8"
+        android:width="@dimen/d8" />
+    <corners
+        android:radius="@dimen/d2"/>
+ 
+</shape>

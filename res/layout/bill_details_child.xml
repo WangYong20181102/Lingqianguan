@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d60"
+            android:paddingLeft="@dimen/d20" >
+
+<!--             <TextView -->
+<!--                 android:id="@+id/tv_child_time" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_centerVertical="true" -->
+<!--                 android:gravity="center" -->
+<!--                 android:lineSpacingExtra="@dimen/d7" -->
+<!--                 android:text="11-25\n10：00" -->
+<!--                 android:textColor="@color/FC_999999" -->
+<!--                 android:textSize="@dimen/s11" -->
+<!--                 android:visibility="gone" /> -->
+
+            <com.wtjr.lqg.widget.UpDownTextView
+                android:id="@+id/udtv_child_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:down_text_color="@color/FC_999999"
+                app:down_text_content="10:00"
+                app:down_text_size="@dimen/s11"
+                app:up_down_margin="@dimen/d6"
+                app:up_text_color="@color/FC_999999"
+                app:up_text_content="11-25"
+                app:up_text_size="@dimen/s11" />
+
+            <TextView
+                android:id="@+id/tv_deal_record_icon"
+                android:layout_width="@dimen/d36"
+                android:layout_height="@dimen/d36"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d20"
+                android:layout_toRightOf="@+id/udtv_child_time"
+                android:background="@drawable/ic_launcher"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/s26" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/d20"
+                android:layout_toRightOf="@+id/tv_deal_record_icon" >
+
+                <TextView
+                    android:id="@+id/tv_child_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123.22"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/s13" />
+
+                <TextView
+                    android:id="@+id/tv_child_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_child_money"
+                    android:text="可用余额——>零钱宝"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/s13" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_heng_xian"
+                style="@style/line"
+                android:layout_alignParentBottom="true"
+                android:background="@color/FC_CCCCCC" />
+        </RelativeLayout>
+
+        <include layout="@layout/item_show_hidden" />
+    </LinearLayout>
+
+</RelativeLayout>

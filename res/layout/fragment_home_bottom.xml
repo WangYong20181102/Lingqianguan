@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/ic_home_bottom_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d15"
+        android:layout_marginRight="@dimen/d15">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_home_newborrow"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:src="@drawable/home_weekweekup"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d15"
+            android:layout_toLeftOf="@+id/iv_home_safe"
+            android:src="@drawable/ic_home_asset"/>
+
+        <ImageView
+            android:id="@+id/iv_home_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d5"
+            android:layout_marginTop="@dimen/d15"
+            android:layout_toLeftOf="@+id/ic_home_hot"
+            android:src="@drawable/ic_home_safe"/>
+
+        <ImageView
+            android:id="@+id/ic_home_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/d10"
+            android:layout_marginTop="@dimen/d15"
+            android:src="@drawable/ic_home_hot"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_rate_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_year_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="7.88-11.88"
+            android:textColor="@color/FC_FF7C03"
+            android:textSize="@dimen/s39"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d19"
+            android:layout_toRightOf="@+id/tv_year_rate"
+            android:text="%"
+            android:textColor="@color/FC_FF7C03"
+            android:textSize="@dimen/s20"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="预期年化收益率"
+        android:textColor="#858585"
+        android:textSize="@dimen/s10"/>
+
+    <TextView
+        android:id="@+id/tv_mini_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d20"
+        android:text="100元起购"
+        android:textColor="@color/FC_414141"
+        android:textSize="@dimen/s12"/>
+
+    <ImageView
+        android:id="@+id/iv_home_snap_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d8"
+        android:src="@drawable/home_snap_up"/>
+
+    <TextView
+        android:id="@+id/tv_home_borrownum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/d30"
+        android:text="(已加入人数)"
+        android:textColor="#7a7a7a"
+        android:textSize="@dimen/s11"/>
+
+
+</LinearLayout>

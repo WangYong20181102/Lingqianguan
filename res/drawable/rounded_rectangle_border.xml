@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 设置边框的原理是先给button设置一个背景设，在到下面第2个item在设置一个背景色覆盖到上面一次，在设置一些属性，就可以看到button有外边框的效果了 -->
+    <!-- 第一层 -->
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#00000000" />
+            <!-- 这个里面一次设置的圆角 -->
+
+        </shape>
+    </item>
+
+    <!-- 第二层放在第一层的上面 -->
+    <!-- 设置与第一层相差多少dp -->
+    <item
+        android:bottom="@dimen/d0.5"
+        android:left="@dimen/d0.5"
+        android:right="@dimen/d0.5"
+        android:top="@dimen/d0.5">
+        
+        <shape
+            android:dither="true"
+            android:shape="rectangle" >
+            <corners android:radius="@dimen/d5" />
+
+            <solid android:color="#ccc" />
+        </shape>
+    </item>
+    
+    <item
+        android:bottom="@dimen/d1"
+        android:left="@dimen/d1"
+        android:right="@dimen/d1"
+        android:top="@dimen/d1"
+        >
+        <shape
+            android:dither="true"
+            android:shape="rectangle" >
+            <corners android:radius="@dimen/d5" />
+
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+
+</layer-list>

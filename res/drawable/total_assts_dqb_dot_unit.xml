@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false" >
+<!-- 总资产定期标 -->
+    <solid android:color="@color/FC_FD8B49" />
+
+    <size
+        android:height="@dimen/d8"
+        android:width="@dimen/d8" />
+    <corners
+        android:radius="@dimen/d2"/>
+ 
+</shape>

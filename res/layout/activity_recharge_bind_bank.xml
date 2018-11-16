@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 充值绑定银行卡页面布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/immersion_status"
+    android:orientation="vertical" >
+    <!--     标题 -->
+    <include layout="@layout/include_activity_title"/>
+
+</LinearLayout>

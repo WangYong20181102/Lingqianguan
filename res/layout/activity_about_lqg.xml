@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/immersion_status"
+    android:orientation="vertical">
+    <!-- 标题 -->
+
+    <include layout="@layout/include_activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/FC_F5F5F5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/FC_F5F5F5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d150"
+                android:background="@color/FC_F5F5F5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/d60"
+                    android:layout_height="@dimen/d60"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/d28"
+                    android:src="@drawable/about_logo" />
+
+                <TextView
+                    android:id="@+id/tv_version_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/d16"
+                    android:textColor="@color/FC_666666"
+                    android:textSize="@dimen/s12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View style="@style/line" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_official_introduction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="官方介绍"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="@dimen/d16" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_company_qualification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="公司资质"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="@dimen/d16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_lqg_gongyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="零钱罐公益"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="@dimen/d16" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_lqg_story"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="零钱罐故事"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View style="@style/line" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/d10"
+                android:orientation="vertical">
+
+                <View style="@style/line" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_media_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="媒体报道"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View style="@style/line" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View style="@style/line" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_lqg_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="零钱罐微信"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View
+                    style="@style/line"
+                    android:layout_marginLeft="@dimen/d16" />
+
+                <com.wtjr.lqg.widget.AboutLQGLayoutItem
+                    android:id="@+id/tv_lqg_weibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:com_textContent="零钱罐微博"></com.wtjr.lqg.widget.AboutLQGLayoutItem>
+
+                <View style="@style/line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

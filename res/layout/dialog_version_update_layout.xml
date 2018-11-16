@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/d300"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_version_icon_close"
+            android:layout_width="@dimen/d34"
+            android:layout_height="@dimen/d34"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/home_update_close"/>
+
+        <View
+            android:layout_width="@dimen/d1"
+            android:layout_height="@dimen/d18"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/image_version_icon_close"
+            android:layout_marginRight="@dimen/d16"
+            android:background="#dedede"/>
+
+        <ImageView
+            android:id="@+id/image_version_icon"
+            android:layout_width="@dimen/d300"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/d14"
+            android:src="@drawable/version_icon"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/d300"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_dialog_shape_version"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_version_update_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d25"
+            android:layout_marginRight="@dimen/d25"
+            android:layout_marginTop="@dimen/d20"
+            android:lineSpacingExtra="@dimen/d6"
+            android:text="1.针对首页进行了美化;\n2.零钱宝功能更新;\n3.转入功能更新，并做出优化。"
+            android:textColor="@color/FC_333333"
+            android:textSize="@dimen/s14"/>
+
+        <Button
+            android:id="@+id/btn_version_update_sure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/d42"
+            android:layout_marginRight="@dimen/d42"
+            android:layout_marginTop="@dimen/d30"
+            android:background="@drawable/btn_bg_drawable_version"
+            android:text="立即升级"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s15"/>
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/d21"
+            android:layout_marginTop="@dimen/d21"
+            android:gravity="center"
+            android:text="应用市场下载"
+            android:textColor="@color/FC_FF9900"
+            android:textSize="@dimen/s15"/>
+    </LinearLayout>
+
+
+</LinearLayout>

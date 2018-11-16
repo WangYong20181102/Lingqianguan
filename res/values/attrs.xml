@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 3D旋转 -->
+    <declare-styleable name="Rotate3dAnimation">
+
+        <!-- 旋转类型   x轴 y轴  z轴 -->
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr>
+        <!-- 初始角度 -->
+        <attr name="fromDeg" format="float"/>
+        <!-- 目标角度 -->
+        <attr name="toDeg" format="float"/>
+        <!-- 旋转点 -->
+        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotY" format="fraction"/>
+    </declare-styleable>
+
+
+    <!-- 底部导航条item -->
+    <declare-styleable name="NavigationBarItem">
+
+        <!-- 内容 -->
+        <attr name="nbi_content" format="string"/>
+        <!-- 字体颜色 -->
+        <attr name="nbi_textColor" format="color"/>
+        <!-- 设置右侧图片资源 -->
+        <attr name="nbi_image" format="reference"/>
+    </declare-styleable>
+
+    <!-- 自定义圆角矩形框 -->
+    <declare-styleable name="RoundRectView">
+
+        <!-- 内矩形按下时候的颜色 -->
+        <attr name="pressed_color" format="color"/>
+        <!-- 内矩形不按下时候的颜色 -->
+        <attr name="no_pressed_color" format="color"/>
+        <!-- 外矩形按下时候的颜色 -->
+        <attr name="pressed_border_color" format="color"/>
+        <!-- 外矩形不按下时候的颜色 -->
+        <attr name="no_pressed_border_color" format="color"/>
+        <!-- 内矩形x圆角 -->
+        <attr name="round_size_x" format="dimension"/>
+        <!-- 内矩形y圆角 -->
+        <attr name="round_size_y" format="dimension"/>
+        <!-- 外矩形x圆角 -->
+        <attr name="round_border_size_x" format="dimension"/>
+        <!-- 外矩形y圆角 -->
+        <attr name="round_border_size_y" format="dimension"/>
+        <!-- 内外矩形直接的间距 -->
+        <attr name="border_size" format="dimension"/>
+    </declare-styleable>
+
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="UsuallyLayoutItem">
+
+        <!-- 设置右侧文本框内容 -->
+        <attr name="com_textTvContentR" format="string"/>
+        <!-- 设置右侧文本框字体大小 -->
+        <attr name="com_textTvSizeR" format="dimension"/>
+        <!-- 设置右侧图片资源 -->
+        <attr name="com_ImageContentrScrR" format="reference"/>
+        <!-- 设置返回图片是否显示 -->
+        <attr name="com_ImageNextVisibility" format="boolean"/>
+        <!-- 设置左侧文本框内容 -->
+        <attr name="com_textTvContentL" format="string"/>
+        <!-- 设置左侧文本框字体大小 -->
+        <attr name="com_textTvSizeL" format="dimension"/>
+        <!-- 设置左侧图片资源 -->
+        <attr name="com_ImageContentrScrL" format="reference"/>
+        <!-- 设置左边图片距离左边的距离 -->
+        <attr name="com_ImageLeftMarginL" format="dimension"/>
+        <!-- 设置左边内容距离左边的距离 -->
+        <attr name="com_textTvContentLMarginL" format="dimension"/>
+        <!-- 设置右边内容距离右边的距离 -->
+        <attr name="com_textTvContentLMarginR" format="dimension"/>
+
+    </declare-styleable>
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="UsuallyLayoutItem5">
+
+        <!-- 设置右侧文本框内容 -->
+        <attr name="me_com_textTvContentR" format="string"/>
+        <!-- 设置右侧文本框字体大小 -->
+        <attr name="me_com_textTvSizeR" format="dimension"/>
+        <!-- 设置右侧图片资源 -->
+        <attr name="me_com_ImageContentrScrR" format="reference"/>
+        <!-- 设置返回图片是否显示 -->
+        <attr name="me_com_ImageNextVisibility" format="boolean"/>
+        <!-- 设置左侧文本框内容 -->
+        <attr name="me_com_textTvContentL" format="string"/>
+        <!-- 设置左侧文本框字体大小 -->
+        <attr name="me_com_textTvSizeL" format="dimension"/>
+        <!-- 设置左侧图片资源 -->
+        <attr name="me_com_ImageContentrScrL" format="reference"/>
+        <!-- 设置左边图片距离左边的距离 -->
+        <attr name="me_com_ImageLeftMarginL" format="dimension"/>
+        <!-- 设置左边内容距离左边的距离 -->
+        <attr name="me_com_textTvContentLMarginL" format="dimension"/>
+        <!-- 设置右边内容距离右边的距离 -->
+        <attr name="me_com_textTvContentLMarginR" format="dimension"/>
+        <!-- 设置右边内容字体颜色 -->
+        <attr name="me_com_textTvContentRTextColor" format="color"/>
+        <!-- 设置左边内容字体颜色 -->
+        <attr name="me_com_textTvContentLTextColor" format="color"/>
+        <!-- 加粗 -->
+        <attr name="me_com_text_style" format="boolean"/>
+
+    </declare-styleable>
+
+    <!--关于零钱罐-->
+    <declare-styleable name="AboutLQGLayoutItem">
+        <!--设置内容-->
+        <attr name="com_textContent" format="string"/>
+    </declare-styleable>
+
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="UsuallyLayoutStyle">
+
+        <!-- 设置上面文本框内容 -->
+        <attr name="com_tv_up" format="string"/>
+        <!-- 设置下面文本框内容 -->
+        <attr name="com_tv_down" format="string"/>
+        <!-- 设置下面文本内容颜色 -->
+        <attr name="com_tv_down_color" format="color"/>
+        <!-- 设置右侧图片资源 -->
+        <attr name="com_image" format="reference"/>
+    </declare-styleable>
+
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="UsuallyLayoutStyle2">
+
+        <!-- 设置上面文本框内容 -->
+        <attr name="com_tv_content2" format="string"/>
+        <!-- 设置右侧图片资源 -->
+        <attr name="com_image2" format="reference"/>
+    </declare-styleable>
+
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="UpDownTextView">
+
+        <!-- 设置上面文本的内容 -->
+        <attr name="up_text_content" format="string"/>
+        <!-- 设置下面文本的内容 -->
+        <attr name="down_text_content" format="string"/>
+        <!-- 设置上面文本字体大小 -->
+        <attr name="up_text_size" format="dimension"/>
+        <!-- 设置上面文本字体颜色 -->
+        <attr name="up_text_color" format="color"/>
+        <!-- 设置下面文本字体大小 -->
+        <attr name="down_text_size" format="dimension"/>
+        <!-- 设置下面文本字体颜色 -->
+        <attr name="down_text_color" format="color"/>
+        <!-- 设置上下文本之间的间隔 -->
+        <attr name="up_down_margin" format="dimension"/>
+        <!-- 设置文本的对齐属性 -->
+        <attr name="text_gravity">
+            <flag name="left" value="3"/>
+            <flag name="center" value="17"/>
+            <flag name="right" value="5"/>
+        </attr>
+    </declare-styleable>
+    <!-- 自定义组合控件 -->
+    <declare-styleable name="LqbUpDownTextView">
+
+        <!-- 设置上面文本的内容 -->
+        <attr name="lqb_up_text_content" format="string"/>
+        <!-- 设置下面文本的内容 -->
+        <attr name="lqb_down_text_content" format="string"/>
+        <!-- 设置上面文本字体大小 -->
+        <attr name="lqb_up_text_size" format="dimension"/>
+        <!-- 设置上面文本字体颜色 -->
+        <attr name="lqb_up_text_color" format="color"/>
+        <!-- 设置下面文本字体大小 -->
+        <attr name="lqb_down_text_size" format="dimension"/>
+        <!-- 设置下面文本字体颜色 -->
+        <attr name="lqb_down_text_color" format="color"/>
+        <!-- 设置上下文本之间的间隔 -->
+        <attr name="lqb_up_down_margin" format="dimension"/>
+        <!-- 左侧icon -->
+        <attr name="lqb_left_icon" format="integer"/>
+        <!-- 设置文本的对齐属性 -->
+        <attr name="lqb_text_gravity">
+            <flag name="left" value="3"/>
+            <flag name="center" value="17"/>
+            <flag name="right" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- 圆形图片 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <attr name="civ_fill_color" format="color"/>
+    </declare-styleable>
+
+    <!-- 带圆角的图片 -->
+    <declare-styleable name="CornersImageView">
+        <attr name="corners_radius" format="dimension"/>
+    </declare-styleable>
+
+    <!-- 折线图的属性 -->
+    <declare-styleable name="LineChartView">
+        <!-- 底部隐藏的高度 -->
+        <attr name="bottomHideHeight" format="dimension"/>
+        <!-- 图的背景色 -->
+        <attr name="chartBackground" format="color"/>
+        <!-- 图的下层的背景色 -->
+        <attr name="belowChartBackground" format="color"/>
+        <!-- Y的轴线颜色 -->
+        <attr name="YAxisColor" format="color"/>
+        <!-- 折线颜色 -->
+        <attr name="brokenLineColor" format="color"/>
+        <!-- 折线大小 -->
+        <attr name="brokenLineSize" format="dimension"/>
+        <!-- 收益文字大小 -->
+        <attr name="incomeTextSize" format="dimension"/>
+        <!-- 折线图的背景色中过度色的起始色 -->
+        <attr name="brokenLineBackgroundStart" format="color"/>
+        <!-- 折线图的背景色中过度色的结束色 -->
+        <attr name="brokenLineBackgroundEnd" format="color"/>
+        <!-- 日期文字的大小 -->
+        <attr name="dateTextSize" format="dimension"/>
+        <!-- 尾部圆的半径 -->
+        <attr name="circleRadius" format="dimension"/>
+        <!-- 尾部圆的线宽 -->
+        <attr name="circleLineSize" format="dimension"/>
+        <!-- 折线图最高点的上方空间的距离 -->
+        <attr name="topPadding" format="dimension"/>
+        <!-- 折线图最高点的上方空间的距离 -->
+        <attr name="incomeTextColor" format="color"/>
+    </declare-styleable>
+
+    <!-- 理财柱状图 -->
+    <declare-styleable name="Histogram">
+        <!-- 折线颜色 -->
+        <attr name="brokenLineColor1" format="color"/>
+        <!-- 折线大小 -->
+        <attr name="brokenLineSize1" format="dimension"/>
+        <!-- 折线颜色 -->
+        <attr name="textColor1" format="color"/>
+        <!-- 折线大小 -->
+        <attr name="textSize1" format="dimension"/>
+        <!-- 折线图的背景色中过度色的起始色 -->
+        <attr name="brokenLineBackgroundStart1" format="color"/>
+        <!-- 折线图的背景色中过度色的结束色 -->
+        <attr name="brokenLineBackgroundEnd1" format="color"/>
+    </declare-styleable>
+
+    <!-- 首页收益比例圆图 -->
+    <declare-styleable name="IncomeRatioView">
+
+        <!-- 底部隐藏的高度 -->
+        <attr name="circleLineWidth" format="dimension"/>
+    </declare-styleable>
+
+    <!-- //短信倒计时进度条 -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <!-- 开关按钮 -->
+    <declare-styleable name="ToggleButton">
+        <attr name="borderWidth" format="dimension"></attr>
+        <attr name="offBorderColor" format="reference|color"></attr>
+        <attr name="offColor" format="reference|color"></attr>
+        <attr name="onColor" format="reference|color"></attr>
+        <attr name="spotColor" format="reference|color"></attr>
+        <attr name="animate" format="reference|boolean"></attr>
+    </declare-styleable>
+
+    <!-- 开关按钮 -->
+    <declare-styleable name="BandBankEdit">
+        <!-- 内容 -->
+        <attr name="tvLeft" format="string"/>
+        <!-- 提示语 -->
+        <attr name="edtRight_hint" format="string"/>
+        <!-- 输入框最大长度 -->
+        <attr name="maxLength" format="integer"/>
+        <!-- 是否可以点击 -->
+        <attr name="focusable" format="boolean"/>
+        <!-- 是否可以点击 -->
+        <attr name="edt_focusableInTouchMode" format="boolean"/>
+    </declare-styleable>
+    <!-- 开关按钮 -->
+    <declare-styleable name="BandBankEditNoClearContext">
+        <!-- 内容 -->
+        <attr name="no_tvLeft" format="string"/>
+        <!-- 提示语 -->
+        <attr name="no_edtRight_hint" format="string"/>
+        <!-- 输入框最大长度 -->
+        <attr name="no_maxLength" format="integer"/>
+        <!-- 是否可以点击 -->
+        <attr name="no_focusable" format="boolean"/>
+        <!-- 是否可以点击 -->
+        <attr name="no_edt_focusableInTouchMode" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 注册时候的阶梯控件 -->
+    <declare-styleable name="LadderView">
+
+        <!-- 字体的颜色 -->
+        <attr name="view_select_textColor" format="color"/>
+        <attr name="view_unselect_textColor" format="color"/>
+        <!-- 动画的时间 -->
+        <attr name="view_duration" format="integer"/>
+        <!-- 设置背景色 -->
+        <attr name="view_background" format="color"/>
+        <!-- 渐变色开始色 -->
+        <attr name="view_start_color" format="color"/>
+        <!-- 渐变色结束色 -->
+        <attr name="view_end_color" format="color"/>
+    </declare-styleable>
+
+    <!-- 下拉刷新 -->
+    <declare-styleable name="PullToRefreshLayout">
+        <!-- 渐变色结束色 -->
+        <attr name="refresh_head_text_color" format="color"/>
+    </declare-styleable>
+
+
+    <!-- 输入框分割符号 -->
+    <declare-styleable name="LineEditText">
+        <attr name="x_separator" format="string"/>
+        <attr name="x_customizeMarkerEnable" format="boolean"/>
+        <attr name="x_showMarkerTime">
+            <enum name="after_input" value="0"/>
+            <enum name="before_input" value="1"/>
+            <enum name="always" value="2"/>
+        </attr>
+        <attr name="x_iOSStyleEnable" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 复选按钮用来显示还是隐藏密码的 -->
+    <declare-styleable name="CheckBoxShowOrHide">
+
+        <!-- 显示还是隐藏文字，默认是隐藏的 -->
+        <attr name="cbs_show_or_hide" format="boolean"/>
+    </declare-styleable>
+
+
+    <!-- 总资产的自定义扇形图 -->
+    <declare-styleable name="TotalAssetsView">
+        <!-- 日期文字的大小 -->
+        <attr name="tav_textSize" format="dimension"/>
+    </declare-styleable>
+
+    <!-- 金币输入框 -->
+    <declare-styleable name="MoneyEditText">
+        <!-- 日期文字的大小 -->
+        <attr name="met_background" format="integer"/>
+    </declare-styleable>
+    <!--自定义手机号码输入框-->
+    <declare-styleable name="LineEditTextPhoneNumber">
+        <attr name="letp_hint" format="string"/>
+    </declare-styleable>
+    <!--首页圆形进度-->
+    <declare-styleable name="RoundPercentTextProgressBar">
+        <!--半径-->
+        <attr name="circle_radius" format="integer"/>
+        <!--进度条背景色-->
+        <attr name="bg_progressBar" format="color"/>
+        <!--进度条颜色-->
+        <attr name="circle_progressBar_color" format="color"/>
+    </declare-styleable>
+    <!--首页、我的界面复用布局-->
+    <declare-styleable name="UsuallyLayoutHome">
+        <!--图标-->
+        <attr name="reuse_icon" format="reference"/>
+        <!--字体颜色-->
+        <attr name="reuse_textColor" format="reference|color"/>
+        <!--文字内容-->
+        <attr name="reuse_context" format="string"/>
+        <!--文字大小-->
+        <attr name="reuse_textSize" format="dimension"/>
+        <!--文字距离上部距离-->
+        <attr name="reuse_text_margin_top" format="dimension"/>
+    </declare-styleable>
+</resources>

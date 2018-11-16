@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_earningsView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/me_drawable_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.wtjr.lqg.widget.TextViewWrapContent
+        android:id="@+id/tv_investAndEarnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d25"
+        android:layout_marginRight="@dimen/d25"
+        android:layout_marginTop="@dimen/d25"
+        android:textColor="@color/FC_999999"
+        android:textSize="@dimen/s16" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_scale_value"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/d22"-->
+    <!--android:text="0"-->
+    <!--android:textColor="#f85c07"-->
+    <!--android:textSize="@dimen/s24" />-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/d22"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/tv_scale_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="number"
+            android:paddingLeft="@dimen/d10"
+            android:paddingRight="@dimen/d10"
+            android:text="0"
+            android:textColor="#f85c07"
+            android:textSize="@dimen/s24" />
+        <View
+            android:layout_height="@dimen/d3"
+            android:layout_width="match_parent"
+            android:background="@drawable/xuxian"
+            android:layerType="software"/>
+        <!--<com.wtjr.lqg.widget.LineEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@null"-->
+            <!--android:focusable="false"-->
+            <!--android:focusableInTouchMode="false"-->
+            <!--android:paddingLeft="@dimen/d10"-->
+            <!--android:paddingRight="@dimen/d10"/>-->
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d70"
+        android:paddingBottom="@dimen/d20"
+        android:layout_marginTop="@dimen/d20">
+
+        <com.wtjr.lqg.widget.XCRecyclerView
+            android:id="@+id/rv_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/d1"
+            android:background="#ff0000" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_histogram"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d125"
+        android:layout_marginBottom="@dimen/d25"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_lqb_down_pillarValue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#ffca10"
+                android:textSize="@dimen/s18" />
+
+            <ImageView
+                android:id="@+id/iv_lqb_down_pillar1"
+                android:layout_width="@dimen/d35"
+                android:layout_height="@dimen/d18"
+                android:layout_marginBottom="@dimen/d5"
+                android:layout_marginTop="@dimen/d5"
+                android:scaleType="fitXY"
+                android:src="@drawable/lqb_down_pillar1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="银行"
+                android:textColor="#ffca10"
+                android:textSize="@dimen/s15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_lqb_down_pillarValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="988"
+                android:textColor="#ff8b10"
+                android:textSize="@dimen/s18" />
+
+            <ImageView
+                android:id="@+id/iv_lqb_down_pillar2"
+                android:layout_width="@dimen/d35"
+                android:layout_height="@dimen/d50"
+                android:layout_marginBottom="@dimen/d5"
+                android:layout_marginTop="@dimen/d5"
+                android:scaleType="fitXY"
+                android:src="@drawable/lqb_down_pillar2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="宝宝类"
+                android:textColor="#ff8b10"
+                android:textSize="@dimen/s15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_lqb_down_pillarValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="988"
+                android:textColor="#ffa210"
+                android:textSize="@dimen/s18" />
+
+            <ImageView
+                android:id="@+id/iv_lqb_down_pillar3"
+                android:layout_width="@dimen/d35"
+                android:layout_height="@dimen/d60"
+                android:layout_marginBottom="@dimen/d5"
+                android:layout_marginTop="@dimen/d5"
+                android:scaleType="fitXY"
+                android:src="@drawable/lqb_down_pillar3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="零钱宝"
+                android:textColor="#ffa210"
+                android:textSize="@dimen/s15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_lqb_down_pillarValue4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="988"
+                android:textColor="#f85c07"
+                android:textSize="@dimen/s18" />
+
+            <ImageView
+                android:id="@+id/iv_lqb_down_pillar4"
+                android:layout_width="@dimen/d35"
+                android:layout_height="@dimen/d60"
+                android:layout_marginBottom="@dimen/d5"
+                android:layout_marginTop="@dimen/d5"
+                android:scaleType="fitXY"
+                android:src="@drawable/lqb_down_pillar4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="零钱罐定期"
+                android:textColor="#f85c07"
+                android:textSize="@dimen/s15" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
