@@ -35,8 +35,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.api.model.Information;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.utils.Log;
 import com.wtjr.lqg.MainActivity;
@@ -398,24 +396,27 @@ public class WebViewActivity extends BaseActivity implements OnClickListener, Do
                     intent.putExtra("TitleName", "150了解零钱罐");
                     startActivity(intent);
                 } else if (url.equals(Constant.H5_GOTO_ZHICHI)) {// 智齿客服
-                    Information info = new Information();
-                    info.setAppkey("ce00f9474d614e1a9735c72ec58355ae");
-                    //注意：uid为用户唯一标识，不能传入一样的值
-                    info.setUid(mUid);
-                    //用户昵称，选填
-                    info.setUname(app.mAccountData.nickName);
-                    //是否使用语音功能 true使用 false不使用   默认为true
-                    info.setUseVoice(false);
-                    //是否使用机器人语音功能 true使用 false不使用 默认为false
-                    info.setUseRobotVoice(false);
-                    info.setColor("#ffca60");   //标题栏背景
+//                    Information info = new Information();
+//                    info.setAppkey("ce00f9474d614e1a9735c72ec58355ae");
+//                    //注意：uid为用户唯一标识，不能传入一样的值
+//                    info.setUid(mUid);
+//                    //用户昵称，选填
+//                    info.setUname(app.mAccountData.nickName);
+//                    //是否使用语音功能 true使用 false不使用   默认为true
+//                    info.setUseVoice(false);
+//                    //是否使用机器人语音功能 true使用 false不使用 默认为false
+//                    info.setUseRobotVoice(false);
+//                    info.setColor("#ffca60");   //标题栏背景
 //                    //返回时是否弹出满意度评价
 //                    info.setShowSatisfaction(false);
                     /**
                      * @param context 上下文对象
                      * @param information 初始化参数
                      */
-                    SobotApi.startSobotChat(WebViewActivity.this, info);
+//                    SobotApi.startSobotChat(WebViewActivity.this, info);
+
+                    ToastUtil.showToastShort(WebViewActivity.this,"敬请期待。。。");
+
 
                 } else if (url.startsWith("tel:")) {// 常见问题 提现问题拨打电话跳转
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));

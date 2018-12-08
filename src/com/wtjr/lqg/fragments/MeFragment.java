@@ -15,8 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
-import com.sobot.chat.SobotApi;
-import com.sobot.chat.utils.ZhiChiConstant;
 import com.umeng.analytics.MobclickAgent;
 import com.wtjr.lqg.R;
 import com.wtjr.lqg.activities.AboutLQGActivity;
@@ -246,15 +244,15 @@ public class MeFragment extends BaseFragment implements View.OnClickListener, Ht
     public void initData() {
         LoginState(isLogin);
 
-        /**
-         * action:ZhiChiConstants.sobot_unreadCountBrocast
-         * 注册智齿广播
-         */
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ZhiChiConstant.sobot_unreadCountBrocast);
-        getActivity().registerReceiver(new SobotReceiver(), filter);
-
-        SobotApi.setNotificationFlag(getActivity(), true, R.drawable.sobot_launcher, R.drawable.ic_launcher);
+//        /**
+//         * action:ZhiChiConstants.sobot_unreadCountBrocast
+//         * 注册智齿广播
+//         */
+//        IntentFilter filter = new IntentFilter();
+//        filter.addAction(ZhiChiConstant.sobot_unreadCountBrocast);
+//        getActivity().registerReceiver(new SobotReceiver(), filter);
+//
+//        SobotApi.setNotificationFlag(getActivity(), true, R.drawable.sobot_launcher, R.drawable.ic_launcher);
 
     }
 

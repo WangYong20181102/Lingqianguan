@@ -2,10 +2,7 @@ package com.wtjr.lqg.utils;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.widget.Toast;
 
-import com.sobot.chat.SobotApi;
 import com.umeng.analytics.MobclickAgent;
 import com.wtjr.lqg.activities.GestureEditActivity;
 import com.wtjr.lqg.activities.HaveAcountsLoginActivity;
@@ -85,13 +82,13 @@ public class LoginOrExitUtils {
      * 退出成功
      */
     public static void exitSuccess(Context context, LqgApplication app) {
-        /**
-         * 智齿客服
-         * 用户在应用中退出登陆时需要调用 SDK 的注销操作（只在切换账号时调用），
-         * 该操作会通知服务器进行推送信息的解绑，避免用户已退出但推送依然发送到当前设备的情况发生。
-         * 当用于用户退出登录时调用以下方法：
-         */
-        SobotApi.exitSobotChat(context);
+//        /**
+//         * 智齿客服
+//         * 用户在应用中退出登陆时需要调用 SDK 的注销操作（只在切换账号时调用），
+//         * 该操作会通知服务器进行推送信息的解绑，避免用户已退出但推送依然发送到当前设备的情况发生。
+//         * 当用于用户退出登录时调用以下方法：
+//         */
+//        SobotApi.exitSobotChat(context);
 
         // 保存状态为退出
         SaveLoginState.unLogin(app);

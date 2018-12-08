@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LQGAPP3.12.iml" filepath="$PROJECT_DIR$/LQGAPP3.12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lingqianguan.iml" filepath="$PROJECT_DIR$/Lingqianguan.iml" />
       <module fileurl="file://$PROJECT_DIR$/sobotsdk/sobotsdk.iml" filepath="$PROJECT_DIR$/sobotsdk/sobotsdk.iml" />
     </modules>
   </component>
